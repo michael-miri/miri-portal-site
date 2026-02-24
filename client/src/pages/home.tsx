@@ -61,7 +61,7 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-hero-services">
+                  <Button variant="outline" className="border-[#0645FF]/30 text-[#0645FF] font-medium rounded-full px-7 h-11 bg-transparent hover:bg-[#0645FF]/[0.06] hover:border-[#0645FF]/50" data-testid="button-hero-services">
                     Our Services
                   </Button>
                 </Link>
