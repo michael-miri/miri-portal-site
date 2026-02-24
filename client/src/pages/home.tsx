@@ -51,7 +51,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
               <p className="text-[17px] text-white/50 leading-relaxed max-w-md mb-10">
-                Avion Tech helps organizations modernize operations, harness AI, and scale infrastructure — with decades of hands-on expertise and a bias toward action.
+                We help organizations modernize operations, harness AI, and scale infrastructure — with decades of hands-on expertise and a bias toward action.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <span className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Why Avion Tech</span>
+              <span className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Why Us</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-why-section">
                 We don't just<br />advise. We build.
               </h2>

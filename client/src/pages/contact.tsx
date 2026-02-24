@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <Layout>
       <PageHeader
-        label="Contact Avion Tech"
+        label="Contact Us"
         title="Let's build together."
         description="Book a free consultation. No obligations — just an honest conversation about your technology needs."
       />

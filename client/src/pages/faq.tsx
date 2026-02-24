@@ -11,19 +11,19 @@ import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const generalFAQs = [
   {
-    q: "What does Avion Tech do?",
-    a: "Avion Tech is an AI-driven technology consulting firm that helps organizations modernize, optimize, and transform their operations. We offer full-spectrum technology consulting including strategy, AI & analytics, cybersecurity, cloud infrastructure, custom application development, data governance, IoT solutions, digital twin modeling, and OT/IT integration.",
+    q: "What do you do?",
+    a: "We're an AI-driven technology consulting firm that helps organizations modernize, optimize, and transform their operations. We offer full-spectrum technology consulting including strategy, AI & analytics, cybersecurity, cloud infrastructure, custom application development, data governance, IoT solutions, digital twin modeling, and OT/IT integration.",
   },
   {
     q: "What industries do you serve?",
     a: "We serve organizations across all sectors including private enterprise, government & federal agencies, municipal governments, and customer-facing businesses. Our experience spans healthcare, finance, education, retail, manufacturing, logistics, energy, real estate, and more — over 50 industries in total.",
   },
   {
-    q: "Where is Avion Tech located?",
-    a: "Avion Tech is headquartered in Lexington, Kentucky. We serve clients nationally and have experience working with organizations across the United States, including federal agencies and Fortune 500 companies.",
+    q: "Where are you located?",
+    a: "We're headquartered in Lexington, Kentucky. We serve clients nationally and have experience working with organizations across the United States, including federal agencies and Fortune 500 companies.",
   },
   {
-    q: "How long has Avion Tech been in business?",
+    q: "How long have you been in business?",
     a: "Our team brings over 20 years of combined experience in technology consulting, digital transformation, and enterprise architecture. Our consultants have led hundreds of successful projects across diverse industries.",
   },
 ];
@@ -65,7 +65,7 @@ const securityFAQs = [
 const processFAQs = [
   {
     q: "What does a free consultation include?",
-    a: "Our free consultation is a 30-60 minute session where we learn about your organization, challenges, and goals. We'll provide initial recommendations and discuss how Avion Tech can help. There's no obligation, no pressure — just an honest conversation about your technology needs.",
+    a: "Our free consultation is a 30-60 minute session where we learn about your organization, challenges, and goals. We'll provide initial recommendations and discuss how we can help. There's no obligation, no pressure — just an honest conversation about your technology needs.",
   },
   {
     q: "How do you price your services?",
@@ -76,7 +76,7 @@ const processFAQs = [
     a: "For most engagements, we can begin within 2-4 weeks of agreement. For urgent needs, we can often mobilize faster. Our team structure allows us to scale quickly and efficiently to meet your timeline.",
   },
   {
-    q: "What makes Avion Tech different from other consultants?",
+    q: "What makes you different from other consultants?",
     a: "Three things set us apart: First, we're practitioners, not just advisors — our team builds and implements solutions alongside your staff. Second, we prioritize practical, ROI-driven outcomes over theoretical frameworks. Third, our deep expertise across the full technology spectrum means you get one trusted partner instead of managing multiple vendors.",
   },
 ];
@@ -94,7 +94,7 @@ export default function FAQ() {
       <PageHeader
         label="Frequently Asked Questions"
         title="Your questions, answered."
-        description="Everything you need to know about working with Avion Tech. Can't find what you're looking for? Get in touch."
+        description="Everything you need to know about working with us. Can't find what you're looking for? Get in touch."
       />
 
       <section className="bg-[#09090b] border-t border-white/[0.06]">

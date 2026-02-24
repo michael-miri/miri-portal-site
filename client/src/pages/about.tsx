@@ -53,7 +53,7 @@ export default function About() {
   return (
     <Layout>
       <PageHeader
-        label="About Avion Tech"
+        label="About Us"
         title="Innovation meets experience."
         description="Over 20 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
       />
@@ -67,7 +67,7 @@ export default function About() {
                 Delivering the<br />future today.
               </h2>
               <p className="mt-8 text-[15px] text-white/50 leading-[1.8] max-w-md">
-                Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
+                Our consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
               </p>
               <p className="mt-4 text-[15px] text-white/50 leading-[1.8] max-w-md">
                 We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.

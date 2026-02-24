@@ -116,7 +116,7 @@ export default function Portfolio() {
             Have a similar challenge?
           </h2>
           <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
-            Let's discuss how Avion Tech can deliver similar results for your organization.
+            Let's discuss how we can deliver similar results for your organization.
           </p>
           <div className="mt-10">
             <Link href="/contact">

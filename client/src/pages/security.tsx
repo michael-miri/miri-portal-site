@@ -57,7 +57,7 @@ export default function Security() {
   return (
     <Layout>
       <PageHeader
-        label="Security at Avion Tech"
+        label="Our Security"
         title="Enterprise-grade security."
         description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust to continuous monitoring, we protect what matters most."
       />
