@@ -14,7 +14,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Layout, PageHeader, CTABanner, fadeInUp, stagger } from "@/components/layout";
+import { Layout, PageHeader, CTABanner, fadeIn, stagger } from "@/components/layout";
 
 const services = [
   {
@@ -122,52 +122,43 @@ export default function Services() {
   return (
     <Layout>
       <PageHeader
-        label="Avion Tech Capabilities"
-        title="Full-Spectrum"
-        highlight="Technology Consulting"
+        label="Our Capabilities"
+        title="Full-Spectrum Technology Consulting"
         description="Avion Tech delivers actionable insights and practical solutions across cloud, AI, cybersecurity, digital twins, and more."
       />
 
-      <section className="relative py-24 bg-[#08081a]">
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#0645FF]/[0.05] to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger} 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      <section className="border-t border-white/[0.04] py-20 bg-[#0b0b0f]">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {services.map((service) => (
-              <motion.div key={service.title} variants={fadeInUp} className="group">
-                <div 
-                  className="relative h-full rounded-2xl p-7 bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1 hover-elevate"
-                  data-testid={`card-service-${service.title.toLowerCase().replace(/\s/g, '-')}`}
+              <motion.div key={service.title} variants={fadeIn}>
+                <div
+                  className="h-full rounded-2xl border border-white/[0.08] bg-[#141419] p-7 hover:border-white/[0.15] transition-colors duration-300"
+                  data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#0645FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center mb-5">
-                    <service.icon className="w-6 h-6 text-[#4B8BFF]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center mb-5">
+                    <service.icon className="w-5 h-5 text-[#3B7BFF]" />
                   </div>
-                  
-                  <h3 className="font-heading text-lg font-semibold text-white mb-2">
+
+                  <h3 className="font-heading text-lg font-bold text-white mb-3">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-sm text-white/40 leading-relaxed mb-5">
                     {service.desc}
                   </p>
-                  
-                  <ul className="space-y-2.5">
+
+                  <ul className="space-y-3">
                     {service.details.map((detail) => (
                       <li key={detail} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-white/30 shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/30 leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-[#3B7BFF] shrink-0 mt-0.5" />
+                        <span className="text-sm text-white/40 leading-relaxed">
                           {detail}
                         </span>
                       </li>
@@ -180,43 +171,44 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="relative py-20 bg-[#0a0a1c]">
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-        
-        <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
+      <section className="border-t border-white/[0.04] py-20 bg-[#0b0b0f]">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={stagger}
+            className="text-center"
           >
-            <motion.h2 
-              variants={fadeInUp} 
-              className="font-heading text-3xl sm:text-4xl font-bold text-white"
+            <motion.span
+              variants={fadeIn}
+              className="inline-block text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]"
             >
-              Need a <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Custom Solution?</span>
+              Custom Solutions
+            </motion.span>
+
+            <motion.h2
+              variants={fadeIn}
+              className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3"
+            >
+              Need Something More Specific?
             </motion.h2>
-            
-            <motion.p 
-              variants={fadeInUp} 
-              className="mt-4 text-white/40 max-w-lg mx-auto"
+
+            <motion.p
+              variants={fadeIn}
+              className="mt-4 text-sm text-white/40 leading-relaxed max-w-2xl mx-auto"
             >
               Our services are modular and adaptable. Let's design the right combination for your organization.
             </motion.p>
-            
-            <motion.div variants={fadeInUp} className="mt-8">
+
+            <motion.div variants={fadeIn} className="mt-8">
               <Link href="/contact">
-                <Button 
-                  size="lg" 
-                  className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-8 rounded-xl group"
+                <Button
+                  className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10"
                   data-testid="button-services-contact"
                 >
                   Talk to Our Team
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
               </Link>
             </motion.div>

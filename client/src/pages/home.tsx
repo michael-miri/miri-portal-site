@@ -2,16 +2,18 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Sparkles,
-  Brain,
-  Code2,
-  Smartphone,
+  Zap,
   Globe,
-  Workflow,
+  TrendingUp,
+  Brain,
   Shield,
   Cloud,
+  Code2,
   Database,
   Boxes,
+  Smartphone,
+  Workflow,
+  ChevronRight,
   Building2,
   Landmark,
   MapPin,
@@ -19,87 +21,188 @@ import {
   Lock,
   ShieldCheck,
   FileCheck,
-  ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Layout, CTABanner, fadeInUp, fadeInLeft, fadeInRight, stagger } from "@/components/layout";
+import { Layout, CTABanner, fadeIn, stagger } from "@/components/layout";
 
-const services = [
-  { icon: Workflow, title: "Strategy & Transformation", desc: "Align business goals with technology capabilities through agile delivery." },
-  { icon: Brain, title: "AI & Advanced Analytics", desc: "Embed intelligent tools and automation to optimize performance." },
-  { icon: Shield, title: "Cybersecurity & Resilience", desc: "Secure-by-design architectures with continuous monitoring." },
-  { icon: Cloud, title: "Cloud & Hybrid Infrastructure", desc: "Scalable, resilient platforms with DevOps methods." },
-  { icon: Code2, title: "Custom Applications", desc: "Streamlined workflows through agile development." },
-  { icon: Database, title: "Data Governance", desc: "Structured data assets that build trust and integration." },
+const features = [
+  {
+    icon: Zap,
+    title: "Rapid Deployment. Every Time.",
+    desc: "Organizations get solutions in weeks, not months. No more delayed timelines. No more missed deadlines. No more stalled initiatives.",
+  },
+  {
+    icon: Globe,
+    title: "Expertise Across Every Domain.",
+    desc: "From AI and cybersecurity to cloud and IoT — our consultants bring 20+ years of cross-industry experience to every project.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Scale Without Compromise.",
+    desc: "Automate 80% of routine processes. Free your team to handle complex challenges. That's intelligent scaling.",
+  },
 ];
 
-const sectors = [
-  { icon: Building2, title: "Private Sector", items: ["Enterprise", "Startups", "SMBs"] },
-  { icon: Landmark, title: "Government & Federal", items: ["Defense", "Compliance", "Secure Systems"] },
-  { icon: MapPin, title: "Municipal", items: ["Smart Cities", "Public Services"] },
-  { icon: Users, title: "Customer-Facing", items: ["E-Commerce", "SaaS", "Consumer Apps"] },
+const services = [
+  { icon: Workflow, title: "Strategy & Transformation" },
+  { icon: Brain, title: "AI & Advanced Analytics" },
+  { icon: Shield, title: "Cybersecurity & Resilience" },
+  { icon: Cloud, title: "Cloud Infrastructure" },
+  { icon: Code2, title: "Custom Applications" },
+  { icon: Database, title: "Data Governance" },
+];
+
+const steps = [
+  { num: "1", title: "Discover", desc: "We assess your current state, understand your challenges, and identify opportunities for improvement." },
+  { num: "2", title: "Design", desc: "Our team builds a tailored roadmap with clear milestones, priorities, and measurable outcomes." },
+  { num: "3", title: "Build", desc: "We implement solutions iteratively with agile sprints, regular check-ins, and continuous feedback." },
+  { num: "4", title: "Scale", desc: "Post-launch support, training, and optimization ensure your solutions grow with your organization." },
 ];
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-[#08081a]" />
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 w-[1000px] h-[600px] rounded-full" style={{
-          background: "radial-gradient(ellipse at center, rgba(6,69,255,0.15) 0%, rgba(80,40,200,0.08) 40%, transparent 70%)"
-        }} />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-        <div className="absolute top-1/4 right-10 w-[200px] h-[200px] bg-purple-500/8 rounded-full blur-[80px]" />
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-32 pb-20">
-        <motion.div initial="hidden" animate="visible" variants={stagger} className="text-center max-w-4xl mx-auto">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0645FF]/25 bg-[#0645FF]/8 mb-8">
-            <Sparkles className="w-3.5 h-3.5 text-[#4B8BFF]" />
-            <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">AI-Driven Technology Consulting</span>
+    <section className="pt-28 pb-20 bg-[#0b0b0f]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" animate="visible" variants={stagger} className="text-center max-w-3xl mx-auto pt-8">
+          <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
+            <span className="text-[12px] text-white/50 font-medium">AI-Driven Consulting</span>
+            <span className="text-[12px] text-white/30 mx-1">·</span>
+            <Link href="/contact" className="text-[12px] text-[#3B7BFF] font-medium hover:text-[#5B9BFF] transition-colors flex items-center gap-0.5">
+              Book a Consultation <ArrowRight className="w-3 h-3" />
+            </Link>
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="font-heading text-5xl sm:text-6xl lg:text-[4.5rem] font-bold text-white leading-[1.08] tracking-tight">
-            Innovate <span className="bg-gradient-to-r from-[#0645FF] via-[#4B8BFF] to-[#82b1ff] bg-clip-text text-transparent">Faster</span> With
-            <br />Technology That Adapts
+          <motion.h1 variants={fadeIn} className="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
+            Technology Consulting<br />for a Smarter Future
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="mt-6 text-lg sm:text-xl text-white/40 max-w-2xl mx-auto leading-relaxed">
-            Avion Tech builds AI-powered solutions with unmatched quality, speed, and value. Decades of expertise, one mission — delivering the future today.
+          <motion.p variants={fadeIn} className="mt-5 text-base sm:text-lg text-white/40 max-w-lg mx-auto leading-relaxed">
+            Avion Tech helps organizations modernize, optimize, and transform — with unmatched quality, speed, and decades of expertise.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <motion.div variants={fadeIn} className="mt-8 flex items-center justify-center gap-3">
             <Link href="/contact">
-              <Button size="lg" className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-8 text-base rounded-xl h-12 group" data-testid="button-hero-cta">
-                Book a Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+              <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10 group" data-testid="button-hero-cta">
+                Get Started Free
+                <ArrowRight className="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-0.5" />
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="border-white/10 text-white font-semibold px-8 text-base rounded-xl h-12 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm" data-testid="button-hero-services">
+              <Button variant="outline" className="border-white/[0.1] text-white/70 font-medium rounded-full px-6 h-10 bg-transparent hover:bg-white/[0.04]" data-testid="button-hero-services">
                 Explore Services
               </Button>
             </Link>
           </motion.div>
         </motion.div>
 
-        <motion.div initial="hidden" animate="visible" variants={stagger} className="mt-20">
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/[0.06] bg-white/[0.04]">
-            {[
-              { val: "20+", lab: "Years Experience" },
-              { val: "500+", lab: "Projects Delivered" },
-              { val: "99%", lab: "Client Satisfaction" },
-              { val: "50+", lab: "Industries Served" },
-            ].map((s) => (
-              <div key={s.lab} className="bg-[#0c0c1d]/80 backdrop-blur-sm p-6 sm:p-8 text-center" data-testid={`text-stat-${s.lab.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="font-heading text-2xl sm:text-3xl font-bold text-white">{s.val}</div>
-                <div className="text-xs text-white/30 mt-1.5">{s.lab}</div>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }} className="mt-14">
+          <div className="relative rounded-2xl border border-white/[0.08] bg-[#141419] overflow-hidden">
+            <div className="rounded-2xl bg-[#141419] p-10 sm:p-16 flex items-center justify-center min-h-[280px] sm:min-h-[360px]">
+              <div className="relative w-full max-w-lg">
+                <div className="relative text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0645FF]/10 border border-[#0645FF]/20 mb-6">
+                    <Brain className="w-9 h-9 text-[#3B7BFF]" />
+                  </div>
+                  <p className="text-lg font-heading font-semibold text-white">Delivering the Future Today</p>
+                  <p className="text-sm text-white/30 mt-2">500+ projects · 50+ industries · 20+ years</p>
+                </div>
               </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.5 }} className="mt-10 text-center">
+          <p className="text-xs text-white/25 mb-4 tracking-wider uppercase">Trusted by organizations across</p>
+          <div className="flex items-center justify-center gap-8 sm:gap-12 flex-wrap">
+            {["Government", "Healthcare", "Finance", "Manufacturing", "Education"].map((name) => (
+              <span key={name} className="text-sm font-medium text-white/20">{name}</span>
             ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function WhySection() {
+  return (
+    <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={stagger} className="text-center mb-14">
+          <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Why Avion Tech</motion.span>
+          <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 leading-tight">
+            Never Let Technology Hold<br />Your Organization Back Again
+          </motion.h2>
+          <motion.p variants={fadeIn} className="mt-4 text-base text-white/40 max-w-lg mx-auto">
+            Three reasons why leading organizations choose Avion Tech over traditional consulting.
+          </motion.p>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }} variants={stagger} className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {features.map((f) => (
+            <motion.div key={f.title} variants={fadeIn}>
+              <div className="h-full rounded-2xl border border-[#0645FF]/20 bg-[#141419] p-8 hover:border-[#0645FF]/40 transition-colors duration-300" data-testid={`card-feature-${f.title.split('.')[0].toLowerCase().replace(/\s/g, '-')}`}>
+                <div className="w-12 h-12 rounded-xl bg-[#0645FF]/10 flex items-center justify-center mb-5">
+                  <f.icon className="w-5 h-5 text-[#3B7BFF]" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-white mb-2">{f.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed">{f.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function StepsSection() {
+  return (
+    <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={stagger} className="text-center mb-14">
+          <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">How It Works</motion.span>
+          <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 leading-tight">
+            Get Started in 4 Simple Steps
+          </motion.h2>
+          <motion.p variants={fadeIn} className="mt-4 text-base text-white/40 max-w-lg mx-auto">
+            From discovery to scale — faster than you think.
+          </motion.p>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-8">
+            {steps.map((step) => (
+              <motion.div key={step.num} variants={fadeIn} className="flex gap-5" data-testid={`step-${step.num}`}>
+                <div className="shrink-0 text-[13px] font-bold text-[#3B7BFF] pt-0.5 w-4">{step.num}</div>
+                <div className="border-l border-white/[0.06] pl-5">
+                  <span className="text-xs text-white/25"> — </span>
+                  <span className="font-heading text-base font-semibold text-white">{step.title}</span>
+                  <p className="text-sm text-white/40 leading-relaxed mt-1.5">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div variants={fadeIn} className="hidden lg:block">
+            <div className="rounded-2xl border border-white/[0.08] bg-[#141419] p-8 min-h-[340px] flex items-center justify-center">
+              <div className="text-center">
+                <div className="grid grid-cols-2 gap-4 max-w-xs mx-auto">
+                  {[
+                    { val: "500+", label: "Projects" },
+                    { val: "99%", label: "Satisfaction" },
+                    { val: "20+", label: "Years" },
+                    { val: "50+", label: "Industries" },
+                  ].map((s) => (
+                    <div key={s.label} className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.06]" data-testid={`text-stat-${s.label.toLowerCase()}`}>
+                      <div className="font-heading text-2xl font-bold text-white">{s.val}</div>
+                      <div className="text-xs text-white/30 mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
@@ -109,131 +212,37 @@ function HeroSection() {
 
 function ServicesPreview() {
   return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#0a0a1c]" />
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#0645FF]/[0.03] to-transparent" />
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-        backgroundSize: "40px 40px"
-      }} />
-
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
-          <motion.div variants={fadeInUp} className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
-              <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Services</span>
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-              The Technology That{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Powers Growth</span>
-            </h2>
-          </motion.div>
-          <motion.div variants={fadeInUp}>
+    <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={stagger} className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+          <div>
+            <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Services</motion.span>
+            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 leading-tight">
+              Full-Spectrum Capabilities
+            </motion.h2>
+          </div>
+          <motion.div variants={fadeIn}>
             <Link href="/services">
-              <Button variant="outline" className="border-white/10 text-white font-semibold px-6 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] group" data-testid="button-services-more">
-                View All 9 Services
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+              <Button variant="outline" className="border-white/[0.1] text-white/70 font-medium rounded-full px-5 h-9 text-sm bg-transparent hover:bg-white/[0.04] group" data-testid="button-services-more">
+                All 9 Services <ChevronRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover:translate-x-0.5" />
               </Button>
             </Link>
           </motion.div>
         </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service) => (
-            <motion.div key={service.title} variants={fadeInUp} className="group">
-              <div className="relative h-full rounded-2xl p-7 bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1" data-testid={`card-service-${service.title.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center mb-5">
-                  <service.icon className="w-5 h-5 text-[#4B8BFF]" />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.map((s) => (
+            <motion.div key={s.title} variants={fadeIn}>
+              <Link href="/services">
+                <div className="flex items-center gap-4 p-5 rounded-xl border border-white/[0.06] bg-[#141419] hover:border-white/[0.12] transition-colors cursor-pointer group" data-testid={`card-service-${s.title.toLowerCase().replace(/\s/g, '-')}`}>
+                  <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center shrink-0">
+                    <s.icon className="w-4.5 h-4.5 text-[#3B7BFF]" />
+                  </div>
+                  <span className="font-heading text-sm font-semibold text-white/80 group-hover:text-white transition-colors">{s.title}</span>
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-sm text-white/35 leading-relaxed">{service.desc}</p>
-              </div>
+              </Link>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function AboutPreview() {
-  return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#08081a]" />
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div variants={fadeInLeft}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
-              <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">About Us</span>
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight">
-              Building Technology,{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Empowering Growth.</span>
-            </h2>
-            <p className="mt-5 text-white/40 leading-relaxed">
-              Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance and adapt to evolving technology landscapes.
-            </p>
-
-            <div className="mt-8 space-y-4">
-              {[
-                { title: "Innovation", desc: "We believe in continuous improvement and cutting-edge solutions." },
-                { title: "Transparency", desc: "Open communication and honesty are at our core." },
-                { title: "Customer-First", desc: "Every solution we build begins with the client's success in mind." },
-              ].map((item) => (
-                <div key={item.title} className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                  <div className="shrink-0 w-2 h-2 rounded-full bg-[#0645FF] mt-2" />
-                  <div>
-                    <h4 className="font-heading text-sm font-semibold text-white">{item.title}</h4>
-                    <p className="text-sm text-white/30 mt-0.5">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/about">
-                <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-6 rounded-xl group" data-testid="button-about-cta">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <span className="text-sm text-white/40 hover:text-white/60 transition-colors cursor-pointer flex items-center gap-1">
-                  Contact Us <ChevronRight className="w-3.5 h-3.5" />
-                </span>
-              </Link>
-            </div>
-          </motion.div>
-
-          <motion.div variants={fadeInRight}>
-            <div className="relative rounded-2xl border border-white/[0.06] bg-[#0e0e22]/60 p-8 overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#0645FF]/10 rounded-full blur-[80px]" />
-              <div className="relative grid grid-cols-2 gap-5">
-                {[
-                  { val: "20+", label: "Years Experience" },
-                  { val: "500+", label: "Projects Delivered" },
-                  { val: "99%", label: "Client Satisfaction" },
-                  { val: "50+", label: "Industries Served" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center p-5 rounded-xl bg-white/[0.03] border border-white/[0.04]">
-                    <div className="font-heading text-3xl font-bold text-white">{stat.val}</div>
-                    <div className="text-xs text-white/30 mt-1.5">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-[#0645FF]/10 to-transparent border border-[#0645FF]/10">
-                <div>
-                  <div className="text-xs text-[#4B8BFF] font-medium">Growth</div>
-                  <div className="text-sm text-white/50 mt-0.5">Helping our clients grow meets growing.</div>
-                </div>
-                <div className="font-heading text-2xl font-bold text-white">80%</div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -242,106 +251,45 @@ function AboutPreview() {
 
 function SecurityCallout() {
   return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#0a0a1c]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-500/5 rounded-full blur-[120px]" />
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
-          <div className="relative rounded-3xl border border-white/[0.06] bg-[#0e0e22]/60 p-10 sm:p-14 overflow-hidden">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#0645FF]/8 rounded-full blur-[120px]" />
-            <div className="absolute -bottom-20 -left-20 w-[200px] h-[200px] bg-purple-500/5 rounded-full blur-[80px]" />
-
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div variants={fadeInLeft}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/25 bg-[#0645FF]/8 mb-6">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#4B8BFF]" />
-                  <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Security First</span>
-                </div>
-                <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight">
-                  Your Data Security Is{" "}
-                  <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Our Priority</span>
-                </h2>
-                <p className="mt-4 text-white/40 leading-relaxed">
-                  Avion Tech implements enterprise-grade security at every level. From SOC 2 compliance to zero-trust architectures, we protect what matters most.
-                </p>
-                <div className="mt-8">
-                  <Link href="/security">
-                    <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-6 rounded-xl group" data-testid="button-security-callout">
-                      Learn About Our Security
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                    </Button>
-                  </Link>
-                </div>
+    <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <div className="rounded-2xl border border-white/[0.08] bg-[#141419] overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="p-8 sm:p-12">
+              <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Security First</motion.span>
+              <motion.h2 variants={fadeIn} className="font-heading text-2xl sm:text-3xl font-bold text-white mt-3 leading-tight">
+                Your Data Security<br />Is Our Priority
+              </motion.h2>
+              <motion.p variants={fadeIn} className="mt-4 text-sm text-white/40 leading-relaxed max-w-md">
+                Enterprise-grade security at every level. From SOC 2 compliance to zero-trust architectures, we protect what matters most.
+              </motion.p>
+              <motion.div variants={fadeIn} className="mt-6">
+                <Link href="/security">
+                  <Button variant="outline" className="border-white/[0.1] text-white/70 font-medium rounded-full px-5 h-9 text-sm bg-transparent hover:bg-white/[0.04] group" data-testid="button-security-callout">
+                    Learn More <ChevronRight className="w-3.5 h-3.5 ml-1 transition-transform group-hover:translate-x-0.5" />
+                  </Button>
+                </Link>
               </motion.div>
+            </motion.div>
 
-              <motion.div variants={fadeInRight} className="grid grid-cols-2 gap-4">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-white/[0.06]">
+              <div className="grid grid-cols-2 gap-4 h-full">
                 {[
-                  { icon: Lock, title: "Zero-Trust", desc: "Never trust, always verify." },
-                  { icon: ShieldCheck, title: "SOC 2 Compliant", desc: "Audited security controls." },
-                  { icon: FileCheck, title: "AES-256 Encryption", desc: "Data encrypted at rest & transit." },
-                  { icon: Shield, title: "24/7 Monitoring", desc: "Continuous threat detection." },
+                  { icon: Lock, title: "Zero-Trust", desc: "Never trust, always verify" },
+                  { icon: ShieldCheck, title: "SOC 2", desc: "Audited security controls" },
+                  { icon: FileCheck, title: "AES-256", desc: "End-to-end encryption" },
+                  { icon: Shield, title: "24/7 Monitoring", desc: "Continuous threat detection" },
                 ].map((item) => (
-                  <div key={item.title} className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.05] hover:border-[#0645FF]/15 transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
-                    <div className="w-9 h-9 rounded-lg bg-[#0645FF]/10 border border-[#0645FF]/10 flex items-center justify-center mb-3">
-                      <item.icon className="w-4 h-4 text-[#4B8BFF]" />
-                    </div>
-                    <h4 className="font-heading text-sm font-semibold text-white mb-1">{item.title}</h4>
-                    <p className="text-xs text-white/30 leading-relaxed">{item.desc}</p>
-                  </div>
+                  <motion.div key={item.title} variants={fadeIn} className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.05]" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
+                    <item.icon className="w-4 h-4 text-[#3B7BFF] mb-2.5" />
+                    <div className="text-sm font-semibold text-white/80">{item.title}</div>
+                    <div className="text-xs text-white/30 mt-0.5">{item.desc}</div>
+                  </motion.div>
                 ))}
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function IndustriesPreview() {
-  return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#08081a]" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-14">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
-            <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Industries</span>
-          </motion.div>
-          <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            Serving{" "}
-            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Diverse Industries</span>
-          </motion.h2>
-        </motion.div>
-
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {sectors.map((sector) => (
-            <motion.div key={sector.title} variants={fadeInUp}>
-              <div className="relative group h-full rounded-2xl p-6 bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1" data-testid={`card-industry-${sector.title.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0645FF]/15 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center mb-5">
-                  <sector.icon className="w-5 h-5 text-[#4B8BFF]" />
-                </div>
-                <h3 className="font-heading text-base font-semibold text-white mb-3">{sector.title}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {sector.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1 rounded-lg bg-[#0645FF]/8 text-[#4B8BFF]/80 border border-[#0645FF]/10">{item}</span>
-                  ))}
-                </div>
               </div>
             </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-10 text-center">
-          <Link href="/industries">
-            <Button variant="outline" className="border-white/10 text-white font-semibold px-6 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] group" data-testid="button-industries-more">
-              Explore All Industries
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-            </Button>
-          </Link>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -351,10 +299,10 @@ export default function Home() {
   return (
     <Layout>
       <HeroSection />
+      <WhySection />
+      <StepsSection />
       <ServicesPreview />
-      <AboutPreview />
       <SecurityCallout />
-      <IndustriesPreview />
       <CTABanner />
     </Layout>
   );

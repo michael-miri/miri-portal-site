@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Layout, PageHeader, CTABanner, fadeInUp, fadeInLeft, fadeInRight, stagger } from "@/components/layout";
+import { Layout, PageHeader, CTABanner, fadeIn, fadeInUp, stagger } from "@/components/layout";
 
 const generalFAQs = [
   {
@@ -94,35 +94,23 @@ export default function FAQ() {
     <Layout>
       <PageHeader
         label="Frequently Asked Questions"
-        title="Your Questions,"
-        highlight="Answered"
+        title="Your Questions, Answered"
         description="Everything you need to know about working with Avion Tech. Can't find what you're looking for? Get in touch with our team."
       />
 
-      <section className="relative py-24 bg-[#08081a]">
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[120px]" />
-        <div className="relative max-w-4xl mx-auto px-5 sm:px-8">
+      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-16">
             {faqSections.map((section) => (
-              <motion.div key={section.prefix} variants={fadeInUp}>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
-                    <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">{section.title}</span>
-                  </div>
-                </div>
+              <motion.div key={section.prefix} variants={fadeIn}>
+                <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF] mb-5 block">{section.title}</span>
                 <Accordion type="single" collapsible className="space-y-3">
                   {section.data.map((faq, i) => (
-                    <AccordionItem key={i} value={`${section.prefix}-${i}`} className="rounded-xl border border-white/[0.06] bg-[#0e0e22]/60 px-6 overflow-hidden" data-testid={`faq-${section.prefix}-${i}`}>
-                      <AccordionTrigger className="text-left text-white font-medium py-5 hover:no-underline [&[data-state=open]>svg]:text-[#0645FF]">
+                    <AccordionItem key={i} value={`${section.prefix}-${i}`} className="rounded-xl border border-white/[0.08] bg-[#141419] px-6" data-testid={`faq-${section.prefix}-${i}`}>
+                      <AccordionTrigger className="text-white text-sm font-medium hover:no-underline py-4">
                         {faq.q}
                       </AccordionTrigger>
-                      <AccordionContent className="text-white/40 leading-relaxed pb-5">
+                      <AccordionContent className="text-white/40 text-sm leading-relaxed pb-4">
                         {faq.a}
                       </AccordionContent>
                     </AccordionItem>
@@ -134,25 +122,18 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="relative py-20 bg-[#0a0a1c]">
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: "40px 40px"
-        }} />
-        <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-        <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <section className="py-20 bg-[#0b0b0f] border-t border-white/[0.04]">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl font-bold text-white">
-              Still Have Questions?
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="mt-4 text-white/40 max-w-lg mx-auto">
+            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white">Still Have Questions?</motion.h2>
+            <motion.p variants={fadeIn} className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
               Our team is happy to answer any additional questions you might have.
             </motion.p>
-            <motion.div variants={fadeInUp} className="mt-8">
+            <motion.div variants={fadeIn} className="mt-8">
               <Link href="/contact">
-                <Button size="lg" className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-8 rounded-xl group" data-testid="button-faq-contact">
+                <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10" data-testid="button-faq-contact">
                   Contact Us
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
               </Link>
             </motion.div>
