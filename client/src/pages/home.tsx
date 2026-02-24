@@ -126,60 +126,56 @@ function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center bg-[#050a1a] overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/images/hero-abstract.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050a1a]/60 via-[#050a1a]/40 to-[#050a1a]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050a1a] via-transparent to-transparent" />
-        <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#0645FF]/15 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-[#0645FF]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: "4s" }} />
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 20% 50%, rgba(6,69,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(6,69,255,0.1) 0%, transparent 40%), radial-gradient(circle at 60% 80%, rgba(6,69,255,0.08) 0%, transparent 45%)`
+        }} />
+        <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#0645FF]/12 rounded-full blur-[150px]" />
+        <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-[#0645FF]/8 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: "4s" }} />
+        <div className="absolute top-20 right-20 w-[300px] h-[300px] border border-[#0645FF]/[0.06] rounded-full" />
+        <div className="absolute top-32 right-32 w-[200px] h-[200px] border border-[#0645FF]/[0.04] rounded-full" />
+        <div className="absolute bottom-40 left-10 w-2 h-2 bg-[#0645FF]/30 rounded-full" />
+        <div className="absolute top-40 right-1/4 w-1.5 h-1.5 bg-[#0645FF]/20 rounded-full" />
+        <div className="absolute bottom-60 right-20 w-1 h-1 bg-[#4B8BFF]/30 rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0645FF]/30 bg-[#0645FF]/10 mb-8">
-              <Sparkles className="w-3.5 h-3.5 text-[#0645FF]" />
-              <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">AI-Driven Consulting</span>
-            </motion.div>
-
-            <motion.h1 variants={fadeInUp} className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
-              Delivering<br />the Future{" "}
-              <span className="relative">
-                <span className="bg-gradient-to-r from-[#0645FF] via-[#4B8BFF] to-[#82b1ff] bg-clip-text text-transparent">Today</span>
-                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#0645FF] to-transparent rounded-full" />
-              </span>
-            </motion.h1>
-
-            <motion.p variants={fadeInUp} className="mt-6 text-lg text-white/50 max-w-lg leading-relaxed">
-              We build AI-powered solutions with unmatched quality, speed, and value. Decades of expertise, one mission.
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-4">
-              <Button size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-[#0645FF] text-white font-semibold px-8 text-base group" data-testid="button-hero-cta">
-                Book a Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-              </Button>
-              <Button size="lg" variant="outline" onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="border-white/15 text-white font-semibold px-8 text-base bg-white/5 backdrop-blur-sm" data-testid="button-hero-services">
-                Our Services
-              </Button>
-            </motion.div>
-
-            <motion.div variants={fadeInUp} className="mt-16 flex items-center gap-10">
-              {[{ val: "20+", lab: "Years Experience" }, { val: "500+", lab: "Projects" }, { val: "99%", lab: "Satisfaction" }].map((s) => (
-                <div key={s.lab}>
-                  <div className="font-heading text-2xl font-bold text-white" data-testid={`text-stat-${s.lab.toLowerCase().replace(/\s/g, '-')}`}>{s.val}</div>
-                  <div className="text-xs text-white/35 mt-0.5">{s.lab}</div>
-                </div>
-              ))}
-            </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0645FF]/30 bg-[#0645FF]/10 mb-8">
+            <Sparkles className="w-3.5 h-3.5 text-[#0645FF]" />
+            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">AI-Driven Consulting</span>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }} className="hidden lg:block">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-[#0645FF]/20 via-transparent to-[#0645FF]/10 rounded-3xl blur-2xl" />
-              <img src="/images/services-visual.png" alt="AI Technology" className="relative w-full max-w-lg mx-auto rounded-2xl" style={{ filter: "drop-shadow(0 0 60px rgba(6,69,255,0.15))" }} />
-            </div>
+          <motion.h1 variants={fadeInUp} className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+            Delivering<br />the Future{" "}
+            <span className="relative">
+              <span className="bg-gradient-to-r from-[#0645FF] via-[#4B8BFF] to-[#82b1ff] bg-clip-text text-transparent">Today</span>
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#0645FF] to-transparent rounded-full" />
+            </span>
+          </motion.h1>
+
+          <motion.p variants={fadeInUp} className="mt-6 text-lg text-white/50 max-w-lg leading-relaxed">
+            We build AI-powered solutions with unmatched quality, speed, and value. Decades of expertise, one mission.
+          </motion.p>
+
+          <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-4">
+            <Button size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-[#0645FF] text-white font-semibold px-8 text-base group" data-testid="button-hero-cta">
+              Book a Free Consultation
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+            </Button>
+            <Button size="lg" variant="outline" onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="border-white/15 text-white font-semibold px-8 text-base bg-white/5 backdrop-blur-sm" data-testid="button-hero-services">
+              Our Services
+            </Button>
           </motion.div>
-        </div>
+
+          <motion.div variants={fadeInUp} className="mt-16 flex items-center gap-10">
+            {[{ val: "20+", lab: "Years Experience" }, { val: "500+", lab: "Projects" }, { val: "99%", lab: "Satisfaction" }].map((s) => (
+              <div key={s.lab}>
+                <div className="font-heading text-2xl font-bold text-white" data-testid={`text-stat-${s.lab.toLowerCase().replace(/\s/g, '-')}`}>{s.val}</div>
+                <div className="text-xs text-white/35 mt-0.5">{s.lab}</div>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
@@ -197,22 +193,16 @@ function ServicesSection() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#0645FF]/[0.03] to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          <motion.div variants={fadeInLeft}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-16">
+          <motion.div variants={fadeInUp} className="max-w-2xl">
             <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">What We Do</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
-              Solutions That<br />
+              Solutions That{" "}
               <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Move You Forward</span>
             </h2>
             <p className="mt-5 text-white/45 max-w-md leading-relaxed">
               From concept to deployment, we bring innovative technology to every challenge with security, speed, and precision.
             </p>
-          </motion.div>
-          <motion.div variants={fadeInRight} className="hidden lg:flex justify-end">
-            <div className="relative w-72 h-72">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0645FF]/20 to-transparent rounded-full blur-3xl" />
-              <img src="/images/services-visual.png" alt="" className="relative w-full h-full object-contain opacity-80" />
-            </div>
           </motion.div>
         </motion.div>
 
@@ -258,13 +248,18 @@ function AboutSection() {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div variants={fadeInLeft} className="relative">
-            <div className="relative">
-              <div className="absolute -inset-6 bg-gradient-to-br from-[#0645FF]/10 via-transparent to-[#0645FF]/5 rounded-3xl blur-xl" />
-              <img src="/images/quality-visual.png" alt="Quality and Innovation" className="relative w-full rounded-2xl" style={{ filter: "drop-shadow(0 0 40px rgba(6,69,255,0.1))" }} />
-              <div className="absolute -bottom-4 -right-4 bg-[#0645FF] rounded-xl px-6 py-4 shadow-lg shadow-[#0645FF]/20">
-                <div className="font-heading text-2xl font-bold text-white">99%</div>
-                <div className="text-xs text-white/70 mt-0.5">Client Satisfaction</div>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { val: "20+", label: "Years Experience", gradient: "from-[#0645FF]/15 to-[#0645FF]/5" },
+                { val: "500+", label: "Projects Delivered", gradient: "from-[#4B8BFF]/15 to-[#4B8BFF]/5" },
+                { val: "99%", label: "Client Satisfaction", gradient: "from-[#0645FF]/20 to-[#0645FF]/5" },
+                { val: "50+", label: "Industries Served", gradient: "from-[#4B8BFF]/15 to-[#0645FF]/5" },
+              ].map((stat) => (
+                <div key={stat.label} className={`rounded-2xl bg-gradient-to-br ${stat.gradient} border border-white/[0.05] p-6 text-center`}>
+                  <div className="font-heading text-3xl font-bold text-white">{stat.val}</div>
+                  <div className="text-xs text-white/40 mt-1">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
