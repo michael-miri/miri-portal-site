@@ -151,7 +151,7 @@ function HeroSection() {
         <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0645FF]/30 bg-[#0645FF]/10 mb-8">
             <Sparkles className="w-3.5 h-3.5 text-[#0645FF]" />
-            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">AI-Driven Consulting</span>
+            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Avion Tech &mdash; AI-Driven Consulting</span>
           </motion.div>
 
           <motion.h1 variants={fadeInUp} className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
@@ -163,7 +163,7 @@ function HeroSection() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="mt-6 text-lg text-white/50 max-w-lg leading-relaxed">
-            We build AI-powered solutions with unmatched quality, speed, and value. Decades of expertise, one mission.
+            <span className="text-white/70 font-medium">Avion Tech</span> builds AI-powered solutions with unmatched quality, speed, and value. Decades of expertise, one mission.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-4">
@@ -204,13 +204,13 @@ function ServicesSection() {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-16">
           <motion.div variants={fadeInUp} className="max-w-2xl">
-            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Technology Consulting</span>
+            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Avion Tech Capabilities</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
               Full-Spectrum{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Capabilities</span>
+              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Technology Consulting</span>
             </h2>
             <p className="mt-5 text-white/45 max-w-md leading-relaxed">
-              From cloud migration and AI to cybersecurity and digital twins, we deliver actionable insights and practical solutions that drive efficiency and innovation.
+              Avion Tech delivers actionable insights and practical solutions across cloud, AI, cybersecurity, digital twins, and more.
             </p>
           </motion.div>
         </motion.div>
@@ -271,11 +271,11 @@ function AboutSection() {
           <motion.div variants={fadeInRight}>
             <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Why Avion Tech</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
-              Harness the Full Potential of{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Digital Transformation</span>
+              Why Choose{" "}
+              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Avion Tech</span>
             </h2>
             <p className="mt-5 text-white/45 leading-relaxed">
-              Our consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance and adapt to evolving technology landscapes.
+              Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance and adapt to evolving technology landscapes.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -334,7 +334,7 @@ function IndustriesSection() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Who We Serve</motion.span>
+          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Avion Tech Industries</motion.span>
           <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
             Built for{" "}
             <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Every Sector</span>
@@ -406,10 +406,10 @@ function TeamSection() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Leadership</motion.span>
+          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Avion Tech Leadership</motion.span>
           <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
-            Meet Your{" "}
-            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Team</span>
+            Meet the{" "}
+            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Avion Tech Team</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
             Experienced leaders committed to collaboration, innovation, and delivering results.
@@ -478,13 +478,13 @@ function ContactSection() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Get Started</motion.span>
+          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Contact Avion Tech</motion.span>
           <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
             Let's Build{" "}
             <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Together</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
-            Book a free consultation. No obligations, no pressure.
+            Book a free consultation with Avion Tech. No obligations, no pressure.
           </motion.p>
         </motion.div>
 
@@ -547,8 +547,8 @@ function ContactSection() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="lg:col-span-2 flex flex-col gap-5">
             <div className="rounded-2xl border border-white/[0.06] bg-gradient-to-br from-[#0645FF]/10 to-transparent p-6">
-              <h4 className="font-heading text-base font-semibold text-white mb-4">Why Choose Us?</h4>
-              {["Free consultation, no strings attached", "Transparent pricing, no hidden fees", "Dedicated team from day one", "Proven results across 50+ industries"].map((item) => (
+              <h4 className="font-heading text-base font-semibold text-white mb-4">Why Choose Avion Tech?</h4>
+              {["Free consultation, no strings attached", "Transparent pricing, no hidden fees", "Dedicated Avion Tech team from day one", "Proven results across 50+ industries"].map((item) => (
                 <div key={item} className="flex items-center gap-3 mb-3 last:mb-0">
                   <CheckCircle2 className="w-4 h-4 text-[#0645FF] shrink-0" />
                   <span className="text-sm text-white/50">{item}</span>
@@ -598,10 +598,10 @@ function CTABanner() {
       <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
           <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Ready to Outpace<br />the Competition?
+            Ready to Build With<br />Avion Tech?
           </motion.h2>
           <motion.p variants={fadeInUp} className="mt-4 text-lg text-white/70 max-w-md mx-auto">
-            Join hundreds of organizations building the future with Avion Tech.
+            Join hundreds of organizations delivering the future today with Avion Tech.
           </motion.p>
           <motion.div variants={fadeInUp} className="mt-8">
             <Button size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-white text-[#0645FF] font-bold px-10 text-base group" data-testid="button-cta-bottom">
