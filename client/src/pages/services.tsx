@@ -123,7 +123,7 @@ export default function Services() {
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[11px] text-[#C4A882]/50 font-mono">{service.num}</span>
+                <span className="text-[12px] text-[#C4A882]/50 font-mono">{service.num}</span>
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-2xl font-bold text-white leading-tight">{service.title}</h3>

@@ -79,7 +79,7 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-1">
-                  <span className="text-[11px] text-[#C4A882]/50 font-mono">{project.num}</span>
+                  <span className="text-[12px] text-[#C4A882]/50 font-mono">{project.num}</span>
                 </div>
                 <div className="lg:col-span-6">
                   <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
@@ -95,7 +95,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="lg:col-span-5">
-                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-6">Key Outcomes</span>
+                  <span className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-6">Key Outcomes</span>
                   <div className="space-y-0">
                     {project.results.map((result, j) => (
                       <div key={result} className={`py-4 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
