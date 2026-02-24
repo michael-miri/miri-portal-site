@@ -6,15 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import {
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-  CheckCircle2,
-} from "lucide-react";
-import { motion } from "framer-motion";
-import { Layout, PageHeader, CTABanner, fadeIn, fadeInLeft, fadeInRight, stagger } from "@/components/layout";
+import { ArrowRight } from "lucide-react";
+import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -45,33 +38,33 @@ export default function Contact() {
     <Layout>
       <PageHeader
         label="Contact Avion Tech"
-        title="Let's Build Together"
-        description="Book a free consultation. No obligations, no pressure — just an honest conversation about your technology needs."
+        title="Let's build together."
+        description="Book a free consultation. No obligations — just an honest conversation about your technology needs."
       />
 
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeft} className="lg:col-span-3">
-              <div className="rounded-2xl border border-white/[0.08] bg-[#141419] p-8">
-                <h2 className="font-heading text-2xl font-bold text-white mb-6">Send Us a Message</h2>
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-7">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+                <h2 className="font-heading text-2xl font-bold text-white mb-8">Send us a message</h2>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/60 text-sm">Name *</FormLabel>
+                          <FormLabel className="text-white/40 text-[13px]">Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="John Doe" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/40" data-testid="input-name" />
+                            <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/60 text-sm">Email *</FormLabel>
+                          <FormLabel className="text-white/40 text-[13px]">Email *</FormLabel>
                           <FormControl>
-                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/40" data-testid="input-email" />
+                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -79,70 +72,64 @@ export default function Contact() {
                     </div>
                     <FormField control={form.control} name="company" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/60 text-sm">Company</FormLabel>
+                        <FormLabel className="text-white/40 text-[13px]">Company</FormLabel>
                         <FormControl>
-                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/40" data-testid="input-company" />
+                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-company" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/60 text-sm">How Can We Help? *</FormLabel>
+                        <FormLabel className="text-white/40 text-[13px]">How can we help? *</FormLabel>
                         <FormControl>
-                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/40 resize-none" data-testid="input-message" />
+                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg focus:border-white/20 resize-none" data-testid="input-message" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
-                    <Button type="submit" className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10 w-full sm:w-auto" data-testid="button-submit-contact">
+                    <Button type="submit" className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90 w-full sm:w-auto" data-testid="button-submit-contact">
                       Send Message
-                      <ArrowRight className="w-4 h-4 ml-1.5" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </form>
                 </Form>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="lg:col-span-2 space-y-6">
-              <div className="rounded-2xl border border-white/[0.08] bg-[#141419] p-7">
-                <h3 className="font-heading text-lg font-semibold text-white mb-6">Contact Info</h3>
-                <div className="space-y-5">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Contact Info</span>
+                <div className="space-y-6">
                   {[
-                    { icon: Mail, label: "Email", value: "hello@aviontech.com" },
-                    { icon: Phone, label: "Phone", value: "(859) 555-0142" },
-                    { icon: MapPin, label: "Location", value: "Lexington, Kentucky" },
+                    { label: "Email", value: "hello@aviontech.com" },
+                    { label: "Phone", value: "(859) 555-0142" },
+                    { label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-3" data-testid={`text-contact-${item.label.toLowerCase()}`}>
-                      <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center shrink-0">
-                        <item.icon className="w-5 h-5 text-[#3B7BFF]" />
-                      </div>
-                      <div>
-                        <div className="text-xs text-white/40">{item.label}</div>
-                        <div className="text-sm text-white/70 mt-0.5">{item.value}</div>
-                      </div>
+                    <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>
+                      <div className="text-[11px] text-white/20 uppercase tracking-wider">{item.label}</div>
+                      <div className="text-[15px] text-white/50 mt-1">{item.value}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/[0.08] bg-[#141419] p-7">
-                <h3 className="font-heading text-lg font-semibold text-white mb-4">What to Expect</h3>
-                <ul className="space-y-3">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">What to Expect</span>
+                <div className="space-y-0">
                   {[
                     "Response within 24 hours",
                     "Free 30-60 min consultation",
                     "No obligation, no pressure",
                     "Tailored recommendations",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#3B7BFF] shrink-0 mt-0.5" />
-                      <span className="text-sm text-white/40">{item}</span>
-                    </li>
+                  ].map((item, i) => (
+                    <div key={item} className={`py-4 ${i > 0 ? "border-t border-white/[0.04]" : ""}`}>
+                      <span className="text-[14px] text-white/35">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,14 +1,13 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Layout, PageHeader, CTABanner, fadeIn, fadeInUp, stagger } from "@/components/layout";
+import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const generalFAQs = [
   {
@@ -94,50 +93,53 @@ export default function FAQ() {
     <Layout>
       <PageHeader
         label="Frequently Asked Questions"
-        title="Your Questions, Answered"
-        description="Everything you need to know about working with Avion Tech. Can't find what you're looking for? Get in touch with our team."
+        title="Your questions, answered."
+        description="Everything you need to know about working with Avion Tech. Can't find what you're looking for? Get in touch."
       />
 
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-4xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-16">
-            {faqSections.map((section) => (
-              <motion.div key={section.prefix} variants={fadeIn}>
-                <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF] mb-5 block">{section.title}</span>
-                <Accordion type="single" collapsible className="space-y-3">
-                  {section.data.map((faq, i) => (
-                    <AccordionItem key={i} value={`${section.prefix}-${i}`} className="rounded-xl border border-white/[0.08] bg-[#141419] px-6" data-testid={`faq-${section.prefix}-${i}`}>
-                      <AccordionTrigger className="text-white text-sm font-medium hover:no-underline py-4">
-                        {faq.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-white/40 text-sm leading-relaxed pb-4">
-                        {faq.a}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </motion.div>
-            ))}
-          </motion.div>
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[900px] mx-auto px-6 sm:px-10">
+          {faqSections.map((section, sIdx) => (
+            <div key={section.prefix} className={`py-16 ${sIdx > 0 ? "border-t border-white/[0.06]" : ""}`}>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-8">{section.title}</span>
+              <Accordion type="single" collapsible className="space-y-0">
+                {section.data.map((faq, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`${section.prefix}-${i}`}
+                    className={`border-b border-white/[0.06] px-0 ${i === 0 ? "border-t" : ""}`}
+                    data-testid={`faq-${section.prefix}-${i}`}
+                  >
+                    <AccordionTrigger className="text-white text-[15px] font-medium hover:no-underline py-6">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-white/30 text-[14px] leading-relaxed pb-6">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-20 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white">Still Have Questions?</motion.h2>
-            <motion.p variants={fadeIn} className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
-              Our team is happy to answer any additional questions you might have.
-            </motion.p>
-            <motion.div variants={fadeIn} className="mt-8">
-              <Link href="/contact">
-                <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10" data-testid="button-faq-contact">
-                  Contact Us
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
+          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
+            Still have questions?
+          </h2>
+          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+            Our team is happy to answer anything. No pressure, just clarity.
+          </p>
+          <div className="mt-10">
+            <Link href="/contact">
+              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-faq-contact">
+                Contact Us
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

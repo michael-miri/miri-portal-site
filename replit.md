@@ -4,21 +4,22 @@
 Multi-page marketing website for Avion Tech, an AI-driven tech consulting company. Conversion-optimized site with separate pages for Services, About (with Team), Industries, Portfolio, FAQ, Security, and Contact. Content sourced from Stantec Proposal document.
 
 ## Recent Changes
-- 2026-02-24: Full redesign to premium dark aesthetic with glass-morphism cards, glowing orbs, dot grid patterns
+- 2026-02-24: Complete redesign to editorial magazine-style layout inspired by NatGeo concept
+- 2026-02-24: Removed all content animations (framer motion only used for mobile nav toggle)
+- 2026-02-24: New design uses asymmetric grids, large editorial typography, gap-px grid patterns
+- 2026-02-24: Background changed to #09090b, cards use #0e0e12, borders white/[0.06]
+- 2026-02-24: White CTA buttons instead of blue, editorial split-headline hero
 - 2026-02-24: Updated logo to new Avion Tech triangle design (Black_and_White_Initial_A_Tech_Business_Logo_-2)
-- 2026-02-24: Floating pill-style navbar with backdrop blur
 - 2026-02-24: Restructured from single-page to multi-page architecture with wouter routing
-- 2026-02-24: Added Security page with callout on home page
-- 2026-02-24: Added Portfolio page with 6 project examples
-- 2026-02-24: Added FAQ page with accordion sections (General, Services, Security, Getting Started)
 - 2026-02-24: Created shared layout components (Navbar, Footer, PageHeader, CTABanner)
 
 ## Architecture
-- **Frontend**: React + Vite + TypeScript + Tailwind CSS + shadcn/ui + Framer Motion
+- **Frontend**: React + Vite + TypeScript + Tailwind CSS + shadcn/ui
 - **Routing**: wouter with Switch/Route, ScrollToTop component
 - **Static site**: No database or API required
-- **Theme**: Dark futuristic design with primary color #0645FF
+- **Theme**: Editorial dark design, #09090b background, white/[0.06] borders, gap-px grids
 - **Fonts**: Space Grotesk (headings), Inter (body)
+- **No content animations** - Framer Motion only used for mobile nav toggle
 
 ## Pages
 1. **Home** (`/`) - Hero, Services preview (6 of 9), About preview, Security callout, Industries preview, CTA

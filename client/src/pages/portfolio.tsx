@@ -1,21 +1,11 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Shield,
-  Smartphone,
-  Globe,
-  Boxes,
-  CheckCircle2,
-} from "lucide-react";
-import { motion } from "framer-motion";
-import { Layout, PageHeader, CTABanner, fadeIn, fadeInUp, stagger } from "@/components/layout";
+import { ArrowRight } from "lucide-react";
+import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const projects = [
   {
-    icon: Globe,
+    num: "01",
     title: "MDAH Interactive Tour System",
     client: "Mississippi Department of Archives & History",
     sector: "Government",
@@ -24,7 +14,7 @@ const projects = [
     tags: ["Digital Twin", "IoT", "Mobile App", "CMS"],
   },
   {
-    icon: Cloud,
+    num: "02",
     title: "Enterprise Cloud Migration",
     client: "Fortune 500 Manufacturer",
     sector: "Private Sector",
@@ -33,7 +23,7 @@ const projects = [
     tags: ["Cloud", "DevOps", "Infrastructure", "Migration"],
   },
   {
-    icon: Brain,
+    num: "03",
     title: "Predictive Maintenance Platform",
     client: "Energy & Utilities Provider",
     sector: "Energy",
@@ -42,7 +32,7 @@ const projects = [
     tags: ["AI/ML", "IoT", "Analytics", "Automation"],
   },
   {
-    icon: Shield,
+    num: "04",
     title: "Federal Cybersecurity Overhaul",
     client: "Federal Government Agency",
     sector: "Government",
@@ -51,7 +41,7 @@ const projects = [
     tags: ["Cybersecurity", "Zero-Trust", "Compliance", "Federal"],
   },
   {
-    icon: Smartphone,
+    num: "05",
     title: "Smart City Dashboard",
     client: "Metropolitan Municipality",
     sector: "Municipal",
@@ -60,7 +50,7 @@ const projects = [
     tags: ["Smart City", "Data Visualization", "IoT", "Public Service"],
   },
   {
-    icon: Boxes,
+    num: "06",
     title: "OT/IT Convergence Platform",
     client: "Industrial Manufacturing Company",
     sector: "Manufacturing",
@@ -75,77 +65,67 @@ export default function Portfolio() {
     <Layout>
       <PageHeader
         label="Our Work"
-        title="Project Portfolio"
-        description="Real-world examples of how Avion Tech helps organizations transform through practical, impactful technology solutions."
+        title="Real results. Real projects."
+        description="A selection of projects that demonstrate how we help organizations transform through practical, impactful technology solutions."
       />
 
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
-            <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Case Studies</motion.span>
-            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">Featured Projects</motion.h2>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-6">
-            {projects.map((project) => (
-              <motion.div key={project.title} variants={fadeIn}>
-                <div className="rounded-2xl border border-white/[0.08] bg-[#141419] p-7 sm:p-8 hover:border-white/[0.15] transition-colors duration-300" data-testid={`card-project-${project.title.toLowerCase().replace(/\s/g, '-')}`}>
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                    <div className="lg:col-span-3">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center shrink-0">
-                          <project.icon className="w-5 h-5 text-[#3B7BFF]" />
-                        </div>
-                        <div>
-                          <h3 className="font-heading text-lg font-semibold text-white">{project.title}</h3>
-                          <div className="flex items-center gap-3 mt-1 flex-wrap">
-                            <span className="text-sm text-white/40">{project.client}</span>
-                            <span className="text-xs px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/50">{project.sector}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-sm text-white/40 leading-relaxed mb-5">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/50">{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="lg:col-span-2">
-                      <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF] mb-4">Key Outcomes</h4>
-                      <ul className="space-y-2.5">
-                        {project.results.map((result) => (
-                          <li key={result} className="flex items-start gap-2.5">
-                            <CheckCircle2 className="w-4 h-4 text-[#3B7BFF] shrink-0 mt-0.5" />
-                            <span className="text-sm text-white/40 leading-relaxed">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          {projects.map((project, i) => (
+            <div
+              key={project.num}
+              className={`py-20 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
+              data-testid={`card-project-${project.title.toLowerCase().replace(/\s/g, '-')}`}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="lg:col-span-1">
+                  <span className="text-[11px] text-white/15 font-mono">{project.num}</span>
+                </div>
+                <div className="lg:col-span-6">
+                  <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
+                  <div className="flex items-center gap-3 mt-3">
+                    <span className="text-[13px] text-white/30">{project.client}</span>
+                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/25">{project.sector}</span>
+                  </div>
+                  <p className="mt-6 text-[14px] text-white/30 leading-relaxed">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/25">{tag}</span>
+                    ))}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                <div className="lg:col-span-5">
+                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/20 block mb-6">Key Outcomes</span>
+                  <div className="space-y-0">
+                    {project.results.map((result, j) => (
+                      <div key={result} className={`py-4 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
+                        <span className="text-[14px] text-white/40 leading-relaxed">{result}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-20 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white">Have a Similar Challenge?</motion.h2>
-            <motion.p variants={fadeIn} className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
-              Let's discuss how Avion Tech can deliver similar results for your organization.
-            </motion.p>
-            <motion.div variants={fadeIn} className="mt-8">
-              <Link href="/contact">
-                <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10" data-testid="button-portfolio-contact">
-                  Start a Conversation
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
+          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
+            Have a similar challenge?
+          </h2>
+          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+            Let's discuss how Avion Tech can deliver similar results for your organization.
+          </p>
+          <div className="mt-10">
+            <Link href="/contact">
+              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-portfolio-contact">
+                Start a Conversation
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

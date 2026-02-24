@@ -1,12 +1,12 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
-import { Layout, PageHeader, CTABanner, fadeInUp, fadeInLeft, fadeInRight, stagger } from "@/components/layout";
+import { ArrowRight } from "lucide-react";
+import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const team = [
   {
     name: "Richard Hake",
+    initials: "RH",
     role: "Project Manager",
     location: "Lexington, Kentucky",
     bio: "Richard brings over 15 years of experience in management consulting, business transformation, and program leadership. He specializes in guiding digital modernization initiatives, integrating technology solutions, and aligning project delivery with organizational goals.",
@@ -14,6 +14,7 @@ const team = [
   },
   {
     name: "Michael Colliver",
+    initials: "MC",
     role: "Technology Solution Architect",
     location: "Lexington, Kentucky",
     bio: "Michael is a senior technology consultant with 14 years of experience in software development, digital transformation, and user experience. He has led cross-functional teams through complex lifecycles, integrating business strategy with technical execution.",
@@ -53,153 +54,117 @@ export default function About() {
     <Layout>
       <PageHeader
         label="About Avion Tech"
-        title="Innovation Meets Experience"
-        description="With over 20 years of combined expertise, Avion Tech helps organizations modernize, optimize, and transform through practical technology solutions."
+        title="Innovation meets experience."
+        description="Over 20 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
       />
 
-      {/* Mission Section */}
-      <section className="border-t border-white/[0.04] py-24 bg-[#0b0b0f]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div variants={fadeInLeft}>
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Our Mission</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">
-                Delivering the Future Today
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 py-32">
+            <div>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Mission</span>
+              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
+                Delivering the<br />future today.
               </h2>
-              <p className="mt-6 text-sm text-white/40 leading-relaxed">
+              <p className="mt-8 text-[15px] text-white/30 leading-[1.8] max-w-md">
                 Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
               </p>
-              <p className="mt-4 text-sm text-white/40 leading-relaxed">
-                We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes that move your organization forward.
+              <p className="mt-4 text-[15px] text-white/30 leading-[1.8] max-w-md">
+                We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.
               </p>
-            </motion.div>
+            </div>
+            <div className="grid grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+              {[
+                { val: "20+", label: "Years\nExperience" },
+                { val: "500+", label: "Projects\nDelivered" },
+                { val: "99%", label: "Client\nSatisfaction" },
+                { val: "50+", label: "Industries\nServed" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-[#09090b] p-8 flex flex-col justify-center" data-testid={`card-stat-${stat.label.split('\n')[0].toLowerCase()}`}>
+                  <div className="font-heading text-[2.5rem] font-bold text-white leading-none">{stat.val}</div>
+                  <div className="text-[12px] text-white/25 mt-3 whitespace-pre-line leading-relaxed">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <motion.div variants={fadeInRight}>
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { val: "20+", label: "Years Experience" },
-                  { val: "500+", label: "Projects Delivered" },
-                  { val: "99%", label: "Client Satisfaction" },
-                  { val: "50+", label: "Industries Served" },
-                ].map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-white/[0.08] bg-[#141419] hover:border-white/[0.15] transition-colors duration-300 p-7 text-center" data-testid={`card-stat-${stat.label.toLowerCase().replace(/\s/g, '-')}`}>
-                    <div className="font-heading text-3xl font-bold text-white">{stat.val}</div>
-                    <div className="text-xs text-white/40 mt-2">{stat.label}</div>
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4">
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Values</span>
+              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
+                What drives us.
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+                {values.map((item, i) => (
+                  <div key={item.title} className="bg-[#09090b] p-8" data-testid={`card-value-${i + 1}`}>
+                    <span className="text-[11px] text-white/15 font-mono block mb-4">0{i + 1}</span>
+                    <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
+                    <p className="text-[13px] text-white/30 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="border-t border-white/[0.04] py-24 bg-[#0b0b0f]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-            <motion.div variants={fadeInUp}>
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Our Values</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">
-                What Drives Avion Tech
-              </h2>
-            </motion.div>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {values.map((item, i) => (
-              <motion.div key={item.title} variants={fadeInUp}>
-                <div className="rounded-2xl border border-white/[0.08] bg-[#141419] hover:border-white/[0.15] transition-colors duration-300 p-7 h-full flex flex-col" data-testid={`card-value-${i + 1}`}>
-                  <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center mb-4">
-                    <span className="font-heading text-sm font-bold text-[#3B7BFF]">0{i + 1}</span>
-                  </div>
-                  <h3 className="font-heading text-lg font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-sm text-white/40 leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="border-t border-white/[0.04] py-24 bg-[#0b0b0f]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-            <motion.div variants={fadeInUp}>
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Avion Tech Leadership</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">
-                Meet the Team
-              </h2>
-              <p className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
-                Experienced leaders committed to collaboration, innovation, and delivering results.
-              </p>
-            </motion.div>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {team.map((member) => (
-              <motion.div key={member.name} variants={fadeInUp}>
-                <div className="rounded-2xl border border-white/[0.08] bg-[#141419] hover:border-white/[0.15] transition-colors duration-300 p-7 h-full flex flex-col" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
-                  <div className="w-14 h-14 rounded-full bg-[#0645FF]/10 flex items-center justify-center mb-6">
-                    <span className="font-heading text-sm font-bold text-[#3B7BFF]">{member.name.split(" ").map(n => n[0]).join("")}</span>
-                  </div>
-
-                  <h3 className="font-heading text-lg font-semibold text-white">{member.name}</h3>
-                  <div className="flex flex-col gap-2 mt-2 mb-5">
-                    <span className="flex items-center gap-1.5 text-sm text-[#3B7BFF]">
-                      <Briefcase className="w-3.5 h-3.5" />
-                      {member.role}
-                    </span>
-                    <span className="flex items-center gap-1.5 text-xs text-white/40">
-                      <MapPin className="w-3 h-3" />
-                      {member.location}
-                    </span>
-                  </div>
-
-                  <p className="text-sm text-white/40 leading-relaxed mb-6">{member.bio}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {member.skills.map((skill) => (
-                      <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/50">{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Timeline/Milestones Section */}
-      <section className="border-t border-white/[0.04] py-24 bg-[#0b0b0f]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-            <motion.div variants={fadeInUp}>
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Our Journey</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">
-                Key Milestones
-              </h2>
-            </motion.div>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="relative max-w-3xl mx-auto">
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-white/[0.08]" />
-            <div className="space-y-10">
-              {milestones.map((m, idx) => (
-                <motion.div key={m.year} variants={fadeInUp} className="flex items-start gap-6 pl-2" data-testid={`milestone-${idx + 1}`}>
-                  <div className="shrink-0 relative">
-                    <div className="w-12 h-12 rounded-full border border-white/[0.08] bg-[#141419] flex items-center justify-center">
-                      <span className="font-heading text-sm font-bold text-[#3B7BFF]">{idx + 1}</span>
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <span className="font-heading text-sm font-bold text-white">{m.year}</span>
-                    <p className="text-sm text-white/40 mt-1 leading-relaxed">{m.event}</p>
-                  </div>
-                </motion.div>
-              ))}
             </div>
-          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
+          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Leadership</span>
+          <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-20">
+            Meet the team.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden max-w-4xl">
+            {team.map((member) => (
+              <div key={member.name} className="bg-[#09090b] p-10" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div className="w-16 h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-8">
+                  <span className="font-heading text-[15px] font-bold text-white/50">{member.initials}</span>
+                </div>
+
+                <h3 className="font-heading text-xl font-bold text-white">{member.name}</h3>
+                <p className="text-[13px] text-white/40 mt-1">{member.role}</p>
+                <p className="text-[12px] text-white/20 mt-1">{member.location}</p>
+
+                <p className="text-[13px] text-white/30 leading-relaxed mt-6">{member.bio}</p>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {member.skills.map((skill) => (
+                    <span key={skill} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/30">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4">
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Journey</span>
+              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
+                Key milestones.
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <div className="space-y-0">
+                {milestones.map((m, idx) => (
+                  <div key={m.year} className={`flex gap-8 py-8 ${idx > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`milestone-${idx + 1}`}>
+                    <span className="font-heading text-2xl font-bold text-white/20 shrink-0 w-20">{m.year}</span>
+                    <p className="text-[14px] text-white/35 leading-relaxed pt-2">{m.event}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

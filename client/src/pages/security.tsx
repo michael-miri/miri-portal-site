@@ -1,53 +1,37 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Lock,
-  ShieldCheck,
-  FileCheck,
-  Eye,
-  Fingerprint,
-  Network,
-  CheckCircle2,
-} from "lucide-react";
-import { motion } from "framer-motion";
-import { Layout, PageHeader, CTABanner, fadeIn, fadeInUp, stagger } from "@/components/layout";
+import { ArrowRight } from "lucide-react";
+import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const securityPillars = [
   {
-    icon: Lock,
     title: "Zero-Trust Architecture",
-    desc: "We implement a zero-trust model where every access request is verified regardless of source. No implicit trust — every user, device, and connection is authenticated and authorized continuously.",
+    desc: "Every access request is verified regardless of source. No implicit trust — every user, device, and connection is authenticated and authorized continuously.",
     items: ["Identity verification at every access point", "Micro-segmentation of network resources", "Least-privilege access controls", "Continuous authentication and session monitoring"],
   },
   {
-    icon: ShieldCheck,
     title: "Compliance & Standards",
-    desc: "Our security practices align with the most rigorous industry standards and regulatory frameworks, ensuring your organization meets its compliance obligations.",
+    desc: "Our practices align with the most rigorous industry standards and regulatory frameworks.",
     items: ["SOC 2 Type II certified", "NIST 800-53 compliant", "ISO 27001 aligned", "FedRAMP High authorization experience"],
   },
   {
-    icon: FileCheck,
     title: "Data Encryption",
-    desc: "All data is protected with enterprise-grade encryption both at rest and in transit, ensuring your sensitive information remains confidential at every stage.",
+    desc: "Enterprise-grade encryption both at rest and in transit, ensuring sensitive information remains confidential at every stage.",
     items: ["AES-256 encryption at rest", "TLS 1.3 for data in transit", "End-to-end encryption for sensitive communications", "Hardware security module (HSM) key management"],
   },
   {
-    icon: Eye,
     title: "24/7 Threat Monitoring",
-    desc: "Our security operations center provides continuous monitoring, detection, and response to potential threats across all systems and environments.",
+    desc: "Continuous monitoring, detection, and response to potential threats across all systems and environments.",
     items: ["Real-time security event monitoring", "Automated threat detection and alerting", "Behavioral anomaly detection", "Incident response within minutes"],
   },
   {
-    icon: Fingerprint,
     title: "Identity & Access Management",
-    desc: "Robust identity management ensures the right people have the right access at the right time, with full audit trails and governance controls.",
+    desc: "The right people have the right access at the right time, with full audit trails and governance controls.",
     items: ["Multi-factor authentication (MFA)", "Single sign-on (SSO) integration", "Role-based access control (RBAC)", "Privileged access management (PAM)"],
   },
   {
-    icon: Network,
     title: "Network Security",
-    desc: "Multi-layered network defense protects against external threats while maintaining performance and availability for authorized users.",
+    desc: "Multi-layered network defense that protects against external threats while maintaining performance.",
     items: ["Next-generation firewall protection", "Intrusion detection and prevention (IDS/IPS)", "DDoS mitigation and traffic analysis", "Secure VPN and remote access"],
   },
 ];
@@ -74,115 +58,111 @@ export default function Security() {
     <Layout>
       <PageHeader
         label="Security at Avion Tech"
-        title="Enterprise-Grade Security"
-        description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust architectures to continuous monitoring, we protect what matters most."
+        title="Enterprise-grade security."
+        description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust to continuous monitoring, we protect what matters most."
       />
 
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
-            <motion.span variants={fadeIn} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Security Pillars</motion.span>
-            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">How We Protect Your Data</motion.h2>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityPillars.map((pillar) => (
-              <motion.div key={pillar.title} variants={fadeIn}>
-                <div className="h-full rounded-2xl border border-white/[0.08] bg-[#141419] p-7 hover:border-white/[0.15] transition-colors duration-300" data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}>
-                  <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center mb-5">
-                    <pillar.icon className="w-5 h-5 text-[#3B7BFF]" />
-                  </div>
-                  <h3 className="font-heading text-lg font-semibold text-white mb-2">{pillar.title}</h3>
-                  <p className="text-sm text-white/40 leading-relaxed mb-5">{pillar.desc}</p>
-                  <ul className="space-y-2.5">
-                    {pillar.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#3B7BFF] shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/40 leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+      <section className="bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          {securityPillars.map((pillar, i) => (
+            <div
+              key={pillar.title}
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
+              data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
+            >
+              <div className="lg:col-span-1">
+                <span className="text-[11px] text-white/15 font-mono">0{i + 1}</span>
+              </div>
+              <div className="lg:col-span-4">
+                <h3 className="font-heading text-xl font-bold text-white leading-tight">{pillar.title}</h3>
+                <p className="mt-3 text-[14px] text-white/30 leading-relaxed">{pillar.desc}</p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
+                  {pillar.items.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="text-white/15 mt-1.5 text-[8px]">●</span>
+                      <span className="text-[14px] text-white/35 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.div variants={fadeIn} className="text-center mb-16">
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Our Process</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">Security Lifecycle</h2>
-              <p className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
-                Our proven five-phase approach ensures comprehensive protection from assessment through continuous improvement.
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4">
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Process</span>
+              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
+                Security lifecycle.
+              </h2>
+              <p className="mt-6 text-[15px] text-white/30 leading-relaxed max-w-sm">
+                A proven five-phase approach that ensures comprehensive protection from assessment through continuous improvement.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {securityProcess.map((phase) => (
-                <motion.div key={phase.step} variants={fadeIn}>
-                  <div className="h-full text-center rounded-2xl border border-white/[0.08] bg-[#141419] p-7 hover:border-white/[0.15] transition-colors duration-300">
-                    <div className="font-heading text-3xl font-bold text-[#3B7BFF] mb-3">{phase.step}</div>
-                    <h4 className="font-heading text-base font-semibold text-white mb-2">{phase.title}</h4>
-                    <p className="text-xs text-white/40 leading-relaxed">{phase.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.div variants={fadeIn} className="text-center mb-16">
-              <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-[#3B7BFF]">Compliance</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3">Certifications & Standards</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {certifications.map((cert) => (
-                <motion.div key={cert.name} variants={fadeIn}>
-                  <div className="flex items-start gap-4 rounded-2xl border border-white/[0.08] bg-[#141419] p-7 hover:border-white/[0.15] transition-colors duration-300" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
-                    <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 flex items-center justify-center shrink-0">
-                      <ShieldCheck className="w-5 h-5 text-[#3B7BFF]" />
-                    </div>
+            <div className="lg:col-span-8">
+              <div className="space-y-0">
+                {securityProcess.map((phase, i) => (
+                  <div key={phase.step} className={`flex gap-8 py-8 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}>
+                    <span className="text-[11px] text-white/15 font-mono shrink-0 pt-1">{phase.step}</span>
                     <div>
-                      <h4 className="font-heading text-base font-semibold text-white">{cert.name}</h4>
-                      <p className="text-sm text-white/40 mt-1">{cert.desc}</p>
+                      <h3 className="font-heading text-lg font-semibold text-white mb-1.5">{phase.title}</h3>
+                      <p className="text-[13px] text-white/30 leading-relaxed">{phase.desc}</p>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                ))}
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-[#0b0b0f] border-t border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.h2 variants={fadeIn} className="font-heading text-3xl sm:text-4xl font-bold text-white">Need a Security Assessment?</motion.h2>
-            <motion.p variants={fadeIn} className="mt-4 text-sm text-white/40 max-w-lg mx-auto leading-relaxed">
-              Our cybersecurity experts can evaluate your current posture and recommend improvements.
-            </motion.p>
-            <motion.div variants={fadeIn} className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link href="/contact">
-                <Button className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-medium rounded-full px-6 h-10" data-testid="button-security-contact">
-                  Request an Assessment
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
-                </Button>
-              </Link>
-              <Link href="/faq">
-                <Button variant="outline" className="border-white/[0.1] text-white/70 font-medium rounded-full px-5 h-9 bg-transparent hover:bg-white/[0.04]" data-testid="button-security-faq">
-                  Security FAQ
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Compliance</span>
+              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
+                Certifications &<br />standards.
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+              {certifications.map((cert) => (
+                <div key={cert.name} className="bg-[#09090b] p-6 hover:bg-[#0e0e12] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
+                  <h4 className="text-[15px] font-semibold text-white mb-1">{cert.name}</h4>
+                  <p className="text-[12px] text-white/25 leading-relaxed">{cert.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
+          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
+            Need a security assessment?
+          </h2>
+          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+            Our cybersecurity experts can evaluate your current posture and recommend improvements.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link href="/contact">
+              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-security-contact">
+                Request an Assessment
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+            <Link href="/faq">
+              <Button variant="outline" className="border-white/[0.1] text-white/50 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/70" data-testid="button-security-faq">
+                Security FAQ
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
