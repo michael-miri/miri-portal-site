@@ -41,7 +41,7 @@ export default function Home() {
               <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-white leading-[1.02] tracking-[-0.02em]">
                 Build<br />
                 smarter.<br />
-                <span className="text-[#0645FF]/60">Move faster.</span>
+                <span className="text-[#0645FF]">Move faster.</span>
               </h1>
             </div>
             <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
