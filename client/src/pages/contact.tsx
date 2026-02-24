@@ -53,18 +53,18 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/40 text-[13px]">Name *</FormLabel>
+                          <FormLabel className="text-white/50 text-[13px]">Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-name" />
+                            <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/40 text-[13px]">Email *</FormLabel>
+                          <FormLabel className="text-white/50 text-[13px]">Email *</FormLabel>
                           <FormControl>
-                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-email" />
+                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -72,23 +72,23 @@ export default function Contact() {
                     </div>
                     <FormField control={form.control} name="company" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/40 text-[13px]">Company</FormLabel>
+                        <FormLabel className="text-white/50 text-[13px]">Company</FormLabel>
                         <FormControl>
-                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg h-11 focus:border-white/20" data-testid="input-company" />
+                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-company" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/40 text-[13px]">How can we help? *</FormLabel>
+                        <FormLabel className="text-white/50 text-[13px]">How can we help? *</FormLabel>
                         <FormControl>
-                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/15 rounded-lg focus:border-white/20 resize-none" data-testid="input-message" />
+                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/50 resize-none" data-testid="input-message" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
-                    <Button type="submit" className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90 w-full sm:w-auto" data-testid="button-submit-contact">
+                    <Button type="submit" className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 w-full sm:w-auto" data-testid="button-submit-contact">
                       Send Message
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -99,7 +99,7 @@ export default function Contact() {
 
             <div className="lg:col-span-5 space-y-6">
               <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
-                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Contact Info</span>
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Contact Info</span>
                 <div className="space-y-6">
                   {[
                     { label: "Email", value: "hello@aviontech.com" },
@@ -107,15 +107,15 @@ export default function Contact() {
                     { label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (
                     <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>
-                      <div className="text-[11px] text-white/20 uppercase tracking-wider">{item.label}</div>
-                      <div className="text-[15px] text-white/50 mt-1">{item.value}</div>
+                      <div className="text-[11px] text-white/35 uppercase tracking-wider">{item.label}</div>
+                      <div className="text-[15px] text-white/60 mt-1">{item.value}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
-                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">What to Expect</span>
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">What to Expect</span>
                 <div className="space-y-0">
                   {[
                     "Response within 24 hours",
@@ -124,7 +124,7 @@ export default function Contact() {
                     "Tailored recommendations",
                   ].map((item, i) => (
                     <div key={item} className={`py-4 ${i > 0 ? "border-t border-white/[0.04]" : ""}`}>
-                      <span className="text-[14px] text-white/35">{item}</span>
+                      <span className="text-[14px] text-white/50">{item}</span>
                     </div>
                   ))}
                 </div>

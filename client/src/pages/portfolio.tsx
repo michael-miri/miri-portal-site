@@ -79,27 +79,27 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-1">
-                  <span className="text-[11px] text-white/15 font-mono">{project.num}</span>
+                  <span className="text-[11px] text-[#0645FF]/30 font-mono">{project.num}</span>
                 </div>
                 <div className="lg:col-span-6">
                   <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
                   <div className="flex items-center gap-3 mt-3">
-                    <span className="text-[13px] text-white/30">{project.client}</span>
-                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/25">{project.sector}</span>
+                    <span className="text-[13px] text-white/45">{project.client}</span>
+                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]/70">{project.sector}</span>
                   </div>
-                  <p className="mt-6 text-[14px] text-white/30 leading-relaxed">{project.desc}</p>
+                  <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
                   <div className="flex flex-wrap gap-2 mt-6">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/25">{tag}</span>
+                      <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{tag}</span>
                     ))}
                   </div>
                 </div>
                 <div className="lg:col-span-5">
-                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/20 block mb-6">Key Outcomes</span>
+                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/50 block mb-6">Key Outcomes</span>
                   <div className="space-y-0">
                     {project.results.map((result, j) => (
                       <div key={result} className={`py-4 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
-                        <span className="text-[14px] text-white/40 leading-relaxed">{result}</span>
+                        <span className="text-[14px] text-white/50 leading-relaxed">{result}</span>
                       </div>
                     ))}
                   </div>
@@ -115,12 +115,12 @@ export default function Portfolio() {
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Have a similar challenge?
           </h2>
-          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
             Let's discuss how Avion Tech can deliver similar results for your organization.
           </p>
           <div className="mt-10">
             <Link href="/contact">
-              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-portfolio-contact">
+              <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90" data-testid="button-portfolio-contact">
                 Start a Conversation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

@@ -37,26 +37,26 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
             <div className="lg:col-span-7">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-8">AI-Driven Technology Consulting</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-8">AI-Driven Technology Consulting</span>
               <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-white leading-[1.02] tracking-[-0.02em]">
                 Build<br />
                 smarter.<br />
-                <span className="text-white/20">Move faster.</span>
+                <span className="text-[#0645FF]/40">Move faster.</span>
               </h1>
             </div>
             <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
-              <p className="text-[17px] text-white/35 leading-relaxed max-w-md mb-10">
+              <p className="text-[17px] text-white/50 leading-relaxed max-w-md mb-10">
                 Avion Tech helps organizations modernize operations, harness AI, and scale infrastructure — with decades of hands-on expertise and a bias toward action.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
-                  <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90 group" data-testid="button-hero-cta">
+                  <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-hero-cta">
                     Start a Project
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="outline" className="border-white/[0.1] text-white/50 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/70" data-testid="button-hero-services">
+                  <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-hero-services">
                     Our Services
                   </Button>
                 </Link>
@@ -69,9 +69,9 @@ export default function Home() {
       <section className="bg-[#09090b] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-10">
           <div className="flex flex-wrap items-center gap-x-10 gap-y-3">
-            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/20 shrink-0">Trusted across</span>
+            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 shrink-0">Trusted across</span>
             {["Government", "Healthcare", "Finance", "Manufacturing", "Energy"].map((name) => (
-              <span key={name} className="text-[13px] text-white/15 font-medium" data-testid={`tag-industry-${name.toLowerCase()}`}>{name}</span>
+              <span key={name} className="text-[13px] text-white/25 font-medium" data-testid={`tag-industry-${name.toLowerCase()}`}>{name}</span>
             ))}
           </div>
         </div>
@@ -81,17 +81,17 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-32">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">What We Do</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">What We Do</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-capabilities-section">
                 Nine capabilities.<br />
-                <span className="text-white/20">One partner.</span>
+                <span className="text-[#0645FF]/40">One partner.</span>
               </h2>
-              <p className="mt-6 text-[15px] text-white/30 leading-relaxed max-w-sm">
+              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
                 From strategy through implementation — we cover the full technology spectrum so you don't have to manage multiple vendors.
               </p>
               <div className="mt-10">
                 <Link href="/services" data-testid="link-capabilities-more">
-                  <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors inline-flex items-center gap-2 group">
+                  <span className="text-[13px] text-[#0645FF]/70 hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
                     View all 9 services <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -102,9 +102,9 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {capabilities.map((cap) => (
                   <div key={cap.num} className="bg-[#09090b] p-8 group hover:bg-[#0e0e12] transition-colors" data-testid={`card-capability-${cap.num}`}>
-                    <span className="text-[11px] text-white/15 font-mono block mb-5">{cap.num}</span>
+                    <span className="text-[11px] text-[#0645FF]/30 font-mono block mb-5">{cap.num}</span>
                     <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
-                    <p className="text-[13px] text-white/30 leading-relaxed">{cap.desc}</p>
+                    <p className="text-[13px] text-white/50 leading-relaxed">{cap.desc}</p>
                   </div>
                 ))}
               </div>
@@ -117,11 +117,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Why Avion Tech</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Why Avion Tech</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-why-section">
                 We don't just<br />advise. We build.
               </h2>
-              <p className="mt-8 text-[15px] text-white/30 leading-relaxed max-w-md">
+              <p className="mt-8 text-[15px] text-white/50 leading-relaxed max-w-md">
                 Most consultants hand you a strategy deck and walk away. We roll up our sleeves and implement alongside your team — from architecture to deployment to ongoing support.
               </p>
               <div className="mt-10 space-y-6">
@@ -132,7 +132,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
                     <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
-                    <p className="text-[13px] text-white/30 leading-relaxed">{item.desc}</p>
+                    <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -141,12 +141,12 @@ export default function Home() {
             <div>
               <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] overflow-hidden">
                 <div className="p-10 border-b border-white/[0.06]">
-                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/20 block mb-8">By the Numbers</span>
+                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/50 block mb-8">By the Numbers</span>
                   <div className="space-y-0">
                     {stats.map((stat, i) => (
                       <div key={i} className={`py-6 ${i > 0 ? "border-t border-white/[0.04]" : ""}`} data-testid={`stat-${i}`}>
                         <div className="font-heading text-[2.5rem] font-bold text-white leading-none mb-2">{stat.value}</div>
-                        <p className="text-[13px] text-white/25 leading-relaxed">{stat.label}</p>
+                        <p className="text-[13px] text-white/40 leading-relaxed">{stat.label}</p>
                       </div>
                     ))}
                   </div>
@@ -161,12 +161,12 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">How We Work</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">How We Work</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-howwework-section">
                 Four phases.<br />
-                <span className="text-white/20">Zero surprises.</span>
+                <span className="text-[#0645FF]/40">Zero surprises.</span>
               </h2>
-              <p className="mt-6 text-[15px] text-white/30 leading-relaxed max-w-sm">
+              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
                 Every engagement follows a proven methodology designed for clarity, speed, and measurable outcomes.
               </p>
             </div>
@@ -180,10 +180,10 @@ export default function Home() {
                   { num: "04", title: "Scale", desc: "Post-launch support, training, and optimization ensure your solutions grow as your organization grows." },
                 ].map((step, i) => (
                   <div key={step.num} className={`flex gap-8 py-10 ${i > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`step-${step.num}`}>
-                    <span className="text-[11px] text-white/15 font-mono shrink-0 pt-1">{step.num}</span>
+                    <span className="text-[11px] text-[#0645FF]/30 font-mono shrink-0 pt-1">{step.num}</span>
                     <div>
                       <h3 className="font-heading text-xl font-semibold text-white mb-2">{step.title}</h3>
-                      <p className="text-[14px] text-white/30 leading-relaxed max-w-lg">{step.desc}</p>
+                      <p className="text-[14px] text-white/50 leading-relaxed max-w-lg">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -197,14 +197,14 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Industries</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Industries</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-industries-section">
                 Built for every<br />sector.
               </h2>
             </div>
             <div className="lg:text-right">
               <Link href="/industries" data-testid="link-industries-more">
-                <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors inline-flex items-center gap-2 group">
+                <span className="text-[13px] text-[#0645FF]/70 hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
                   Explore all industries <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
@@ -213,7 +213,7 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industries.map((name) => (
               <div key={name} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`industry-tag-${name.toLowerCase().replace(/\s/g, '-')}`}>
-                <span className="text-[14px] text-white/40 font-medium">{name}</span>
+                <span className="text-[14px] text-white/50 font-medium">{name}</span>
               </div>
             ))}
           </div>
@@ -224,17 +224,17 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Security</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Security</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-security-section">
                 Security isn't a<br />feature. It's the<br />
-                <span className="text-white/20">foundation.</span>
+                <span className="text-[#0645FF]/40">foundation.</span>
               </h2>
-              <p className="mt-8 text-[15px] text-white/30 leading-relaxed max-w-md">
+              <p className="mt-8 text-[15px] text-white/50 leading-relaxed max-w-md">
                 Every system we build starts with security. Zero-trust architectures, SOC 2 compliance, AES-256 encryption, and 24/7 monitoring — embedded from day one.
               </p>
               <div className="mt-8">
                 <Link href="/security" data-testid="link-security-more">
-                  <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors inline-flex items-center gap-2 group">
+                  <span className="text-[13px] text-[#0645FF]/70 hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
                     Our security approach <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -250,7 +250,7 @@ export default function Home() {
               ].map((item) => (
                 <div key={item.title} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
                   <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-[12px] text-white/25 leading-relaxed">{item.desc}</p>
+                  <p className="text-[12px] text-white/40 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>

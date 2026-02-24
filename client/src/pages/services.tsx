@@ -123,18 +123,18 @@ export default function Services() {
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[11px] text-white/15 font-mono">{service.num}</span>
+                <span className="text-[11px] text-[#0645FF]/30 font-mono">{service.num}</span>
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-2xl font-bold text-white leading-tight">{service.title}</h3>
-                <p className="mt-3 text-[14px] text-white/30 leading-relaxed">{service.desc}</p>
+                <p className="mt-3 text-[14px] text-white/50 leading-relaxed">{service.desc}</p>
               </div>
               <div className="lg:col-span-7">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
                   {service.details.map((detail) => (
                     <div key={detail} className="flex items-start gap-3">
-                      <span className="text-white/15 mt-1.5 text-[8px]">●</span>
-                      <span className="text-[14px] text-white/35 leading-relaxed">{detail}</span>
+                      <span className="text-[#0645FF]/40 mt-1.5 text-[8px]">●</span>
+                      <span className="text-[14px] text-white/50 leading-relaxed">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -149,13 +149,13 @@ export default function Services() {
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Need something more specific?
           </h2>
-          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
             Our services are modular and adaptable. Let's design the right combination for your organization.
           </p>
           <div className="mt-10">
             <Link href="/contact">
               <Button
-                className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90"
+                className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90"
                 data-testid="button-services-contact"
               >
                 Talk to Our Team

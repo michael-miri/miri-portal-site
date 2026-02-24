@@ -34,7 +34,7 @@ export function Navbar() {
                 className={`text-[13px] tracking-wide transition-colors duration-200 ${
                   location === link.href
                     ? "text-white"
-                    : "text-white/40 hover:text-white/70"
+                    : "text-white/50 hover:text-white/80"
                 }`}
                 data-testid={`link-nav-${link.label.toLowerCase()}`}
               >
@@ -47,7 +47,7 @@ export function Navbar() {
             <Link href="/contact">
               <Button
                 size="sm"
-                className="bg-white text-black text-[13px] font-medium rounded-full px-5 h-9 hover:bg-white/90"
+                className="bg-[#0645FF] text-white text-[13px] font-medium rounded-full px-5 h-9 hover:bg-[#0645FF]/90"
                 data-testid="button-nav-cta"
               >
                 Start a Project
@@ -82,7 +82,7 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={`block text-sm py-3 px-3 rounded-lg transition-colors ${
-                    location === link.href ? "text-white bg-white/[0.04]" : "text-white/40"
+                    location === link.href ? "text-white bg-white/[0.04]" : "text-white/50"
                   }`}
                   data-testid={`link-mobile-${link.label.toLowerCase()}`}
                 >
@@ -90,7 +90,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link href="/contact" onClick={() => setMobileOpen(false)}>
-                <Button className="bg-white text-black text-sm font-medium mt-4 w-full rounded-full" data-testid="button-mobile-cta">
+                <Button className="bg-[#0645FF] text-white text-sm font-medium mt-4 w-full rounded-full" data-testid="button-mobile-cta">
                   Start a Project
                 </Button>
               </Link>
@@ -111,22 +111,22 @@ export function Footer() {
             <Link href="/" className="inline-block mb-6" data-testid="link-footer-logo">
               <img src={logoImage} alt="Avion Tech" className="h-7 w-auto" />
             </Link>
-            <p className="text-[15px] text-white/30 leading-relaxed max-w-sm">
+            <p className="text-[15px] text-white/50 leading-relaxed max-w-sm">
               AI-driven technology consulting for organizations ready to move faster, think bigger, and build smarter.
             </p>
           </div>
           <div className="md:col-span-2">
-            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 mb-5">Services</h4>
+            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 mb-5">Services</h4>
             <ul className="space-y-3">
               {["Strategy", "AI & Analytics", "Cybersecurity", "Cloud", "Custom Apps"].map((item) => (
                 <li key={item}>
-                  <Link href="/services" className="text-[14px] text-white/25 hover:text-white/50 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</Link>
+                  <Link href="/services" className="text-[14px] text-white/40 hover:text-white/60 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="md:col-span-2">
-            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 mb-5">Company</h4>
+            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 mb-5">Company</h4>
             <ul className="space-y-3">
               {[
                 { label: "About", href: "/about" },
@@ -136,21 +136,21 @@ export function Footer() {
                 { label: "FAQ", href: "/faq" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-[14px] text-white/25 hover:text-white/50 transition-colors" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</Link>
+                  <Link href={item.href} className="text-[14px] text-white/40 hover:text-white/60 transition-colors" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="md:col-span-3">
-            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 mb-5">Get in Touch</h4>
-            <ul className="space-y-3 text-[14px] text-white/25">
+            <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 mb-5">Get in Touch</h4>
+            <ul className="space-y-3 text-[14px] text-white/40">
               <li data-testid="contact-email">hello@aviontech.com</li>
               <li data-testid="contact-phone">(859) 555-0142</li>
               <li data-testid="contact-location">Lexington, Kentucky</li>
             </ul>
             <div className="mt-8">
               <Link href="/contact">
-                <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors inline-flex items-center gap-1.5" data-testid="link-footer-contact-cta">
+                <span className="text-[13px] text-[#0645FF]/70 hover:text-[#0645FF] transition-colors inline-flex items-center gap-1.5" data-testid="link-footer-contact-cta">
                   Start a conversation <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </Link>
@@ -158,10 +158,10 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-white/15" data-testid="text-copyright">&copy; {new Date().getFullYear()} Avion Tech. All rights reserved.</p>
+          <p className="text-[12px] text-white/25" data-testid="text-copyright">&copy; {new Date().getFullYear()} Avion Tech. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="text-[12px] text-white/15 hover:text-white/30 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
-            <span className="text-[12px] text-white/15 hover:text-white/30 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
+            <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
+            <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
           </div>
         </div>
       </div>
@@ -173,9 +173,9 @@ export function PageHeader({ label, title, description }: { label: string; title
   return (
     <section className="pt-[140px] pb-20 bg-[#09090b]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-        <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">{label}</span>
+        <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">{label}</span>
         <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl">{title}</h1>
-        <p className="mt-6 text-[17px] text-white/35 max-w-xl leading-relaxed">{description}</p>
+        <p className="mt-6 text-[17px] text-white/50 max-w-xl leading-relaxed">{description}</p>
       </div>
     </section>
   );
@@ -188,24 +188,24 @@ export function CTABanner() {
         <div className="border-t border-white/[0.06] pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Next Step</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Next Step</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Ready to move<br />forward?
               </h2>
             </div>
             <div className="lg:text-right">
-              <p className="text-[15px] text-white/35 leading-relaxed mb-8 max-w-md lg:ml-auto">
+              <p className="text-[15px] text-white/50 leading-relaxed mb-8 max-w-md lg:ml-auto">
                 Book a free consultation. No obligations — just an honest conversation about where technology can take your organization.
               </p>
               <div className="flex flex-wrap gap-3 lg:justify-end">
                 <Link href="/contact">
-                  <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90 group" data-testid="button-cta-bottom">
+                  <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-cta-bottom">
                     Start a Project
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>
                 <Link href="/portfolio">
-                  <Button variant="outline" className="border-white/[0.1] text-white/50 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/70" data-testid="button-cta-portfolio">
+                  <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-cta-portfolio">
                     View Our Work
                   </Button>
                 </Link>

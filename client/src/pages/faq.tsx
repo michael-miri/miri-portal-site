@@ -101,7 +101,7 @@ export default function FAQ() {
         <div className="max-w-[900px] mx-auto px-6 sm:px-10">
           {faqSections.map((section, sIdx) => (
             <div key={section.prefix} className={`py-16 ${sIdx > 0 ? "border-t border-white/[0.06]" : ""}`}>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-8">{section.title}</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-8">{section.title}</span>
               <Accordion type="single" collapsible className="space-y-0">
                 {section.data.map((faq, i) => (
                   <AccordionItem
@@ -113,7 +113,7 @@ export default function FAQ() {
                     <AccordionTrigger className="text-white text-[15px] font-medium hover:no-underline py-6">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-white/30 text-[14px] leading-relaxed pb-6">
+                    <AccordionContent className="text-white/50 text-[14px] leading-relaxed pb-6">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -129,12 +129,12 @@ export default function FAQ() {
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Still have questions?
           </h2>
-          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
             Our team is happy to answer anything. No pressure, just clarity.
           </p>
           <div className="mt-10">
             <Link href="/contact">
-              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-faq-contact">
+              <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90" data-testid="button-faq-contact">
                 Contact Us
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

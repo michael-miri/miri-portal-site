@@ -8,8 +8,8 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - 2026-02-24: Removed all content animations (framer motion only used for mobile nav toggle)
 - 2026-02-24: New design uses asymmetric grids, large editorial typography, gap-px grid patterns
 - 2026-02-24: Background changed to #09090b, cards use #0e0e12, borders white/[0.06]
-- 2026-02-24: White CTA buttons instead of blue, editorial split-headline hero
-- 2026-02-24: Updated logo to new Avion Tech triangle design (Black_and_White_Initial_A_Tech_Business_Logo_-2)
+- 2026-02-24: Blue (#0645FF) CTA buttons, blue accent labels/numbers/links, improved text contrast
+- 2026-02-24: Updated logo to new Avion Tech triangle design (Black_and_White_Initial_A_Tech_Business_Logo_-3)
 - 2026-02-24: Restructured from single-page to multi-page architecture with wouter routing
 - 2026-02-24: Created shared layout components (Navbar, Footer, PageHeader, CTABanner)
 
@@ -47,7 +47,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/index.css` - Theme variables
 - `tailwind.config.ts` - Design tokens
-- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo_-2_1771948156481.png` - Avion Tech logo (current)
+- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo_-3_1771952961801.png` - Avion Tech logo (current)
 - `attached_assets/Stantec_Proposal_for_MDAH_Tour_System_1_1771948064569.pdf` - Source content
 
 ## User Preferences

@@ -71,18 +71,18 @@ export default function Security() {
               data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[11px] text-white/15 font-mono">0{i + 1}</span>
+                <span className="text-[11px] text-[#0645FF]/30 font-mono">0{i + 1}</span>
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-xl font-bold text-white leading-tight">{pillar.title}</h3>
-                <p className="mt-3 text-[14px] text-white/30 leading-relaxed">{pillar.desc}</p>
+                <p className="mt-3 text-[14px] text-white/50 leading-relaxed">{pillar.desc}</p>
               </div>
               <div className="lg:col-span-7">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
                   {pillar.items.map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <span className="text-white/15 mt-1.5 text-[8px]">●</span>
-                      <span className="text-[14px] text-white/35 leading-relaxed">{item}</span>
+                      <span className="text-[#0645FF]/40 mt-1.5 text-[8px]">●</span>
+                      <span className="text-[14px] text-white/50 leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -96,11 +96,11 @@ export default function Security() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Process</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Our Process</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Security lifecycle.
               </h2>
-              <p className="mt-6 text-[15px] text-white/30 leading-relaxed max-w-sm">
+              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
                 A proven five-phase approach that ensures comprehensive protection from assessment through continuous improvement.
               </p>
             </div>
@@ -108,10 +108,10 @@ export default function Security() {
               <div className="space-y-0">
                 {securityProcess.map((phase, i) => (
                   <div key={phase.step} className={`flex gap-8 py-8 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}>
-                    <span className="text-[11px] text-white/15 font-mono shrink-0 pt-1">{phase.step}</span>
+                    <span className="text-[11px] text-[#0645FF]/30 font-mono shrink-0 pt-1">{phase.step}</span>
                     <div>
                       <h3 className="font-heading text-lg font-semibold text-white mb-1.5">{phase.title}</h3>
-                      <p className="text-[13px] text-white/30 leading-relaxed">{phase.desc}</p>
+                      <p className="text-[13px] text-white/50 leading-relaxed">{phase.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -125,7 +125,7 @@ export default function Security() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Compliance</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Compliance</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Certifications &<br />standards.
               </h2>
@@ -134,7 +134,7 @@ export default function Security() {
               {certifications.map((cert) => (
                 <div key={cert.name} className="bg-[#09090b] p-6 hover:bg-[#0e0e12] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
                   <h4 className="text-[15px] font-semibold text-white mb-1">{cert.name}</h4>
-                  <p className="text-[12px] text-white/25 leading-relaxed">{cert.desc}</p>
+                  <p className="text-[12px] text-white/40 leading-relaxed">{cert.desc}</p>
                 </div>
               ))}
             </div>
@@ -147,18 +147,18 @@ export default function Security() {
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Need a security assessment?
           </h2>
-          <p className="mt-4 text-[15px] text-white/30 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
             Our cybersecurity experts can evaluate your current posture and recommend improvements.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link href="/contact">
-              <Button className="bg-white text-black font-medium rounded-full px-7 h-11 hover:bg-white/90" data-testid="button-security-contact">
+              <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90" data-testid="button-security-contact">
                 Request an Assessment
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
             <Link href="/faq">
-              <Button variant="outline" className="border-white/[0.1] text-white/50 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/70" data-testid="button-security-faq">
+              <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-security-faq">
                 Security FAQ
               </Button>
             </Link>

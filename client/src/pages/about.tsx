@@ -62,14 +62,14 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 py-32">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Mission</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Our Mission</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Delivering the<br />future today.
               </h2>
-              <p className="mt-8 text-[15px] text-white/30 leading-[1.8] max-w-md">
+              <p className="mt-8 text-[15px] text-white/50 leading-[1.8] max-w-md">
                 Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
               </p>
-              <p className="mt-4 text-[15px] text-white/30 leading-[1.8] max-w-md">
+              <p className="mt-4 text-[15px] text-white/50 leading-[1.8] max-w-md">
                 We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function About() {
               ].map((stat) => (
                 <div key={stat.label} className="bg-[#09090b] p-8 flex flex-col justify-center" data-testid={`card-stat-${stat.label.split('\n')[0].toLowerCase()}`}>
                   <div className="font-heading text-[2.5rem] font-bold text-white leading-none">{stat.val}</div>
-                  <div className="text-[12px] text-white/25 mt-3 whitespace-pre-line leading-relaxed">{stat.label}</div>
+                  <div className="text-[12px] text-white/40 mt-3 whitespace-pre-line leading-relaxed">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -94,7 +94,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Values</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Our Values</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 What drives us.
               </h2>
@@ -103,9 +103,9 @@ export default function About() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {values.map((item, i) => (
                   <div key={item.title} className="bg-[#09090b] p-8" data-testid={`card-value-${i + 1}`}>
-                    <span className="text-[11px] text-white/15 font-mono block mb-4">0{i + 1}</span>
+                    <span className="text-[11px] text-[#0645FF]/30 font-mono block mb-4">0{i + 1}</span>
                     <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
-                    <p className="text-[13px] text-white/30 leading-relaxed">{item.desc}</p>
+                    <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -116,7 +116,7 @@ export default function About() {
 
       <section className="bg-[#09090b] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Leadership</span>
+          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Leadership</span>
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-20">
             Meet the team.
           </h2>
@@ -124,19 +124,19 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden max-w-4xl">
             {team.map((member) => (
               <div key={member.name} className="bg-[#09090b] p-10" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="w-16 h-16 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-8">
-                  <span className="font-heading text-[15px] font-bold text-white/50">{member.initials}</span>
+                <div className="w-16 h-16 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 flex items-center justify-center mb-8">
+                  <span className="font-heading text-[15px] font-bold text-[#0645FF]/70">{member.initials}</span>
                 </div>
 
                 <h3 className="font-heading text-xl font-bold text-white">{member.name}</h3>
-                <p className="text-[13px] text-white/40 mt-1">{member.role}</p>
-                <p className="text-[12px] text-white/20 mt-1">{member.location}</p>
+                <p className="text-[13px] text-[#0645FF]/60 mt-1">{member.role}</p>
+                <p className="text-[12px] text-white/35 mt-1">{member.location}</p>
 
-                <p className="text-[13px] text-white/30 leading-relaxed mt-6">{member.bio}</p>
+                <p className="text-[13px] text-white/50 leading-relaxed mt-6">{member.bio}</p>
 
                 <div className="flex flex-wrap gap-2 mt-6">
                   {member.skills.map((skill) => (
-                    <span key={skill} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/30">{skill}</span>
+                    <span key={skill} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/30 block mb-6">Our Journey</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-6">Our Journey</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Key milestones.
               </h2>
@@ -158,8 +158,8 @@ export default function About() {
               <div className="space-y-0">
                 {milestones.map((m, idx) => (
                   <div key={m.year} className={`flex gap-8 py-8 ${idx > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`milestone-${idx + 1}`}>
-                    <span className="font-heading text-2xl font-bold text-white/20 shrink-0 w-20">{m.year}</span>
-                    <p className="text-[14px] text-white/35 leading-relaxed pt-2">{m.event}</p>
+                    <span className="font-heading text-2xl font-bold text-[#0645FF]/30 shrink-0 w-20">{m.year}</span>
+                    <p className="text-[14px] text-white/50 leading-relaxed pt-2">{m.event}</p>
                   </div>
                 ))}
               </div>
