@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
+import heroBg from "@assets/AdobeStock_321324090_1771955338444.jpeg";
 
 const capabilities = [
   { num: "01", title: "Strategy &\nTransformation", desc: "Align business goals with technology through agile delivery and high-value outcomes." },
@@ -33,8 +34,12 @@ const industries = [
 export default function Home() {
   return (
     <Layout>
-      <section className="pt-[160px] pb-32 bg-[#09090b]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+      <section className="pt-[160px] pb-32 bg-[#09090b] relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#09090b]/60 via-[#09090b]/40 to-[#09090b]" />
+        </div>
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
             <div className="lg:col-span-7">
               <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF] block mb-8">AI-Driven Technology Consulting</span>
