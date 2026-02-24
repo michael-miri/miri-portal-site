@@ -50,7 +50,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
-              <p className="text-[19px] text-white/50 leading-relaxed max-w-md mb-10">
+              <p className="text-[21px] text-white/50 leading-relaxed max-w-md mb-10">
                 We help organizations modernize operations, harness AI, and scale infrastructure — with decades of hands-on expertise and a bias toward action.
               </p>
               <div className="flex flex-wrap gap-3">
