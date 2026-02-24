@@ -133,7 +133,7 @@ export function PageHeader({ label, title, highlight, description }: { label: st
         }} />
       </div>
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 text-center">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0645FF]/25 bg-[#0645FF]/8 mb-8">
             <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF] animate-pulse" />
             <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">{label}</span>
@@ -162,14 +162,14 @@ export function CTABanner() {
         <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#4B8BFF]/20 rounded-full blur-[120px]" />
       </div>
       <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } }}>
-          <motion.h2 variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
+          <motion.h2 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
             Ready to Build With<br />Avion Tech?
           </motion.h2>
-          <motion.p variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }} className="mt-5 text-lg text-white/60 max-w-md mx-auto">
+          <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="mt-5 text-lg text-white/60 max-w-md mx-auto">
             Join hundreds of organizations delivering the future today.
           </motion.p>
-          <motion.div variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }} className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-white hover:bg-white/90 text-[#0645FF] font-bold px-8 text-base rounded-xl h-12 group" data-testid="button-cta-bottom">
                 Get Started Now
@@ -199,21 +199,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export const fadeInLeft = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export const fadeInRight = {
-  hidden: { opacity: 0, x: 30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, x: 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export const stagger = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
 };
