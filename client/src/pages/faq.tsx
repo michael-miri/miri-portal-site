@@ -101,7 +101,7 @@ export default function FAQ() {
         <div className="max-w-[900px] mx-auto px-6 sm:px-10">
           {faqSections.map((section, sIdx) => (
             <div key={section.prefix} className={`py-16 ${sIdx > 0 ? "border-t border-white/[0.06]" : ""}`}>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/70 block mb-8">{section.title}</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF] block mb-8">{section.title}</span>
               <Accordion type="single" collapsible className="space-y-0">
                 {section.data.map((faq, i) => (
                   <AccordionItem

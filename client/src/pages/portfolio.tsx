@@ -79,13 +79,13 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-1">
-                  <span className="text-[11px] text-[#0645FF]/30 font-mono">{project.num}</span>
+                  <span className="text-[11px] text-[#0645FF]/50 font-mono">{project.num}</span>
                 </div>
                 <div className="lg:col-span-6">
                   <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
                   <div className="flex items-center gap-3 mt-3">
                     <span className="text-[13px] text-white/45">{project.client}</span>
-                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]/70">{project.sector}</span>
+                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]">{project.sector}</span>
                   </div>
                   <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
                   <div className="flex flex-wrap gap-2 mt-6">
@@ -95,7 +95,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="lg:col-span-5">
-                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/50 block mb-6">Key Outcomes</span>
+                  <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF]/80 block mb-6">Key Outcomes</span>
                   <div className="space-y-0">
                     {project.results.map((result, j) => (
                       <div key={result} className={`py-4 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
