@@ -50,7 +50,7 @@ export function Navbar() {
                 className="bg-[#0645FF] text-white text-[13px] font-medium rounded-full px-5 h-9 hover:bg-[#0645FF]/90"
                 data-testid="button-nav-cta"
               >
-                Start a Project
+                Get in Touch
               </Button>
             </Link>
           </div>
@@ -91,7 +91,7 @@ export function Navbar() {
               ))}
               <Link href="/contact" onClick={() => setMobileOpen(false)}>
                 <Button className="bg-[#0645FF] text-white text-sm font-medium mt-4 w-full rounded-full" data-testid="button-mobile-cta">
-                  Start a Project
+                  Get in Touch
                 </Button>
               </Link>
             </div>
@@ -200,7 +200,7 @@ export function CTABanner() {
               <div className="flex flex-wrap gap-3 lg:justify-end">
                 <Link href="/contact">
                   <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-cta-bottom">
-                    Start a Project
+                    Get in Touch
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>

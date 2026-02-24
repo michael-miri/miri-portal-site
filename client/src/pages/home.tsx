@@ -56,7 +56,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
                   <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-hero-cta">
-                    Start a Project
+                    Get in Touch
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>
