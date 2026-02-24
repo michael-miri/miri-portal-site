@@ -1,135 +1,45 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
-import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo__1771947651217.png";
 import {
+  ArrowRight,
+  Sparkles,
   Brain,
   Code2,
   Smartphone,
   Globe,
-  ArrowRight,
-  Menu,
-  X,
-  Mail,
-  Phone,
-  MapPin,
-  CheckCircle2,
-  Sparkles,
-  Bot,
   Workflow,
-  ChevronRight,
-  Building2,
-  Landmark,
-  Users,
   Shield,
   Cloud,
   Database,
   Boxes,
-  Briefcase,
+  Building2,
+  Landmark,
+  MapPin,
+  Users,
+  CheckCircle2,
+  Lock,
+  ShieldCheck,
+  FileCheck,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const contactFormSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Please enter a valid email"),
-  company: z.string().optional(),
-  message: z.string().min(1, "Please tell us how we can help"),
-});
-
-type ContactFormValues = z.infer<typeof contactFormSchema>;
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const stagger = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
-
-const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#about" },
-  { label: "Team", href: "#team" },
-  { label: "Industries", href: "#industries" },
-  { label: "Contact", href: "#contact" },
-];
+import { motion } from "framer-motion";
+import { Layout, CTABanner, fadeInUp, fadeInLeft, fadeInRight, stagger } from "@/components/layout";
+import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo__1771947651217.png";
 
 const services = [
-  { icon: Workflow, title: "Strategy & Transformation", desc: "Align business goals with technology capabilities through agile delivery and high-value outcomes." },
-  { icon: Brain, title: "AI & Advanced Analytics", desc: "Embed intelligent tools and automation to optimize performance and extend asset life." },
-  { icon: Shield, title: "Cybersecurity & Resilience", desc: "Secure-by-design architectures with continuous monitoring and compliance frameworks." },
-  { icon: Cloud, title: "Cloud & Hybrid Infrastructure", desc: "Scalable, resilient platforms with DevOps methods that accelerate deployment and adaptability." },
-  { icon: Code2, title: "Custom Applications & Automation", desc: "Streamlined workflows through agile development, iterative prototyping, and user-centered design." },
-  { icon: Database, title: "Data Governance & Management", desc: "Structured data assets that build trust, improve accessibility, and enable integration." },
-  { icon: Boxes, title: "IoT, Edge & Real-Time Systems", desc: "Connected infrastructure that drives operational intelligence and proactive decisions." },
-  { icon: Globe, title: "Digital Twin & Visualization", desc: "Immersive models and simulations that reveal system behavior and support data-driven planning." },
-  { icon: Smartphone, title: "OT/IT Integration", desc: "Unified, data-rich environments that enhance control, situational awareness, and enterprise decisions." },
+  { icon: Workflow, title: "Strategy & Transformation", desc: "Align business goals with technology capabilities through agile delivery." },
+  { icon: Brain, title: "AI & Advanced Analytics", desc: "Embed intelligent tools and automation to optimize performance." },
+  { icon: Shield, title: "Cybersecurity & Resilience", desc: "Secure-by-design architectures with continuous monitoring." },
+  { icon: Cloud, title: "Cloud & Hybrid Infrastructure", desc: "Scalable, resilient platforms with DevOps methods." },
+  { icon: Code2, title: "Custom Applications", desc: "Streamlined workflows through agile development." },
+  { icon: Database, title: "Data Governance", desc: "Structured data assets that build trust and integration." },
 ];
 
-function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const scrollTo = (href: string) => {
-    setMobileOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050a1a]/70 backdrop-blur-2xl border-b border-white/[0.04]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="flex items-center justify-between gap-4 h-16 sm:h-20">
-          <a href="#" className="shrink-0" data-testid="link-logo">
-            <img src={logoImage} alt="Avion Tech" className="h-9 sm:h-11 w-auto" />
-          </a>
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button key={link.label} onClick={() => scrollTo(link.href)} className="text-sm font-medium text-white/60 transition-colors duration-200" data-testid={`link-nav-${link.label.toLowerCase()}`}>
-                {link.label}
-              </button>
-            ))}
-          </div>
-          <div className="hidden md:block">
-            <Button onClick={() => scrollTo("#contact")} className="bg-[#0645FF] text-white font-semibold px-6" data-testid="button-nav-cta">
-              Get Started
-            </Button>
-          </div>
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white p-2" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} data-testid="button-mobile-menu">
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="md:hidden bg-[#050a1a]/95 backdrop-blur-2xl border-t border-white/5">
-            <div className="px-5 py-4 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <button key={link.label} onClick={() => scrollTo(link.href)} className="text-left text-base font-medium text-white/60 py-2.5" data-testid={`link-mobile-${link.label.toLowerCase()}`}>{link.label}</button>
-              ))}
-              <Button onClick={() => scrollTo("#contact")} className="bg-[#0645FF] text-white font-semibold mt-2 w-full" data-testid="button-mobile-cta">Get Started</Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-}
+const sectors = [
+  { icon: Building2, title: "Private Sector", items: ["Enterprise", "Startups", "SMBs"] },
+  { icon: Landmark, title: "Government & Federal", items: ["Defense", "Compliance", "Secure Systems"] },
+  { icon: MapPin, title: "Municipal", items: ["Smart Cities", "Public Services"] },
+  { icon: Users, title: "Customer-Facing", items: ["E-Commerce", "SaaS", "Consumer Apps"] },
+];
 
 function HeroSection() {
   return (
@@ -142,9 +52,6 @@ function HeroSection() {
         <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-[#0645FF]/8 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: "4s" }} />
         <div className="absolute top-20 right-20 w-[300px] h-[300px] border border-[#0645FF]/[0.06] rounded-full" />
         <div className="absolute top-32 right-32 w-[200px] h-[200px] border border-[#0645FF]/[0.04] rounded-full" />
-        <div className="absolute bottom-40 left-10 w-2 h-2 bg-[#0645FF]/30 rounded-full" />
-        <div className="absolute top-40 right-1/4 w-1.5 h-1.5 bg-[#0645FF]/20 rounded-full" />
-        <div className="absolute bottom-60 right-20 w-1 h-1 bg-[#4B8BFF]/30 rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-28 pb-32">
@@ -167,13 +74,17 @@ function HeroSection() {
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-4">
-            <Button size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-[#0645FF] text-white font-semibold px-8 text-base group" data-testid="button-hero-cta">
-              Book a Free Consultation
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-            </Button>
-            <Button size="lg" variant="outline" onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="border-white/15 text-white font-semibold px-8 text-base bg-white/5 backdrop-blur-sm" data-testid="button-hero-services">
-              Our Services
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-[#0645FF] text-white font-semibold px-8 text-base group" data-testid="button-hero-cta">
+                Book a Free Consultation
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+              </Button>
+            </Link>
+            <Link href="/services">
+              <Button size="lg" variant="outline" className="border-white/15 text-white font-semibold px-8 text-base bg-white/5 backdrop-blur-sm" data-testid="button-hero-services">
+                Our Services
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div variants={fadeInUp} className="mt-16 flex items-center gap-10">
@@ -196,9 +107,9 @@ function HeroSection() {
   );
 }
 
-function ServicesSection() {
+function ServicesPreview() {
   return (
-    <section id="services" className="relative py-24 sm:py-32 bg-[#070e24]">
+    <section className="relative py-24 sm:py-32 bg-[#070e24]">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#0645FF]/[0.03] to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
@@ -210,7 +121,7 @@ function ServicesSection() {
               <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Technology Consulting</span>
             </h2>
             <p className="mt-5 text-white/45 max-w-md leading-relaxed">
-              Avion Tech delivers actionable insights and practical solutions across cloud, AI, cybersecurity, digital twins, and more.
+              Avion Tech delivers actionable insights across cloud, AI, cybersecurity, digital twins, and more.
             </p>
           </motion.div>
         </motion.div>
@@ -219,8 +130,6 @@ function ServicesSection() {
           {services.map((service) => (
             <motion.div key={service.title} variants={fadeInUp} className="relative group bg-[#070e24] p-7 hover-elevate" data-testid={`card-service-${service.title.toLowerCase().replace(/\s/g, '-')}`}>
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0645FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#0645FF]/5 to-transparent rounded-bl-3xl" />
-
               <div className="relative">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 flex items-center justify-center mb-4">
                   <service.icon className="w-5 h-5 text-[#0645FF]" />
@@ -230,6 +139,15 @@ function ServicesSection() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-10 text-center">
+          <Link href="/services">
+            <Button variant="outline" className="border-white/15 text-white font-semibold px-8 bg-white/5 group" data-testid="button-services-more">
+              View All 9 Services
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
@@ -242,9 +160,9 @@ function ServicesSection() {
   );
 }
 
-function AboutSection() {
+function AboutPreview() {
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
+    <section className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
       <div className="absolute top-0 left-0 w-1/2 h-full">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0645FF]/[0.04] to-transparent" />
       </div>
@@ -275,7 +193,7 @@ function AboutSection() {
               <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Avion Tech</span>
             </h2>
             <p className="mt-5 text-white/45 leading-relaxed">
-              Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance and adapt to evolving technology landscapes.
+              Avion Tech consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -298,11 +216,13 @@ function AboutSection() {
               ))}
             </div>
 
-            <div className="mt-10">
-              <Button onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-[#0645FF] text-white font-semibold px-8 group" data-testid="button-about-cta">
-                Let's Talk
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-              </Button>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/about">
+                <Button className="bg-[#0645FF] text-white font-semibold px-8 group" data-testid="button-about-cta">
+                  Learn More About Us
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>
@@ -310,7 +230,6 @@ function AboutSection() {
 
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 80L1440 80L1440 30C1100 0 800 60 500 20C200 -10 100 50 0 30L0 80Z" fill="#0645FF" fillOpacity="0.06" />
           <path d="M0 80L1440 80L1440 50C1200 70 900 30 600 60C300 90 100 40 0 50L0 80Z" fill="#070e24" />
         </svg>
       </div>
@@ -318,16 +237,71 @@ function AboutSection() {
   );
 }
 
-function IndustriesSection() {
-  const sectors = [
-    { icon: Building2, title: "Private Sector", items: ["Enterprise", "Startups", "SMBs"] },
-    { icon: Landmark, title: "Government & Federal", items: ["Defense", "Compliance", "Secure Systems"] },
-    { icon: MapPin, title: "Municipal", items: ["Smart Cities", "Public Services", "Community Apps"] },
-    { icon: Users, title: "Customer-Facing", items: ["E-Commerce", "SaaS", "Consumer Apps"] },
-  ];
-
+function SecurityCallout() {
   return (
-    <section id="industries" className="relative py-24 sm:py-32 bg-[#070e24] overflow-hidden">
+    <section className="relative py-24 sm:py-32 bg-[#070e24] overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
+      </div>
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
+          <div className="relative rounded-3xl border border-[#0645FF]/20 bg-gradient-to-br from-[#0645FF]/10 via-[#050a1a] to-[#050a1a] p-10 sm:p-14 overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#0645FF]/10 rounded-full blur-[80px]" />
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#0645FF]/5 rounded-full blur-[60px]" />
+
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <motion.div variants={fadeInLeft}>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/30 bg-[#0645FF]/10 mb-6">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#0645FF]" />
+                  <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Security First</span>
+                </div>
+                <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white leading-tight">
+                  Your Data Security Is{" "}
+                  <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Our Priority</span>
+                </h2>
+                <p className="mt-4 text-white/45 leading-relaxed max-w-lg">
+                  Avion Tech implements enterprise-grade security at every level. From SOC 2 compliance to zero-trust architectures, we protect what matters most.
+                </p>
+                <div className="mt-8">
+                  <Link href="/security">
+                    <Button className="bg-[#0645FF] text-white font-semibold px-8 group" data-testid="button-security-callout">
+                      Learn About Our Security
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeInRight} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { icon: Lock, title: "Zero-Trust Architecture", desc: "Never trust, always verify across all systems." },
+                  { icon: ShieldCheck, title: "SOC 2 Compliant", desc: "Audited security controls and processes." },
+                  { icon: FileCheck, title: "Data Encryption", desc: "AES-256 encryption at rest and in transit." },
+                  { icon: Shield, title: "24/7 Monitoring", desc: "Continuous threat detection and response." },
+                ].map((item) => (
+                  <div key={item.title} className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.06]" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
+                    <item.icon className="w-5 h-5 text-[#0645FF] mb-3" />
+                    <h4 className="font-heading text-sm font-semibold text-white mb-1">{item.title}</h4>
+                    <p className="text-xs text-white/35 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0 80L1440 80L1440 30C1200 60 900 10 600 40C300 70 100 20 0 40L0 80Z" fill="#050a1a" />
+        </svg>
+      </div>
+    </section>
+  );
+}
+
+function IndustriesPreview() {
+  return (
+    <section className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
       </div>
@@ -339,17 +313,12 @@ function IndustriesSection() {
             Built for{" "}
             <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Every Sector</span>
           </motion.h2>
-          <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
-            Tailored solutions for every industry, from private enterprise to public service.
-          </motion.p>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {sectors.map((sector) => (
             <motion.div key={sector.title} variants={fadeInUp}>
               <div className="relative group h-full rounded-2xl p-6 bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.05] hover-elevate" data-testid={`card-industry-${sector.title.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#0645FF]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 flex items-center justify-center mb-4">
                   <sector.icon className="w-5 h-5 text-[#0645FF]" />
                 </div>
@@ -364,321 +333,28 @@ function IndustriesSection() {
           ))}
         </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-12 flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
-          {["Healthcare", "Finance", "Education", "Retail", "Manufacturing", "Logistics", "Energy", "Real Estate"].map((tag) => (
-            <span key={tag} className="text-xs px-3 py-1.5 rounded-full border border-white/[0.06] text-white/30 bg-white/[0.02]">{tag}</span>
-          ))}
-        </motion.div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 100L1440 100L1440 60C1100 20 800 80 500 40C200 0 100 70 0 40L0 100Z" fill="#050a1a" />
-        </svg>
-      </div>
-    </section>
-  );
-}
-
-function TeamSection() {
-  const team = [
-    {
-      name: "Richard Hake",
-      role: "Project Manager",
-      location: "Lexington, Kentucky",
-      bio: "Richard brings over 15 years of experience in management consulting, business transformation, and program leadership. He specializes in guiding digital modernization initiatives, integrating technology solutions, and aligning project delivery with organizational goals.",
-      skills: ["Stakeholder Engagement", "Strategic Planning", "Cross-Functional Leadership", "Digital Modernization"],
-    },
-    {
-      name: "Michael Colliver",
-      role: "Technology Solution Architect",
-      location: "Lexington, Kentucky",
-      bio: "Michael is a senior technology consultant with 14 years of experience in software development, digital transformation, and user experience. He has led cross-functional teams through complex lifecycles, integrating business strategy with technical execution.",
-      skills: ["Solution Architecture", "Software Development", "UI/UX Design", "Business Analysis"],
-    },
-  ];
-
-  return (
-    <section id="team" className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/3 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Avion Tech Leadership</motion.span>
-          <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
-            Meet the{" "}
-            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Avion Tech Team</span>
-          </motion.h2>
-          <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
-            Experienced leaders committed to collaboration, innovation, and delivering results.
-          </motion.p>
-        </motion.div>
-
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {team.map((member) => (
-            <motion.div key={member.name} variants={fadeInUp}>
-              <div className="relative group h-full rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.04] to-transparent p-8 hover-elevate" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#0645FF]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0645FF]/25 to-[#0645FF]/5 flex items-center justify-center">
-                    <Briefcase className="w-6 h-6 text-[#0645FF]" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-lg font-semibold text-white">{member.name}</h3>
-                    <p className="text-sm text-[#4B8BFF]">{member.role}</p>
-                    <p className="text-xs text-white/30 mt-0.5">{member.location}</p>
-                  </div>
-                </div>
-
-                <p className="text-sm text-white/45 leading-relaxed mb-5">{member.bio}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {member.skills.map((skill) => (
-                    <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-[#0645FF]/10 text-[#4B8BFF] border border-[#0645FF]/15">{skill}</span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 80L1440 80L1440 40C1100 10 800 60 500 30C200 0 100 50 0 30L0 80Z" fill="#070e24" />
-        </svg>
-      </div>
-    </section>
-  );
-}
-
-function ContactSection() {
-  const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
-
-  const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: { name: "", email: "", company: "", message: "" },
-  });
-
-  const onSubmit = (_data: ContactFormValues) => {
-    setSubmitted(true);
-    toast({ title: "Message sent!", description: "We'll be in touch within 24 hours." });
-  };
-
-  return (
-    <section id="contact" className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#0645FF]/5 rounded-full blur-[130px]" />
-        <div className="absolute top-1/4 right-0 w-[300px] h-[300px] bg-[#0645FF]/8 rounded-full blur-[100px]" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Contact Avion Tech</motion.span>
-          <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
-            Let's Build{" "}
-            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Together</span>
-          </motion.h2>
-          <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
-            Book a free consultation with Avion Tech. No obligations, no pressure.
-          </motion.p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeft} className="lg:col-span-3">
-            <div className="rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-transparent p-8">
-              {submitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-[#0645FF]/20 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-8 h-8 text-[#0645FF]" />
-                  </div>
-                  <h3 className="font-heading text-2xl font-bold text-white mb-2">Thank You!</h3>
-                  <p className="text-white/50 mb-8">We'll reach out within 24 hours.</p>
-                  <Button onClick={() => { setSubmitted(false); form.reset(); }} variant="outline" className="border-white/15 text-white bg-white/5" data-testid="button-send-another">
-                    Send Another
-                  </Button>
-                </div>
-              ) : (
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5" data-testid="form-contact">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <FormField control={form.control} name="name" render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white/60 text-xs uppercase tracking-wider">Name *</FormLabel>
-                          <FormControl><Input {...field} placeholder="John Doe" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 rounded-xl" data-testid="input-name" /></FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )} />
-                      <FormField control={form.control} name="email" render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white/60 text-xs uppercase tracking-wider">Email *</FormLabel>
-                          <FormControl><Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 rounded-xl" data-testid="input-email" /></FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )} />
-                    </div>
-                    <FormField control={form.control} name="company" render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/60 text-xs uppercase tracking-wider">Company</FormLabel>
-                        <FormControl><Input {...field} placeholder="Your Company" className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 rounded-xl" data-testid="input-company" /></FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )} />
-                    <FormField control={form.control} name="message" render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/60 text-xs uppercase tracking-wider">Message *</FormLabel>
-                        <FormControl><Textarea {...field} placeholder="Tell us about your project..." rows={4} className="bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 resize-none rounded-xl" data-testid="input-message" /></FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )} />
-                    <Button type="submit" size="lg" className="w-full bg-[#0645FF] text-white font-semibold text-base rounded-xl" data-testid="button-submit-contact">
-                      Send Message
-                      <ChevronRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </form>
-                </Form>
-              )}
-            </div>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="lg:col-span-2 flex flex-col gap-5">
-            <div className="rounded-2xl border border-white/[0.06] bg-gradient-to-br from-[#0645FF]/10 to-transparent p-6">
-              <h4 className="font-heading text-base font-semibold text-white mb-4">Why Choose Avion Tech?</h4>
-              {["Free consultation, no strings attached", "Transparent pricing, no hidden fees", "Dedicated Avion Tech team from day one", "Proven results across 50+ industries"].map((item) => (
-                <div key={item} className="flex items-center gap-3 mb-3 last:mb-0">
-                  <CheckCircle2 className="w-4 h-4 text-[#0645FF] shrink-0" />
-                  <span className="text-sm text-white/50">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 space-y-4">
-              {[
-                { icon: Mail, label: "contact@aviontech.com" },
-                { icon: Phone, label: "+1 (555) 234-5678" },
-                { icon: MapPin, label: "Nationwide, USA" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#0645FF]/15 to-[#0645FF]/5 flex items-center justify-center shrink-0">
-                    <item.icon className="w-4 h-4 text-[#0645FF]" />
-                  </div>
-                  <span className="text-sm text-white/50">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function CTABanner() {
-  return (
-    <section className="relative py-24 bg-gradient-to-br from-[#0645FF] via-[#0645FF] to-[#0835c0] overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full opacity-30" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-          backgroundSize: "32px 32px"
-        }} />
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-[80px]" />
-        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-white/10 rounded-full blur-[60px]" />
-      </div>
-
-      <div className="absolute top-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 0L1440 0L1440 20C1200 60 900 10 600 40C300 70 100 20 0 40L0 0Z" fill="#050a1a" />
-        </svg>
-      </div>
-
-      <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-          <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Ready to Build With<br />Avion Tech?
-          </motion.h2>
-          <motion.p variants={fadeInUp} className="mt-4 text-lg text-white/70 max-w-md mx-auto">
-            Join hundreds of organizations delivering the future today with Avion Tech.
-          </motion.p>
-          <motion.div variants={fadeInUp} className="mt-8">
-            <Button size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })} className="bg-white text-[#0645FF] font-bold px-10 text-base group" data-testid="button-cta-bottom">
-              Get Started Now
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-10 text-center">
+          <Link href="/industries">
+            <Button variant="outline" className="border-white/15 text-white font-semibold px-8 bg-white/5 group" data-testid="button-industries-more">
+              Explore All Industries
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
             </Button>
-          </motion.div>
+          </Link>
         </motion.div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 60L1440 60L1440 40C1200 0 900 50 600 20C300 -10 100 40 0 20L0 60Z" fill="#030712" />
-        </svg>
-      </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="relative py-12 bg-[#030712]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-          <div className="md:col-span-2">
-            <a href="#" className="inline-block mb-4" data-testid="link-footer-logo">
-              <img src={logoImage} alt="Avion Tech" className="h-10 w-auto" />
-            </a>
-            <p className="text-sm text-white/35 max-w-xs leading-relaxed">
-              Delivering the future today through AI-driven consulting and innovative technology solutions.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-heading text-xs font-semibold text-white/60 mb-4 tracking-widest uppercase">Services</h4>
-            <ul className="space-y-2">
-              {["Strategy & Transformation", "AI & Analytics", "Cybersecurity", "Cloud Infrastructure", "Custom Applications"].map((item) => (
-                <li key={item}>
-                  <button onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="text-sm text-white/30 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</button>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-heading text-xs font-semibold text-white/60 mb-4 tracking-widest uppercase">Company</h4>
-            <ul className="space-y-2">
-              {[{ label: "Why Us", href: "#about" }, { label: "Team", href: "#team" }, { label: "Industries", href: "#industries" }, { label: "Contact", href: "#contact" }].map((item) => (
-                <li key={item.label}>
-                  <button onClick={() => document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" })} className="text-sm text-white/30 transition-colors" data-testid={`link-footer-${item.label.toLowerCase().replace(/\s/g, '-')}`}>{item.label}</button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25" data-testid="text-copyright">&copy; {new Date().getFullYear()} Avion Tech. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span className="text-xs text-white/25">Privacy Policy</span>
-            <span className="text-xs text-white/25">Terms of Service</span>
-          </div>
-        </div>
-      </div>
-    </footer>
   );
 }
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050a1a]">
-      <Navbar />
+    <Layout>
       <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TeamSection />
-      <IndustriesSection />
-      <ContactSection />
+      <ServicesPreview />
+      <AboutPreview />
+      <SecurityCallout />
+      <IndustriesPreview />
       <CTABanner />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
