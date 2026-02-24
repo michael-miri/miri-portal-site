@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="shrink-0" data-testid="link-logo">
-            <img src={logoImage} alt="Avion Tech" className="h-9 w-auto" />
+            <img src={logoImage} alt="Avion Tech" className="h-12 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
