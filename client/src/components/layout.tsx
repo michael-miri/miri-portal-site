@@ -109,7 +109,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
             <Link href="/" className="inline-block mb-6" data-testid="link-footer-logo">
-              <img src={logoImage} alt="Avion Tech" className="h-7 w-auto" />
+              <img src={logoImage} alt="Avion Tech" className="h-12 w-auto" />
             </Link>
             <p className="text-[15px] text-white/50 leading-relaxed max-w-sm">
               AI-driven technology consulting for organizations ready to move faster, think bigger, and build smarter.
