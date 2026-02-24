@@ -116,7 +116,7 @@ export function Footer() {
             </p>
           </div>
           <div className="md:col-span-2">
-            <h4 className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Services</h4>
+            <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Services</h4>
             <ul className="space-y-3">
               {["Strategy", "AI & Analytics", "Cybersecurity", "Cloud", "Custom Apps"].map((item) => (
                 <li key={item}>
@@ -126,7 +126,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:col-span-2">
-            <h4 className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Company</h4>
+            <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Company</h4>
             <ul className="space-y-3">
               {[
                 { label: "About", href: "/about" },
@@ -142,7 +142,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:col-span-3">
-            <h4 className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
+            <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
             <ul className="space-y-3 text-[14px] text-white/40">
               <li data-testid="contact-email">hello@aviontech.com</li>
               <li data-testid="contact-phone">(859) 555-0142</li>
@@ -173,7 +173,7 @@ export function PageHeader({ label, title, description }: { label: string; title
   return (
     <section className="pt-[140px] pb-20 bg-[#09090b]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-        <span className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">{label}</span>
+        <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">{label}</span>
         <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl">{title}</h1>
         <p className="mt-6 text-[17px] text-white/50 max-w-xl leading-relaxed">{description}</p>
       </div>
@@ -188,7 +188,7 @@ export function CTABanner() {
         <div className="border-t border-white/[0.06] pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
-              <span className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Next Step</span>
+              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Next Step</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Ready to move<br />forward?
               </h2>
