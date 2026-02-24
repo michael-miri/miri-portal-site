@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import logoImage from "@assets/image_1771947163542.png";
+import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo__1771947651217.png";
 import {
   Brain,
   Code2,
