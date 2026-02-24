@@ -50,7 +50,7 @@ export default function Industries() {
               data-testid={`card-industry-${sector.title.toLowerCase().replace(/\s/g, '-')}`}
             >
               <div className="lg:col-span-5">
-                <span className="text-[11px] text-[#0645FF]/50 font-mono block mb-4">0{i + 1}</span>
+                <span className="text-[11px] text-white/30 font-mono block mb-4">0{i + 1}</span>
                 <h3 className="font-heading text-3xl font-bold text-white leading-tight">{sector.title}</h3>
                 <p className="mt-4 text-[14px] text-white/50 leading-relaxed max-w-sm">{sector.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-6">
@@ -77,7 +77,7 @@ export default function Industries() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#0645FF] block mb-6">More Industries</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">More Industries</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 We also serve.
               </h2>

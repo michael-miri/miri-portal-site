@@ -123,7 +123,7 @@ export default function Services() {
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[11px] text-[#0645FF]/50 font-mono">{service.num}</span>
+                <span className="text-[11px] text-white/30 font-mono">{service.num}</span>
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-2xl font-bold text-white leading-tight">{service.title}</h3>
@@ -133,7 +133,7 @@ export default function Services() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
                   {service.details.map((detail) => (
                     <div key={detail} className="flex items-start gap-3">
-                      <span className="text-[#0645FF]/60 mt-1.5 text-[8px]">●</span>
+                      <span className="text-white/30 mt-1.5 text-[8px]">●</span>
                       <span className="text-[14px] text-white/50 leading-relaxed">{detail}</span>
                     </div>
                   ))}
