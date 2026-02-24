@@ -83,28 +83,34 @@ export default function Security() {
         description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust architectures to continuous monitoring, we protect what matters most."
       />
 
-      <section className="relative py-24 bg-[#070e24]">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#0645FF]/[0.03] to-transparent" />
+      <section className="relative py-24 bg-[#08081a]">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px"
+        }} />
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[120px]" />
         <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
-            <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Security Pillars</motion.span>
-            <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl font-bold text-white mt-4">
+            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
+              <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Security Pillars</span>
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl font-bold text-white">
               How We Protect{" "}
               <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Your Data</span>
             </motion.h2>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityPillars.map((pillar) => (
-              <motion.div key={pillar.title} variants={fadeInUp} className="group">
-                <div className="relative h-full rounded-2xl p-7 bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.05] hover-elevate" data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}>
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#0645FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 flex items-center justify-center mb-5">
-                    <pillar.icon className="w-6 h-6 text-[#0645FF]" />
+              <motion.div key={pillar.title} variants={fadeInUp}>
+                <div className="relative h-full rounded-2xl p-7 bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1" data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center mb-5">
+                    <pillar.icon className="w-6 h-6 text-[#4B8BFF]" />
                   </div>
                   <h3 className="font-heading text-lg font-semibold text-white mb-2">{pillar.title}</h3>
-                  <p className="text-sm text-white/45 leading-relaxed mb-5">{pillar.desc}</p>
+                  <p className="text-sm text-white/40 leading-relaxed mb-5">{pillar.desc}</p>
                   <ul className="space-y-2.5">
                     {pillar.items.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
@@ -120,52 +126,35 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="relative py-24 bg-[#050a1a] overflow-hidden">
-        <div className="absolute top-1/2 -translate-y-1/2 -left-32 w-64 h-64 bg-[#0645FF]/8 rounded-full blur-[100px]" />
+      <section className="relative py-24 bg-[#0a0a1c] overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px"
+        }} />
+        <div className="absolute top-1/2 -translate-y-1/2 -left-32 w-64 h-64 bg-[#0645FF]/5 rounded-full blur-[120px]" />
         <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
             <motion.div variants={fadeInUp} className="text-center mb-16">
-              <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Our Process</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
+                <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Our Process</span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
                 Security{" "}
                 <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Lifecycle</span>
               </h2>
-              <p className="mt-4 text-white/45 max-w-lg mx-auto">
+              <p className="mt-4 text-white/40 max-w-lg mx-auto">
                 Our proven five-phase approach ensures comprehensive protection from assessment through continuous improvement.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {securityProcess.map((phase) => (
-                <motion.div key={phase.step} variants={fadeInUp} className="relative text-center p-6 rounded-2xl bg-white/[0.03] border border-white/[0.05]">
-                  <div className="font-heading text-3xl font-bold text-[#0645FF]/30 mb-3">{phase.step}</div>
-                  <h4 className="font-heading text-base font-semibold text-white mb-2">{phase.title}</h4>
-                  <p className="text-xs text-white/35 leading-relaxed">{phase.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="relative py-24 bg-[#070e24]">
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
-            <motion.div variants={fadeInUp} className="text-center mb-16">
-              <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Compliance</span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-4">
-                Certifications &{" "}
-                <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Standards</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {certifications.map((cert) => (
-                <motion.div key={cert.name} variants={fadeInUp} className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.05]" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
-                  <ShieldCheck className="w-6 h-6 text-[#0645FF] shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-heading text-base font-semibold text-white">{cert.name}</h4>
-                    <p className="text-sm text-white/35 mt-1">{cert.desc}</p>
+                <motion.div key={phase.step} variants={fadeInUp}>
+                  <div className="relative h-full text-center p-6 rounded-2xl bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1">
+                    <div className="font-heading text-3xl font-bold bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent mb-3">{phase.step}</div>
+                    <h4 className="font-heading text-base font-semibold text-white mb-2">{phase.title}</h4>
+                    <p className="text-xs text-white/35 leading-relaxed">{phase.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -174,24 +163,67 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="relative py-20 bg-[#050a1a]">
+      <section className="relative py-24 bg-[#08081a]">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px"
+        }} />
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px]" />
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger}>
+            <motion.div variants={fadeInUp} className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0645FF]/20 bg-[#0645FF]/8 mb-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#0645FF]" />
+                <span className="text-xs font-medium text-[#4B8BFF] tracking-wider uppercase">Compliance</span>
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
+                Certifications &{" "}
+                <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Standards</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {certifications.map((cert) => (
+                <motion.div key={cert.name} variants={fadeInUp}>
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-[#0e0e22]/80 border border-white/[0.06] hover:border-[#0645FF]/20 transition-all duration-300 hover:-translate-y-1" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-5 h-5 text-[#4B8BFF]" />
+                    </div>
+                    <div>
+                      <h4 className="font-heading text-base font-semibold text-white">{cert.name}</h4>
+                      <p className="text-sm text-white/35 mt-1">{cert.desc}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="relative py-20 bg-[#0a0a1c]">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px"
+        }} />
+        <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
         <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl font-bold text-white">
               Need a Security Assessment?
             </motion.h2>
-            <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
+            <motion.p variants={fadeInUp} className="mt-4 text-white/40 max-w-lg mx-auto">
               Our cybersecurity experts can evaluate your current posture and recommend improvements.
             </motion.p>
             <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-[#0645FF] text-white font-semibold px-8 group" data-testid="button-security-contact">
+                <Button size="lg" className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-8 rounded-xl group" data-testid="button-security-contact">
                   Request an Assessment
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                 </Button>
               </Link>
               <Link href="/faq">
-                <Button size="lg" variant="outline" className="border-white/15 text-white font-semibold px-8 bg-white/5" data-testid="button-security-faq">
+                <Button size="lg" variant="outline" className="border-white/15 text-white font-semibold px-8 rounded-xl bg-white/[0.03]" data-testid="button-security-faq">
                   Security FAQ
                 </Button>
               </Link>

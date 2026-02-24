@@ -4,16 +4,14 @@
 Multi-page marketing website for Avion Tech, an AI-driven tech consulting company. Conversion-optimized site with separate pages for Services, About (with Team), Industries, Portfolio, FAQ, Security, and Contact. Content sourced from Stantec Proposal document.
 
 ## Recent Changes
+- 2026-02-24: Full redesign to premium dark aesthetic with glass-morphism cards, glowing orbs, dot grid patterns
+- 2026-02-24: Updated logo to new Avion Tech triangle design (Black_and_White_Initial_A_Tech_Business_Logo_-2)
+- 2026-02-24: Floating pill-style navbar with backdrop blur
 - 2026-02-24: Restructured from single-page to multi-page architecture with wouter routing
 - 2026-02-24: Added Security page with callout on home page
 - 2026-02-24: Added Portfolio page with 6 project examples
 - 2026-02-24: Added FAQ page with accordion sections (General, Services, Security, Getting Started)
 - 2026-02-24: Created shared layout components (Navbar, Footer, PageHeader, CTABanner)
-- 2026-02-24: Added scroll-to-top behavior on route changes
-- 2026-02-24: Updated services to Technology Consulting capabilities (9 services from pages 6-7 of proposal)
-- 2026-02-24: Added Team section with Richard Hake (PM) and Michael Colliver (Solution Architect) from page 8
-- 2026-02-24: Removed generated illustrations, using pure CSS gradients and geometric shapes
-- 2026-02-24: Updated logo to new blue triangle "A" design
 
 ## Architecture
 - **Frontend**: React + Vite + TypeScript + Tailwind CSS + shadcn/ui + Framer Motion
@@ -48,7 +46,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/index.css` - Theme variables
 - `tailwind.config.ts` - Design tokens
-- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo__1771947651217.png` - Avion Tech logo
+- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo_-2_1771948156481.png` - Avion Tech logo (current)
 - `attached_assets/Stantec_Proposal_for_MDAH_Tour_System_1_1771948064569.pdf` - Source content
 
 ## User Preferences

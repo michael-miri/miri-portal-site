@@ -50,12 +50,17 @@ export default function Contact() {
         description="Book a free consultation. No obligations, no pressure — just an honest conversation about your technology needs."
       />
 
-      <section className="relative py-24 bg-[#070e24]">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#0645FF]/[0.03] to-transparent" />
+      <section className="relative py-24 bg-[#08081a]">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: "40px 40px"
+        }} />
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[120px]" />
         <div className="relative max-w-5xl mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeft} className="lg:col-span-3">
-              <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e22]/60 p-8">
                 <h2 className="font-heading text-2xl font-bold text-white mb-6">Send Us a Message</h2>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
@@ -64,7 +69,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-white/60 text-sm">Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="John Doe" className="bg-white/[0.04] border-white/10 text-white placeholder:text-white/20 focus:border-[#0645FF]/50 focus:ring-[#0645FF]/20" data-testid="input-name" />
+                            <Input {...field} placeholder="John Doe" className="bg-white/[0.04] border-white/[0.06] text-white placeholder:text-white/20 focus:border-[#0645FF]/40 focus:ring-[#0645FF]/20" data-testid="input-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -73,7 +78,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-white/60 text-sm">Email *</FormLabel>
                           <FormControl>
-                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.04] border-white/10 text-white placeholder:text-white/20 focus:border-[#0645FF]/50 focus:ring-[#0645FF]/20" data-testid="input-email" />
+                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.04] border-white/[0.06] text-white placeholder:text-white/20 focus:border-[#0645FF]/40 focus:ring-[#0645FF]/20" data-testid="input-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -83,7 +88,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-white/60 text-sm">Company</FormLabel>
                         <FormControl>
-                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.04] border-white/10 text-white placeholder:text-white/20 focus:border-[#0645FF]/50 focus:ring-[#0645FF]/20" data-testid="input-company" />
+                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.04] border-white/[0.06] text-white placeholder:text-white/20 focus:border-[#0645FF]/40 focus:ring-[#0645FF]/20" data-testid="input-company" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -92,12 +97,12 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel className="text-white/60 text-sm">How Can We Help? *</FormLabel>
                         <FormControl>
-                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.04] border-white/10 text-white placeholder:text-white/20 focus:border-[#0645FF]/50 focus:ring-[#0645FF]/20 resize-none" data-testid="input-message" />
+                          <Textarea {...field} rows={5} placeholder="Tell us about your project, goals, or questions..." className="bg-white/[0.04] border-white/[0.06] text-white placeholder:text-white/20 focus:border-[#0645FF]/40 focus:ring-[#0645FF]/20 resize-none" data-testid="input-message" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
-                    <Button type="submit" className="bg-[#0645FF] text-white font-semibold px-8 w-full sm:w-auto group" data-testid="button-submit-contact">
+                    <Button type="submit" className="bg-[#0645FF] hover:bg-[#0535DD] text-white font-semibold px-8 rounded-xl w-full sm:w-auto group" data-testid="button-submit-contact">
                       Send Message
                       <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                     </Button>
@@ -107,7 +112,7 @@ export default function Contact() {
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight} className="lg:col-span-2 space-y-6">
-              <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e22]/60 p-8">
                 <h3 className="font-heading text-lg font-semibold text-white mb-6">Contact Info</h3>
                 <div className="space-y-5">
                   {[
@@ -116,8 +121,8 @@ export default function Contact() {
                     { icon: MapPin, label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-3" data-testid={`text-contact-${item.label.toLowerCase()}`}>
-                      <div className="w-9 h-9 rounded-lg bg-[#0645FF]/10 flex items-center justify-center shrink-0">
-                        <item.icon className="w-4 h-4 text-[#0645FF]" />
+                      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 border border-[#0645FF]/10 flex items-center justify-center shrink-0">
+                        <item.icon className="w-4 h-4 text-[#4B8BFF]" />
                       </div>
                       <div>
                         <div className="text-xs text-white/35">{item.label}</div>
@@ -128,7 +133,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8">
+              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e22]/60 p-8">
                 <h3 className="font-heading text-lg font-semibold text-white mb-4">What to Expect</h3>
                 <ul className="space-y-3">
                   {[
