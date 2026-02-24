@@ -47,7 +47,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/index.css` - Theme variables
 - `tailwind.config.ts` - Design tokens
-- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo_-3_1771952961801.png` - Avion Tech logo (current)
+- `attached_assets/Black_and_White_Initial_A_Tech_Business_Logo_-4_1771955022816.png` - Avion Tech logo (current)
 - `attached_assets/Stantec_Proposal_for_MDAH_Tour_System_1_1771948064569.pdf` - Source content
 
 ## User Preferences
