@@ -27,6 +27,11 @@ import {
   Building2,
   Landmark,
   Users,
+  Shield,
+  Cloud,
+  Database,
+  Boxes,
+  Briefcase,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -62,17 +67,21 @@ const stagger = {
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Why Us", href: "#about" },
+  { label: "Team", href: "#team" },
   { label: "Industries", href: "#industries" },
   { label: "Contact", href: "#contact" },
 ];
 
 const services = [
-  { icon: Brain, title: "AI Consulting", desc: "Smart automation and data-driven insights that transform operations." },
-  { icon: Code2, title: "App Development", desc: "Scalable, high-performance applications built for the future." },
-  { icon: Bot, title: "Automation", desc: "Eliminate repetitive tasks and accelerate your workflow 10x." },
-  { icon: Globe, title: "Web Platforms", desc: "Responsive, conversion-driven websites and web applications." },
-  { icon: Smartphone, title: "Mobile Apps", desc: "Native and cross-platform apps with flawless UX." },
-  { icon: Workflow, title: "Digital Transformation", desc: "End-to-end modernization aligned with your goals." },
+  { icon: Workflow, title: "Strategy & Transformation", desc: "Align business goals with technology capabilities through agile delivery and high-value outcomes." },
+  { icon: Brain, title: "AI & Advanced Analytics", desc: "Embed intelligent tools and automation to optimize performance and extend asset life." },
+  { icon: Shield, title: "Cybersecurity & Resilience", desc: "Secure-by-design architectures with continuous monitoring and compliance frameworks." },
+  { icon: Cloud, title: "Cloud & Hybrid Infrastructure", desc: "Scalable, resilient platforms with DevOps methods that accelerate deployment and adaptability." },
+  { icon: Code2, title: "Custom Applications & Automation", desc: "Streamlined workflows through agile development, iterative prototyping, and user-centered design." },
+  { icon: Database, title: "Data Governance & Management", desc: "Structured data assets that build trust, improve accessibility, and enable integration." },
+  { icon: Boxes, title: "IoT, Edge & Real-Time Systems", desc: "Connected infrastructure that drives operational intelligence and proactive decisions." },
+  { icon: Globe, title: "Digital Twin & Visualization", desc: "Immersive models and simulations that reveal system behavior and support data-driven planning." },
+  { icon: Smartphone, title: "OT/IT Integration", desc: "Unified, data-rich environments that enhance control, situational awareness, and enterprise decisions." },
 ];
 
 function Navbar() {
@@ -195,34 +204,30 @@ function ServicesSection() {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-16">
           <motion.div variants={fadeInUp} className="max-w-2xl">
-            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">What We Do</span>
+            <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Technology Consulting</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
-              Solutions That{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Move You Forward</span>
+              Full-Spectrum{" "}
+              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Capabilities</span>
             </h2>
             <p className="mt-5 text-white/45 max-w-md leading-relaxed">
-              From concept to deployment, we bring innovative technology to every challenge with security, speed, and precision.
+              From cloud migration and AI to cybersecurity and digital twins, we deliver actionable insights and practical solutions that drive efficiency and innovation.
             </p>
           </motion.div>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-2xl overflow-hidden">
-          {services.map((service, i) => (
-            <motion.div key={service.title} variants={fadeInUp} className="relative group bg-[#070e24] p-8 hover-elevate" data-testid={`card-service-${service.title.toLowerCase().replace(/\s/g, '-')}`}>
+          {services.map((service) => (
+            <motion.div key={service.title} variants={fadeInUp} className="relative group bg-[#070e24] p-7 hover-elevate" data-testid={`card-service-${service.title.toLowerCase().replace(/\s/g, '-')}`}>
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0645FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#0645FF]/5 to-transparent rounded-bl-3xl" />
 
               <div className="relative">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 flex items-center justify-center mb-5">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0645FF]/20 to-[#0645FF]/5 flex items-center justify-center mb-4">
                   <service.icon className="w-5 h-5 text-[#0645FF]" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <h3 className="font-heading text-base font-semibold text-white mb-1.5">{service.title}</h3>
                 <p className="text-sm text-white/40 leading-relaxed">{service.desc}</p>
               </div>
-
-              {i < services.length - 1 && (
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-[#0645FF]/10 rounded-br-2xl opacity-30" />
-              )}
             </motion.div>
           ))}
         </motion.div>
@@ -266,18 +271,18 @@ function AboutSection() {
           <motion.div variants={fadeInRight}>
             <span className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Why Avion Tech</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
-              We Guarantee to{" "}
-              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Beat the Competition</span>
+              Harness the Full Potential of{" "}
+              <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Digital Transformation</span>
             </h2>
             <p className="mt-5 text-white/45 leading-relaxed">
-              Decades of hands-on expertise, innovative technologies, and an unwavering commitment to delivering the best experience.
+              Our consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help you optimize performance and adapt to evolving technology landscapes.
             </p>
 
             <div className="mt-10 space-y-6">
               {[
-                { title: "Unmatched Quality", desc: "Rigorous standards, enterprise-grade security, best-in-class practices." },
-                { title: "Most Affordable", desc: "Premium results at competitive prices. We'll beat any comparable quote." },
-                { title: "Fastest Delivery", desc: "Agile teams and proven processes get you to market ahead of schedule." },
+                { title: "Scalable & Secure", desc: "Solutions aligned with organizational goals, built on secure-by-design architectures." },
+                { title: "Actionable Insights", desc: "Industry-leading tools and methodologies that drive efficiency and measurable results." },
+                { title: "End-to-End Delivery", desc: "From assessment and strategy through implementation and long-term support." },
               ].map((item, i) => (
                 <div key={item.title} className="flex items-start gap-4">
                   <div className="relative shrink-0 mt-1">
@@ -369,6 +374,81 @@ function IndustriesSection() {
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
           <path d="M0 100L1440 100L1440 60C1100 20 800 80 500 40C200 0 100 70 0 40L0 100Z" fill="#050a1a" />
+        </svg>
+      </div>
+    </section>
+  );
+}
+
+function TeamSection() {
+  const team = [
+    {
+      name: "Richard Hake",
+      role: "Project Manager",
+      location: "Lexington, Kentucky",
+      bio: "Richard brings over 15 years of experience in management consulting, business transformation, and program leadership. He specializes in guiding digital modernization initiatives, integrating technology solutions, and aligning project delivery with organizational goals.",
+      skills: ["Stakeholder Engagement", "Strategic Planning", "Cross-Functional Leadership", "Digital Modernization"],
+    },
+    {
+      name: "Michael Colliver",
+      role: "Technology Solution Architect",
+      location: "Lexington, Kentucky",
+      bio: "Michael is a senior technology consultant with 14 years of experience in software development, digital transformation, and user experience. He has led cross-functional teams through complex lifecycles, integrating business strategy with technical execution.",
+      skills: ["Solution Architecture", "Software Development", "UI/UX Design", "Business Analysis"],
+    },
+  ];
+
+  return (
+    <section id="team" className="relative py-24 sm:py-32 bg-[#050a1a] overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/3 w-[400px] h-[400px] bg-[#0645FF]/5 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="text-center mb-16">
+          <motion.span variants={fadeInUp} className="text-xs font-semibold text-[#0645FF] tracking-widest uppercase">Leadership</motion.span>
+          <motion.h2 variants={fadeInUp} className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+            Meet Your{" "}
+            <span className="bg-gradient-to-r from-[#0645FF] to-[#4B8BFF] bg-clip-text text-transparent">Team</span>
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="mt-4 text-white/45 max-w-lg mx-auto">
+            Experienced leaders committed to collaboration, innovation, and delivering results.
+          </motion.p>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {team.map((member) => (
+            <motion.div key={member.name} variants={fadeInUp}>
+              <div className="relative group h-full rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.04] to-transparent p-8 hover-elevate" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#0645FF]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0645FF]/25 to-[#0645FF]/5 flex items-center justify-center">
+                    <Briefcase className="w-6 h-6 text-[#0645FF]" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold text-white">{member.name}</h3>
+                    <p className="text-sm text-[#4B8BFF]">{member.role}</p>
+                    <p className="text-xs text-white/30 mt-0.5">{member.location}</p>
+                  </div>
+                </div>
+
+                <p className="text-sm text-white/45 leading-relaxed mb-5">{member.bio}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {member.skills.map((skill) => (
+                    <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-[#0645FF]/10 text-[#4B8BFF] border border-[#0645FF]/15">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0 80L1440 80L1440 40C1100 10 800 60 500 30C200 0 100 50 0 30L0 80Z" fill="#070e24" />
         </svg>
       </div>
     </section>
@@ -557,7 +637,7 @@ function Footer() {
           <div>
             <h4 className="font-heading text-xs font-semibold text-white/60 mb-4 tracking-widest uppercase">Services</h4>
             <ul className="space-y-2">
-              {["AI Consulting", "App Development", "Automation", "Web Platforms", "Mobile Apps"].map((item) => (
+              {["Strategy & Transformation", "AI & Analytics", "Cybersecurity", "Cloud Infrastructure", "Custom Applications"].map((item) => (
                 <li key={item}>
                   <button onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} className="text-sm text-white/30 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</button>
                 </li>
@@ -567,7 +647,7 @@ function Footer() {
           <div>
             <h4 className="font-heading text-xs font-semibold text-white/60 mb-4 tracking-widest uppercase">Company</h4>
             <ul className="space-y-2">
-              {[{ label: "Why Us", href: "#about" }, { label: "Industries", href: "#industries" }, { label: "Contact", href: "#contact" }].map((item) => (
+              {[{ label: "Why Us", href: "#about" }, { label: "Team", href: "#team" }, { label: "Industries", href: "#industries" }, { label: "Contact", href: "#contact" }].map((item) => (
                 <li key={item.label}>
                   <button onClick={() => document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" })} className="text-sm text-white/30 transition-colors" data-testid={`link-footer-${item.label.toLowerCase().replace(/\s/g, '-')}`}>{item.label}</button>
                 </li>
@@ -594,6 +674,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
+      <TeamSection />
       <IndustriesSection />
       <ContactSection />
       <CTABanner />
