@@ -62,7 +62,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 py-32">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Our Mission</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Mission</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Delivering the<br />future today.
               </h2>
@@ -94,7 +94,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Our Values</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Values</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 What drives us.
               </h2>
@@ -103,7 +103,7 @@ export default function About() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {values.map((item, i) => (
                   <div key={item.title} className="bg-[#09090b] p-8" data-testid={`card-value-${i + 1}`}>
-                    <span className="text-[11px] text-white/30 font-mono block mb-4">0{i + 1}</span>
+                    <span className="text-[11px] text-[#C4A882]/50 font-mono block mb-4">0{i + 1}</span>
                     <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
                     <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
@@ -116,7 +116,7 @@ export default function About() {
 
       <section className="bg-[#09090b] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Leadership</span>
+          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Leadership</span>
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-20">
             Meet the team.
           </h2>
@@ -149,7 +149,7 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Our Journey</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Journey</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Key milestones.
               </h2>

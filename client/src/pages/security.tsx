@@ -71,7 +71,7 @@ export default function Security() {
               data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[11px] text-white/30 font-mono">0{i + 1}</span>
+                <span className="text-[11px] text-[#C4A882]/50 font-mono">0{i + 1}</span>
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-xl font-bold text-white leading-tight">{pillar.title}</h3>
@@ -81,7 +81,7 @@ export default function Security() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
                   {pillar.items.map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <span className="text-white/30 mt-1.5 text-[8px]">●</span>
+                      <span className="text-[#C4A882]/50 mt-1.5 text-[8px]">●</span>
                       <span className="text-[14px] text-white/50 leading-relaxed">{item}</span>
                     </div>
                   ))}
@@ -96,7 +96,7 @@ export default function Security() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Our Process</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Process</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Security lifecycle.
               </h2>
@@ -108,7 +108,7 @@ export default function Security() {
               <div className="space-y-0">
                 {securityProcess.map((phase, i) => (
                   <div key={phase.step} className={`flex gap-8 py-8 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}>
-                    <span className="text-[11px] text-white/30 font-mono shrink-0 pt-1">{phase.step}</span>
+                    <span className="text-[11px] text-[#C4A882]/50 font-mono shrink-0 pt-1">{phase.step}</span>
                     <div>
                       <h3 className="font-heading text-lg font-semibold text-white mb-1.5">{phase.title}</h3>
                       <p className="text-[13px] text-white/50 leading-relaxed">{phase.desc}</p>
@@ -125,7 +125,7 @@ export default function Security() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Compliance</span>
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Compliance</span>
               <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Certifications &<br />standards.
               </h2>

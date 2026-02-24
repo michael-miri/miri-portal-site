@@ -99,7 +99,7 @@ export default function Contact() {
 
             <div className="lg:col-span-5 space-y-6">
               <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
-                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">Contact Info</span>
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Contact Info</span>
                 <div className="space-y-6">
                   {[
                     { label: "Email", value: "hello@aviontech.com" },
@@ -115,7 +115,7 @@ export default function Contact() {
               </div>
 
               <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
-                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/50 block mb-6">What to Expect</span>
+                <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What to Expect</span>
                 <div className="space-y-0">
                   {[
                     "Response within 24 hours",
