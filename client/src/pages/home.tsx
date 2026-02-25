@@ -69,6 +69,38 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-5">
+              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Promise</span>
+              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-selfware-section">
+                Vendor software<br />is dead.<br />
+                <span className="text-white/25">Welcome to selfware.</span>
+              </h2>
+              <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
+                We guarantee to be faster, better, and cheaper. We've built a proven AI methodology that delivers tangible outcomes — leveraging the power of tomorrow, today. Software shouldn't be one-size-fits-all. Selfware is software built for you.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7 lg:flex lg:items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
+                {[
+                  { title: "Faster", desc: "AI-accelerated delivery that cuts timelines in half." },
+                  { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages." },
+                  { title: "Cheaper", desc: "No licensing fees, no per-seat costs, no vendor lock-in." },
+                ].map((item) => (
+                  <div key={item.title} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
+                    <h3 className="font-heading text-xl font-semibold text-white mb-3">{item.title}</h3>
+                    <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-32 bg-[#09090b]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
