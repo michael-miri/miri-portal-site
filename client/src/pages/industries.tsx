@@ -50,7 +50,7 @@ export default function Industries() {
               data-testid={`card-industry-${sector.title.toLowerCase().replace(/\s/g, '-')}`}
             >
               <div className="lg:col-span-5">
-                <span className="text-[13px] text-[#C4A882]/50 font-mono block mb-4">0{i + 1}</span>
+
                 <h3 className="font-heading text-3xl font-bold text-white leading-tight">{sector.title}</h3>
                 <p className="mt-4 text-[14px] text-white/50 leading-relaxed max-w-sm">{sector.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-6">

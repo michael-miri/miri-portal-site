@@ -301,7 +301,6 @@ export default function IndustryDetail() {
               <div className="space-y-0">
                 {industry.challenges.map((challenge, i) => (
                   <div key={i} className={`py-8 ${i > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`challenge-${i}`}>
-                    <span className="text-[13px] text-[#C4A882]/50 font-mono mr-4">0{i + 1}</span>
                     <span className="text-[15px] text-white/60 leading-relaxed">{challenge}</span>
                   </div>
                 ))}

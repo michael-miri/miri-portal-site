@@ -70,7 +70,7 @@ export default function Security() {
               data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
             >
               <div className="lg:col-span-1">
-                <span className="text-[13px] text-[#C4A882]/50 font-mono">0{i + 1}</span>
+
               </div>
               <div className="lg:col-span-4">
                 <h3 className="font-heading text-xl font-bold text-white leading-tight">{pillar.title}</h3>

@@ -99,7 +99,7 @@ export default function About() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {values.map((item, i) => (
                   <div key={item.title} className="bg-[#0A0E1A] p-8" data-testid={`card-value-${i + 1}`}>
-                    <span className="text-[13px] text-[#C4A882]/50 font-mono block mb-4">0{i + 1}</span>
+
                     <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
                     <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>

@@ -79,7 +79,7 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-1">
-                  <span className="text-[13px] text-[#C4A882]/50 font-mono">{project.num}</span>
+
                 </div>
                 <div className="lg:col-span-6">
                   <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
