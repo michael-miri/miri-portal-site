@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+              <div className="rounded-2xl border border-white/[0.06] bg-transparent p-10">
                 <h2 className="font-heading text-2xl font-bold text-white mb-8">Send us a message</h2>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -103,7 +103,7 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+              <div className="rounded-2xl border border-white/[0.06] bg-transparent p-10">
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Contact Info</span>
                 <div className="space-y-6">
                   {[
@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] p-10">
+              <div className="rounded-2xl border border-white/[0.06] bg-transparent p-10">
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What to Expect</span>
                 <div className="space-y-0">
                   {[
