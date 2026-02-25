@@ -113,7 +113,7 @@ export default function Legal() {
               <div>
                 <h3 className="text-[15px] font-semibold text-white mb-3">Contact</h3>
                 <p className="text-[15px] text-white/50 leading-relaxed">
-                  For questions about these terms or our privacy practices, contact us at richard@miritechnology.com or call (859) 229-9831.
+                  For questions about these terms or our privacy practices, contact us at richard@miritechnology.com.
                 </p>
               </div>
             </div>
