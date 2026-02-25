@@ -12,6 +12,7 @@ import Portfolio from "@/pages/portfolio";
 import FAQ from "@/pages/faq";
 import Security from "@/pages/security";
 import Contact from "@/pages/contact";
+import IndustryDetail from "@/pages/industry-detail";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/services" component={Services} />
         <Route path="/about" component={About} />
         <Route path="/industries" component={Industries} />
+        <Route path="/industries/:slug" component={IndustryDetail} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/faq" component={FAQ} />
         <Route path="/security" component={Security} />

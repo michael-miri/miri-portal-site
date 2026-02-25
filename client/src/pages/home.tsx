@@ -76,18 +76,20 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {[
-              { name: "Government", icon: <Shield className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Healthcare", icon: <HeartPulse className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Finance", icon: <Landmark className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Manufacturing", icon: <Factory className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Energy", icon: <Zap className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Government", slug: "government", icon: <Shield className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Healthcare", slug: "healthcare", icon: <HeartPulse className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Finance", slug: "finance", icon: <Landmark className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Manufacturing", slug: "manufacturing", icon: <Factory className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Energy", slug: "energy", icon: <Zap className="w-5 h-5 text-[#09090b]" /> },
             ].map((item) => (
-              <div key={item.name} className="flex flex-col items-center justify-center gap-5 bg-[#09090b] py-12 group hover:bg-[#0e0e12] transition-colors" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
-                <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  {item.icon}
+              <Link key={item.name} href={`/industries/${item.slug}`}>
+                <div className="flex flex-col items-center justify-center gap-5 bg-[#09090b] py-12 group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
+                  <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    {item.icon}
+                  </div>
+                  <span className="text-[14px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
                 </div>
-                <span className="text-[14px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

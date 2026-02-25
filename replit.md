@@ -30,6 +30,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 6. **FAQ** (`/faq`) - 4 accordion sections: General, Services & Process, Security & Compliance, Getting Started
 7. **Security** (`/security`) - 6 security pillars, lifecycle process, certifications & standards
 8. **Contact** (`/contact`) - Form (useForm + zodResolver) + contact info sidebar + expectations
+9. **Industry Detail** (`/industries/:slug`) - Individual pages for Government, Healthcare, Finance, Manufacturing, Energy with challenges, solutions, outcomes, related services
 
 ## Shared Components
 - `client/src/components/layout.tsx` - Navbar, Footer, PageHeader, CTABanner, Layout wrapper, animation variants
@@ -44,6 +45,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - `client/src/pages/faq.tsx` - FAQ page with accordions
 - `client/src/pages/security.tsx` - Security page
 - `client/src/pages/contact.tsx` - Contact form page
+- `client/src/pages/industry-detail.tsx` - Individual industry detail pages
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/index.css` - Theme variables
 - `tailwind.config.ts` - Design tokens
