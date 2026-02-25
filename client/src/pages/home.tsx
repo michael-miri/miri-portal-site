@@ -90,7 +90,7 @@ export default function Home() {
                   { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages." },
                   { title: "Cheaper", desc: "AI-driven efficiency means lower costs without cutting corners." },
                 ].map((item) => (
-                  <div key={item.title} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
+                  <div key={item.title} className="bg-[#09090b] p-8" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
                     <h3 className="font-heading text-xl font-semibold text-white mb-3">{item.title}</h3>
                     <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
