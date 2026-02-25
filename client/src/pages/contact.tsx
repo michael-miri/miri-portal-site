@@ -27,9 +27,14 @@ export default function Contact() {
   });
 
   const onSubmit = (data: ContactFormValues) => {
+    const subject = encodeURIComponent(`Contact from ${data.name}${data.company ? ` — ${data.company}` : ""}`);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\n\nMessage:\n${data.message}`
+    );
+    window.location.href = `mailto:richard@miritechnology.com?subject=${subject}&body=${body}`;
     toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out! We'll get back to you within 24 hours.",
+      title: "Opening Email Client",
+      description: "Your email app should open with the message ready to send.",
     });
     form.reset();
   };
