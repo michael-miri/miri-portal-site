@@ -60,16 +60,11 @@ export default function Security() {
             {securityPillars.map((pillar) => (
               <div
                 key={pillar.title}
-                className="bg-[#0A0E1A] p-8 text-center"
+                className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors"
                 data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
               >
-                <h3 className="font-heading text-xl font-bold text-white mb-3">{pillar.title}</h3>
-                <p className="text-[13px] text-white/50 leading-relaxed mb-5">{pillar.desc}</p>
-                <div className="space-y-2">
-                  {pillar.items.map((item) => (
-                    <div key={item} className="text-[13px] text-white/40 leading-relaxed">{item}</div>
-                  ))}
-                </div>
+                <h3 className="font-heading text-[17px] font-semibold text-white leading-snug mb-3">{pillar.title}</h3>
+                <p className="text-[15px] text-white/50 leading-relaxed">{pillar.desc}</p>
               </div>
             ))}
           </div>
