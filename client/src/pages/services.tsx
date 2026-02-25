@@ -145,28 +145,6 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
-          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
-            Need something more specific?
-          </h2>
-          <p className="mt-4 text-[18px] text-white/50 leading-relaxed max-w-lg mx-auto">
-            Our services are modular and adaptable. Let's design the right combination for your organization.
-          </p>
-          <div className="mt-10">
-            <Link href="/contact">
-              <Button
-                className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90"
-                data-testid="button-services-contact"
-              >
-                Talk to Our Team
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CTABanner />
     </Layout>
   );
