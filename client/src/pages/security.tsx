@@ -36,13 +36,6 @@ const securityPillars = [
   },
 ];
 
-const certifications = [
-  { name: "NIST 800-53", desc: "Federal information security standards" },
-  { name: "ISO 27001", desc: "International information security management" },
-  { name: "FedRAMP", desc: "Federal cloud security authorization" },
-  { name: "GDPR", desc: "European data protection regulation" },
-  { name: "CCPA", desc: "California consumer privacy act" },
-];
 
 const securityProcess = [
   { step: "01", title: "Assess", desc: "Comprehensive security audit of current infrastructure, policies, and vulnerabilities." },
@@ -115,27 +108,6 @@ export default function Security() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Compliance</span>
-              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
-                Certifications &<br />standards.
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-              {certifications.map((cert) => (
-                <div key={cert.name} className="bg-[#0A0E1A] p-6 hover:bg-[#141B2E] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
-                  <h4 className="text-[15px] font-semibold text-white mb-1">{cert.name}</h4>
-                  <p className="text-[12px] text-white/40 leading-relaxed">{cert.desc}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
