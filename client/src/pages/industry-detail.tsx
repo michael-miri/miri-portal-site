@@ -318,7 +318,7 @@ export default function IndustryDetail() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, i) => (
-              <div key={i} className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors group" data-testid={`solution-${i}`}>
+              <div key={i} className="bg-[#0A0E1A] p-8" data-testid={`solution-${i}`}>
                 <CheckCircle2 className="w-5 h-5 text-[#C4A882]/40 mb-4 group-hover:text-[#C4A882]/70 transition-colors" />
                 <p className="text-[14px] text-white/60 leading-relaxed">{solution}</p>
               </div>
