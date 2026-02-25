@@ -262,12 +262,12 @@ export default function IndustryDetail() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 mb-8">
-                <Link href="/industries">
-                  <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors" data-testid="link-back-industries">Industries</span>
+              <div className="flex items-baseline gap-3 mb-8">
+                <Link href="/industries" className="leading-none" data-testid="link-back-industries">
+                  <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors">Industries</span>
                 </Link>
-                <span className="text-white/20">/</span>
-                <span className="text-[13px] text-white/60">{industry.name}</span>
+                <span className="text-[13px] text-white/20 leading-none">/</span>
+                <span className="text-[13px] text-white/60 leading-none">{industry.name}</span>
               </div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A]">
