@@ -55,7 +55,7 @@ export default function About() {
       <PageHeader
         label="About Us"
         title="Innovation meets experience."
-        description="Over 20 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
+        description="Over 30 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
       />
 
       <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
