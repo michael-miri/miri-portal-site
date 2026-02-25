@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Building2, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, Sword } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
 import heroBg from "@assets/AdobeStock_321324090_1771955338444.jpeg";
 
@@ -66,12 +66,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#09090b] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-10">
-          <div className="flex flex-wrap items-center gap-x-10 gap-y-3">
-            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/60 shrink-0">Trusted across</span>
-            {["Government", "Healthcare", "Finance", "Manufacturing", "Energy"].map((name) => (
-              <span key={name} className="text-[13px] text-white/25 font-medium" data-testid={`tag-industry-${name.toLowerCase()}`}>{name}</span>
+      <section className="bg-[#09090b] border-t border-white/[0.06] py-24">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
+          <div className="text-center mb-16">
+            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/60">Trusted across industries</span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 justify-items-center">
+            {[
+              { name: "Government", icon: <Shield className="w-6 h-6 text-[#09090b]" /> },
+              { name: "Healthcare", icon: <HeartPulse className="w-6 h-6 text-[#09090b]" /> },
+              { name: "Finance", icon: <Landmark className="w-6 h-6 text-[#09090b]" /> },
+              { name: "Manufacturing", icon: <Factory className="w-6 h-6 text-[#09090b]" /> },
+              { name: "Energy", icon: <Zap className="w-6 h-6 text-[#09090b]" /> },
+            ].map((item) => (
+              <div key={item.name} className="flex flex-col items-center gap-5 group" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
+                <div className="w-20 h-20 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(196,168,130,0.2)]">
+                  {item.icon}
+                </div>
+                <span className="text-[15px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
+              </div>
             ))}
           </div>
         </div>
