@@ -69,32 +69,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#09090b] border-t border-white/[0.06] py-24">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-[32px] font-bold text-white tracking-tight">Trusted across industries</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-            {[
-              { name: "Government", slug: "government", icon: <Shield className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Healthcare", slug: "healthcare", icon: <HeartPulse className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Finance", slug: "finance", icon: <Landmark className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Manufacturing", slug: "manufacturing", icon: <Factory className="w-5 h-5 text-[#09090b]" /> },
-              { name: "Energy", slug: "energy", icon: <Zap className="w-5 h-5 text-[#09090b]" /> },
-            ].map((item) => (
-              <Link key={item.name} href={`/industries/${item.slug}`}>
-                <div className="flex flex-col items-center justify-center gap-5 bg-[#09090b] py-12 group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
-                  <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                    {item.icon}
-                  </div>
-                  <span className="text-[14px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-32 bg-[#09090b]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
