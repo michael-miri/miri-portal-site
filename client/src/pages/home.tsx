@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Building2, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, Sword } from "lucide-react";
+import { ArrowRight, Sparkles, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, ShoppingCart, Sword } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
 import heroBg from "@assets/AdobeStock_321324090_1771955338444.jpeg";
 
@@ -24,14 +24,14 @@ const stats = [
 ];
 
 const industries = [
-  "Government & Federal",
-  "Healthcare",
-  "Finance & Banking",
-  "Manufacturing",
-  "Energy & Utilities",
-  "Education",
-  "Retail & E-Commerce",
-  "Defense & Intelligence",
+  { name: "Government & Federal", slug: "government", icon: <Shield className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Healthcare", slug: "healthcare", icon: <HeartPulse className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Finance & Banking", slug: "finance", icon: <Landmark className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Manufacturing", slug: "manufacturing", icon: <Factory className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Energy & Utilities", slug: "energy", icon: <Zap className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Education", slug: "education", icon: <GraduationCap className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Retail & E-Commerce", slug: "retail", icon: <ShoppingCart className="w-5 h-5 text-[#09090b]" /> },
+  { name: "Defense & Intelligence", slug: "defense", icon: <Sword className="w-5 h-5 text-[#09090b]" /> },
 ];
 
 export default function Home() {
@@ -203,10 +203,15 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-            {industries.map((name) => (
-              <div key={name} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`industry-tag-${name.toLowerCase().replace(/\s/g, '-')}`}>
-                <span className="text-[14px] text-white/50 font-medium">{name}</span>
-              </div>
+            {industries.map((item) => (
+              <Link key={item.name} href={`/industries/${item.slug}`}>
+                <div className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
+                  <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0 transition-transform group-hover:scale-110">
+                    {item.icon}
+                  </div>
+                  <span className="text-[14px] text-white/50 font-medium group-hover:text-white/80 transition-colors">{item.name}</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

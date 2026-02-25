@@ -1,6 +1,6 @@
 import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, HeartPulse, Landmark, Factory, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, HeartPulse, Landmark, Factory, Zap, CheckCircle2, GraduationCap, ShoppingCart, Sword } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
 
 const industryData: Record<string, {
@@ -142,6 +142,84 @@ const industryData: Record<string, {
     ],
     relatedServices: ["IoT, Edge & Real-Time Systems", "OT/IT Integration", "Digital Twin & Visualization", "Cloud & Hybrid Infrastructure"],
   },
+  education: {
+    name: "Education",
+    headline: "Technology that transforms learning.",
+    description: "We help educational institutions modernize their digital infrastructure, build engaging learning platforms, and leverage data to improve student outcomes. From K-12 to higher education, our solutions support the full learning lifecycle.",
+    challenges: [
+      "Outdated learning management systems limiting student engagement",
+      "Data silos across departments preventing holistic student insights",
+      "Cybersecurity threats targeting student and institutional data",
+      "Need for accessible, inclusive digital learning experiences",
+    ],
+    solutions: [
+      "Modern learning management system implementation",
+      "AI-powered adaptive learning and personalization engines",
+      "Unified student data platforms for analytics and reporting",
+      "Secure cloud infrastructure with FERPA compliance",
+      "Accessible digital content delivery across devices",
+      "Virtual and hybrid classroom technology integration",
+    ],
+    outcomes: [
+      "40% increase in student engagement with digital platforms",
+      "Unified student data across all institutional systems",
+      "Full FERPA compliance across digital infrastructure",
+      "Reduced administrative overhead through automation",
+    ],
+    relatedServices: ["AI & Advanced Analytics", "Cloud & Hybrid Infrastructure", "Custom Applications & Automation", "Data Governance & Management"],
+  },
+  retail: {
+    name: "Retail & E-Commerce",
+    headline: "Commerce experiences that convert.",
+    description: "We build high-performance e-commerce platforms and retail technology that drive revenue, improve customer experience, and optimize operations. From supply chain analytics to personalized shopping experiences, we help retailers compete in a digital-first world.",
+    challenges: [
+      "Rising customer expectations for seamless omnichannel experiences",
+      "Inventory management across multiple channels and locations",
+      "Need for real-time personalization at scale",
+      "Securing payment data and customer information (PCI DSS)",
+    ],
+    solutions: [
+      "Headless commerce platform development and integration",
+      "AI-driven product recommendation and personalization engines",
+      "Real-time inventory and supply chain management systems",
+      "Omnichannel customer experience platforms",
+      "PCI DSS compliant payment infrastructure",
+      "Customer analytics and behavioral insights dashboards",
+    ],
+    outcomes: [
+      "35% increase in online conversion rates",
+      "Real-time inventory visibility across all channels",
+      "Personalized experiences driving 25% higher average order value",
+      "Reduced cart abandonment through optimized checkout flows",
+    ],
+    relatedServices: ["AI & Advanced Analytics", "Custom Applications & Automation", "Cloud & Hybrid Infrastructure", "Cybersecurity & Resilience"],
+  },
+  defense: {
+    name: "Defense & Intelligence",
+    headline: "Mission-critical systems. Zero compromise.",
+    description: "We build secure, resilient platforms for defense organizations and intelligence agencies. Our solutions meet the highest security clearance requirements while delivering modern capabilities for mission planning, situational awareness, and operational intelligence.",
+    challenges: [
+      "Extreme security requirements for classified systems and data",
+      "Legacy systems limiting operational effectiveness",
+      "Need for real-time situational awareness across domains",
+      "Interoperability between allied systems and joint operations",
+    ],
+    solutions: [
+      "Classified and air-gapped network architecture design",
+      "Real-time command and control dashboards",
+      "AI-powered intelligence analysis and threat assessment",
+      "Secure communication and collaboration platforms",
+      "Cross-domain solutions for multi-classification environments",
+      "Predictive logistics and supply chain optimization",
+    ],
+    outcomes: [
+      "Real-time operational intelligence across all domains",
+      "Full compliance with DoD security frameworks",
+      "Reduced decision-making time through AI-powered analytics",
+      "Seamless interoperability across allied systems",
+    ],
+    relatedServices: ["Cybersecurity & Resilience", "AI & Advanced Analytics", "Cloud & Hybrid Infrastructure", "OT/IT Integration"],
+  },
 };
 
 const iconMap: Record<string, JSX.Element> = {
@@ -150,6 +228,9 @@ const iconMap: Record<string, JSX.Element> = {
   finance: <Landmark className="w-6 h-6" />,
   manufacturing: <Factory className="w-6 h-6" />,
   energy: <Zap className="w-6 h-6" />,
+  education: <GraduationCap className="w-6 h-6" />,
+  retail: <ShoppingCart className="w-6 h-6" />,
+  defense: <Sword className="w-6 h-6" />,
 };
 
 export default function IndustryDetail() {
