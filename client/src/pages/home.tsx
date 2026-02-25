@@ -269,7 +269,7 @@ export default function Home() {
               { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
               { title: "24/7 Monitoring", desc: "Continuous threat detection and rapid response" },
             ].map((item) => (
-              <div key={item.title} className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
+              <div key={item.title} className="bg-[#0A0E1A] p-8" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
                 <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
               </div>
