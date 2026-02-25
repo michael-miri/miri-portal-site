@@ -110,25 +110,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
-          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
-            Have a similar challenge?
-          </h2>
-          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
-            Let's discuss how we can deliver similar results for your organization.
-          </p>
-          <div className="mt-10">
-            <Link href="/contact">
-              <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90" data-testid="button-portfolio-contact">
-                Start a Conversation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CTABanner />
     </Layout>
   );
