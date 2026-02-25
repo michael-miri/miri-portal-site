@@ -1,6 +1,3 @@
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
 
 const projects = [
@@ -71,42 +68,52 @@ export default function Portfolio() {
 
       <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          {projects.map((project, i) => (
-            <div
-              key={project.num}
-              className={`py-20 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
-              data-testid={`card-project-${project.title.toLowerCase().replace(/\s/g, '-')}`}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div className="lg:col-span-1">
-
-                </div>
-                <div className="lg:col-span-6">
-                  <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
-                  <div className="flex items-center gap-3 mt-3">
-                    <span className="text-[13px] text-white/45">{project.client}</span>
-                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]">{project.sector}</span>
-                  </div>
-                  <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
-                  <div className="flex flex-wrap gap-2 mt-6">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="lg:col-span-5">
-                  <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-6">Key Outcomes</span>
-                  <div className="space-y-0">
-                    {project.results.map((result, j) => (
-                      <div key={result} className={`py-4 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
-                        <span className="text-[14px] text-white/50 leading-relaxed">{result}</span>
+          {projects.map((project, i) => {
+            const imageRight = i % 2 === 0;
+            return (
+              <div
+                key={project.num}
+                className={`py-20 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
+                data-testid={`card-project-${project.title.toLowerCase().replace(/\s/g, '-')}`}
+              >
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${!imageRight ? "lg:[direction:rtl]" : ""}`}>
+                  <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
+                    <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
+                    <div className="flex items-center gap-3 mt-3">
+                      <span className="text-[13px] text-white/45">{project.client}</span>
+                      <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]">{project.sector}</span>
+                    </div>
+                    <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
+                    <div className="flex flex-wrap gap-2 mt-6">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="mt-8">
+                      <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-4">Key Outcomes</span>
+                      <div className="space-y-0">
+                        {project.results.map((result, j) => (
+                          <div key={result} className={`py-3 ${j > 0 ? "border-t border-white/[0.04]" : ""}`}>
+                            <span className="text-[14px] text-white/50 leading-relaxed">{result}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
+                  </div>
+                  <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
+                    <div className="rounded-2xl overflow-hidden border border-white/[0.06] bg-[#141B2E] aspect-[4/3] flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 rounded-full bg-white/[0.05] flex items-center justify-center mx-auto mb-4">
+                          <span className="text-[24px] font-bold text-white/20 font-mono">{project.num}</span>
+                        </div>
+                        <span className="text-[13px] text-white/20">Project Image</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
