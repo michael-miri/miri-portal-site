@@ -124,7 +124,7 @@ export default function Home() {
               {[
                 { title: "Practitioners, not theorists", desc: "Our team writes code, configures infrastructure, and ships production systems — not just PowerPoints." },
                 { title: "ROI in months, not years", desc: "We prioritize high-impact work first." },
-                { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services, and more" },
+                { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services, and more." },
               ].map((item, i) => (
                 <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
                   <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
