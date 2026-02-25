@@ -58,7 +58,7 @@ export default function About() {
         description="Over 20 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
       />
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 py-32">
             <div>
@@ -80,7 +80,7 @@ export default function About() {
                 { val: "99%", label: "Client\nSatisfaction" },
                 { val: "50+", label: "Industries\nServed" },
               ].map((stat) => (
-                <div key={stat.label} className="bg-[#050A30] p-8 flex flex-col justify-center" data-testid={`card-stat-${stat.label.split('\n')[0].toLowerCase()}`}>
+                <div key={stat.label} className="bg-[#0A0E1A] p-8 flex flex-col justify-center" data-testid={`card-stat-${stat.label.split('\n')[0].toLowerCase()}`}>
                   <div className="font-heading text-[2.5rem] font-bold text-white leading-none">{stat.val}</div>
                   <div className="text-[12px] text-white/40 mt-3 whitespace-pre-line leading-relaxed">{stat.label}</div>
                 </div>
@@ -90,7 +90,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
@@ -102,7 +102,7 @@ export default function About() {
             <div className="lg:col-span-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {values.map((item, i) => (
-                  <div key={item.title} className="bg-[#050A30] p-8" data-testid={`card-value-${i + 1}`}>
+                  <div key={item.title} className="bg-[#0A0E1A] p-8" data-testid={`card-value-${i + 1}`}>
                     <span className="text-[13px] text-[#C4A882]/50 font-mono block mb-4">0{i + 1}</span>
                     <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
                     <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
@@ -114,7 +114,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Leadership</span>
           <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-20">
@@ -123,7 +123,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden max-w-4xl">
             {team.map((member) => (
-              <div key={member.name} className="bg-[#050A30] p-10" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
+              <div key={member.name} className="bg-[#0A0E1A] p-10" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
                 <div className="w-16 h-16 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 flex items-center justify-center mb-8">
                   <span className="font-heading text-[15px] font-bold text-[#0645FF]">{member.initials}</span>
                 </div>
@@ -145,7 +145,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">

@@ -24,23 +24,23 @@ const stats = [
 ];
 
 const industries = [
-  { name: "Government & Federal", slug: "government", icon: <Shield className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Healthcare", slug: "healthcare", icon: <HeartPulse className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Finance & Banking", slug: "finance", icon: <Landmark className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Manufacturing", slug: "manufacturing", icon: <Factory className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Energy & Utilities", slug: "energy", icon: <Zap className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Education", slug: "education", icon: <GraduationCap className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Retail & E-Commerce", slug: "retail", icon: <ShoppingCart className="w-5 h-5 text-[#050A30]" /> },
-  { name: "Defense & Intelligence", slug: "defense", icon: <Sword className="w-5 h-5 text-[#050A30]" /> },
+  { name: "Government & Federal", slug: "government", icon: <Shield className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Healthcare", slug: "healthcare", icon: <HeartPulse className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Finance & Banking", slug: "finance", icon: <Landmark className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Manufacturing", slug: "manufacturing", icon: <Factory className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Energy & Utilities", slug: "energy", icon: <Zap className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Education", slug: "education", icon: <GraduationCap className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Retail & E-Commerce", slug: "retail", icon: <ShoppingCart className="w-5 h-5 text-[#0A0E1A]" /> },
+  { name: "Defense & Intelligence", slug: "defense", icon: <Sword className="w-5 h-5 text-[#0A0E1A]" /> },
 ];
 
 export default function Home() {
   return (
     <Layout>
-      <section className="pt-[160px] pb-32 bg-[#050A30] relative overflow-hidden">
+      <section className="pt-[160px] pb-32 bg-[#0A0E1A] relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050A30]/60 via-[#050A30]/40 to-[#050A30]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A]/60 via-[#0A0E1A]/40 to-[#0A0E1A]" />
         </div>
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
@@ -90,8 +90,8 @@ export default function Home() {
                   { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages.", icon: <CircleCheckBig className="w-5 h-5" /> },
                   { title: "Cheaper", desc: "AI-driven efficiency means lower costs without cutting corners.", icon: <DollarSign className="w-5 h-5" /> },
                 ].map((item) => (
-                  <div key={item.title} className="bg-[#050A30] p-8" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
-                    <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center text-[#050A30] mb-4">
+                  <div key={item.title} className="bg-[#0A0E1A] p-8" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
+                    <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A] mb-4">
                       {item.icon}
                     </div>
                     <h3 className="font-heading text-xl font-semibold text-white mb-3">{item.title}</h3>
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30]">
+      <section className="py-32 bg-[#0A0E1A]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-5 lg:sticky lg:top-32">
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {capabilities.map((cap) => (
                   <Link key={cap.num} href={`/services#service-${cap.num}`} className="block h-full">
-                    <div className="bg-[#050A30] p-8 h-full group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
+                    <div className="bg-[#0A0E1A] p-8 h-full group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
                       <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
                       <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
                       <p className="text-[15px] text-white/50 leading-relaxed">{cap.desc}</p>
@@ -142,7 +142,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
@@ -164,7 +164,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i} className="border-t border-white/[0.06] pt-6 flex items-start gap-4" data-testid={`why-item-${i}`}>
                     <div className="w-6 h-6 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-[#050A30]" />
+                      <Check className="w-3.5 h-3.5 text-[#0A0E1A]" />
                     </div>
                     <div>
                       <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
@@ -178,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
@@ -214,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
             <div>
@@ -234,7 +234,7 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industries.map((item) => (
               <Link key={item.name} href={`/industries/${item.slug}`} className="block h-full">
-                <div className="bg-[#050A30] p-8 h-full hover:bg-[#0e0e12] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div className="bg-[#0A0E1A] p-8 h-full hover:bg-[#0e0e12] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
                   <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0 transition-transform group-hover:scale-110">
                     {item.icon}
                   </div>
@@ -246,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -274,7 +274,7 @@ export default function Home() {
                 { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
                 { title: "24/7 Monitoring", desc: "Continuous threat detection and rapid response" },
               ].map((item) => (
-                <div key={item.title} className="bg-[#050A30] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
+                <div key={item.title} className="bg-[#0A0E1A] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
                   <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
                   <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
                 </div>

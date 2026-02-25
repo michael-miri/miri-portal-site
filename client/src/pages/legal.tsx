@@ -9,7 +9,7 @@ export default function Legal() {
         description="Our commitment to protecting your data and the terms governing our services."
       />
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="py-20" id="privacy" data-testid="section-privacy">
             <h2 className="font-heading text-3xl font-bold text-white mb-10" data-testid="heading-privacy">Privacy Policy</h2>

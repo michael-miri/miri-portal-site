@@ -61,7 +61,7 @@ export default function Security() {
         description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust to continuous monitoring, we protect what matters most."
       />
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           {securityPillars.map((pillar, i) => (
             <div
@@ -91,7 +91,7 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
@@ -120,7 +120,7 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -131,7 +131,7 @@ export default function Security() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
               {certifications.map((cert) => (
-                <div key={cert.name} className="bg-[#050A30] p-6 hover:bg-[#0e0e12] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div key={cert.name} className="bg-[#0A0E1A] p-6 hover:bg-[#0e0e12] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
                   <h4 className="text-[15px] font-semibold text-white mb-1">{cert.name}</h4>
                   <p className="text-[12px] text-white/40 leading-relaxed">{cert.desc}</p>
                 </div>
@@ -141,7 +141,7 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Need a security assessment?

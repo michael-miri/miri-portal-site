@@ -240,7 +240,7 @@ export default function IndustryDetail() {
   if (!industry) {
     return (
       <Layout>
-        <div className="min-h-screen flex items-center justify-center bg-[#050A30]">
+        <div className="min-h-screen flex items-center justify-center bg-[#0A0E1A]">
           <div className="text-center">
             <h1 className="font-heading text-4xl font-bold text-white mb-4">Industry not found</h1>
             <Link href="/industries">
@@ -258,7 +258,7 @@ export default function IndustryDetail() {
 
   return (
     <Layout>
-      <section className="pt-[160px] pb-24 bg-[#050A30]">
+      <section className="pt-[160px] pb-24 bg-[#0A0E1A]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="flex items-center gap-3 mb-8">
             <Link href="/industries">
@@ -270,7 +270,7 @@ export default function IndustryDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center text-[#050A30]">
+                <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A]">
                   {iconMap[slug!]}
                 </div>
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]">{industry.name}</span>
@@ -288,7 +288,7 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
@@ -311,7 +311,7 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">How We Help</span>
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-[1.08] tracking-tight mb-16" data-testid="heading-solutions">
@@ -319,7 +319,7 @@ export default function IndustryDetail() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, i) => (
-              <div key={i} className="bg-[#050A30] p-8 hover:bg-[#0e0e12] transition-colors group" data-testid={`solution-${i}`}>
+              <div key={i} className="bg-[#0A0E1A] p-8 hover:bg-[#0e0e12] transition-colors group" data-testid={`solution-${i}`}>
                 <CheckCircle2 className="w-5 h-5 text-[#C4A882]/40 mb-4 group-hover:text-[#C4A882]/70 transition-colors" />
                 <p className="text-[14px] text-white/60 leading-relaxed">{solution}</p>
               </div>
@@ -328,7 +328,7 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -363,7 +363,7 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Explore More</span>
           <h2 className="font-heading text-[clamp(2rem,3.5vw,2.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-12">
@@ -372,8 +372,8 @@ export default function IndustryDetail() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {otherIndustries.map(([key, data]) => (
               <Link key={key} href={`/industries/${key}`}>
-                <div className="bg-[#050A30] p-8 hover:bg-[#0e0e12] transition-colors flex flex-col items-center gap-4 cursor-pointer group" data-testid={`link-other-industry-${key}`}>
-                  <div className="w-12 h-12 rounded-full bg-[#C4A882] flex items-center justify-center text-[#050A30] transition-transform group-hover:scale-110">
+                <div className="bg-[#0A0E1A] p-8 hover:bg-[#0e0e12] transition-colors flex flex-col items-center gap-4 cursor-pointer group" data-testid={`link-other-industry-${key}`}>
+                  <div className="w-12 h-12 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A] transition-transform group-hover:scale-110">
                     {iconMap[key]}
                   </div>
                   <span className="text-[14px] text-white/40 font-medium group-hover:text-white/80 transition-colors">{data.name}</span>

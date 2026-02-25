@@ -97,7 +97,7 @@ export default function FAQ() {
         description="Everything you need to know about working with us. Can't find what you're looking for? Get in touch."
       />
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[900px] mx-auto px-6 sm:px-10">
           {faqSections.map((section, sIdx) => (
             <div key={section.prefix} className={`py-16 ${sIdx > 0 ? "border-t border-white/[0.06]" : ""}`}>
@@ -124,7 +124,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Still have questions?

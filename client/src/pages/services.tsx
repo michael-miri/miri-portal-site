@@ -114,7 +114,7 @@ export default function Services() {
         description="Nine practice areas. One trusted partner. We cover the complete technology lifecycle from strategy through implementation and beyond."
       />
 
-      <section className="bg-[#050A30] border-t border-white/[0.06]">
+      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           {services.map((service, i) => (
             <div
@@ -145,7 +145,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Need something more specific?
