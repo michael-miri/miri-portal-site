@@ -12,6 +12,7 @@ import Portfolio from "@/pages/portfolio";
 import FAQ from "@/pages/faq";
 import Security from "@/pages/security";
 import Contact from "@/pages/contact";
+import Legal from "@/pages/legal";
 import IndustryDetail from "@/pages/industry-detail";
 import NotFound from "@/pages/not-found";
 
@@ -47,6 +48,7 @@ function Router() {
         <Route path="/faq" component={FAQ} />
         <Route path="/security" component={Security} />
         <Route path="/contact" component={Contact} />
+        <Route path="/legal" component={Legal} />
         <Route component={NotFound} />
       </Switch>
     </>
