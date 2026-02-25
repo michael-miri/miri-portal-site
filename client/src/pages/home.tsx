@@ -78,7 +78,7 @@ export default function Home() {
                 Unlimited capabilities.<br />
                 <span className="text-white/25">One partner.</span>
               </h2>
-              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
+              <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
                 From strategy through implementation — we cover the full technology spectrum so you don't have to manage multiple vendors.
               </p>
               <div className="mt-10">
@@ -97,7 +97,7 @@ export default function Home() {
                     <div className="bg-[#09090b] p-8 h-full group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
                       <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
                       <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
-                      <p className="text-[13px] text-white/50 leading-relaxed">{cap.desc}</p>
+                      <p className="text-[15px] text-white/50 leading-relaxed">{cap.desc}</p>
                     </div>
                   </Link>
                 ))}
@@ -115,7 +115,7 @@ export default function Home() {
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-why-section">
                 We don't just<br />advise. We build.
               </h2>
-              <p className="mt-8 text-[15px] text-white/50 leading-relaxed max-w-md">
+              <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
                 Most consultants hand you a strategy deck and walk away. We roll up our sleeves and implement alongside your team — from architecture to deployment to ongoing support.
               </p>
               <div className="mt-10 space-y-6">
@@ -126,7 +126,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
                     <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
-                    <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
+                    <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -140,7 +140,7 @@ export default function Home() {
                     {stats.map((stat, i) => (
                       <div key={i} className={`py-6 ${i > 0 ? "border-t border-white/[0.04]" : ""}`} data-testid={`stat-${i}`}>
                         <div className="font-heading text-[2.5rem] font-bold text-white leading-none mb-2">{stat.value}</div>
-                        <p className="text-[13px] text-white/40 leading-relaxed">{stat.label}</p>
+                        <p className="text-[15px] text-white/40 leading-relaxed">{stat.label}</p>
                       </div>
                     ))}
                   </div>
@@ -160,7 +160,7 @@ export default function Home() {
                 Four phases.<br />
                 <span className="text-white/25">Zero surprises.</span>
               </h2>
-              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
+              <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
                 Every engagement follows a proven methodology designed for clarity, speed, and measurable outcomes.
               </p>
             </div>
@@ -177,7 +177,7 @@ export default function Home() {
                     <span className="text-[13px] text-[#C4A882]/50 font-mono shrink-0 pt-1">{step.num}</span>
                     <div>
                       <h3 className="font-heading text-xl font-semibold text-white mb-2">{step.title}</h3>
-                      <p className="text-[14px] text-white/50 leading-relaxed max-w-lg">{step.desc}</p>
+                      <p className="text-[16px] text-white/50 leading-relaxed max-w-lg">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -228,7 +228,7 @@ export default function Home() {
                 Security isn't a<br />feature. It's the<br />
                 <span className="text-white/25">foundation.</span>
               </h2>
-              <p className="mt-8 text-[15px] text-white/50 leading-relaxed max-w-md">
+              <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
                 Every system we build starts with security. Zero-trust architectures, SOC 2 compliance, AES-256 encryption, and 24/7 monitoring — embedded from day one.
               </p>
               <div className="mt-8">
