@@ -138,10 +138,10 @@ export default function FAQ() {
                     className={`border-b border-white/[0.06] px-0 ${i === 0 ? "border-t" : ""}`}
                     data-testid={`faq-${section.prefix}-${i}`}
                   >
-                    <AccordionTrigger className="text-white text-[15px] font-medium hover:no-underline py-6">
+                    <AccordionTrigger className="text-white text-[14px] sm:text-[15px] font-medium hover:no-underline py-5 sm:py-6 text-left">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-white/50 text-[14px] leading-relaxed pb-6">
+                    <AccordionContent className="text-white/50 text-[13px] sm:text-[14px] leading-relaxed pb-5 sm:pb-6">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
