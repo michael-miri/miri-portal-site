@@ -67,7 +67,7 @@ const services = [
       "Data quality frameworks and validation",
       "Master data management strategies",
       "Data cataloging and metadata management",
-      "Privacy compliance (GDPR, CCPA)",
+      "Data privacy strategy and governance",
     ],
   },
   {
