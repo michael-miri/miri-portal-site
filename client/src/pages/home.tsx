@@ -11,6 +11,9 @@ const capabilities = [
   { num: "04", title: "Cloud & Hybrid\nInfrastructure", desc: "Scalable, resilient platforms with DevOps methods that accelerate deployment." },
   { num: "05", title: "Custom Apps\n& Automation", desc: "Streamlined workflows through agile development and user-centered design." },
   { num: "06", title: "Data Governance\n& Management", desc: "Structured data assets that build trust, improve accessibility, and enable integration." },
+  { num: "07", title: "IoT, Edge &\nReal-Time Systems", desc: "Connected infrastructure that drives operational intelligence and proactive decisions." },
+  { num: "08", title: "Digital Twin &\nVisualization", desc: "Immersive models and simulations that reveal system behavior and support planning." },
+  { num: "09", title: "OT/IT\nIntegration", desc: "Unified, data-rich environments that enhance control and situational awareness." },
 ];
 
 const stats = [
@@ -112,7 +115,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {capabilities.map((cap) => (
                   <div key={cap.num} className="bg-[#09090b] p-8 group hover:bg-[#0e0e12] transition-colors" data-testid={`card-capability-${cap.num}`}>
                     <span className="text-[13px] text-[#C4A882]/50 font-mono block mb-5">{cap.num}</span>
