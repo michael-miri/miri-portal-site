@@ -23,13 +23,6 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: "2005", event: "Founded with a mission to bridge technology and business strategy" },
-  { year: "2010", event: "Expanded services to include AI and cloud infrastructure consulting" },
-  { year: "2015", event: "Launched cybersecurity practice and achieved SOC 2 compliance" },
-  { year: "2020", event: "Pioneered digital twin and IoT solutions for enterprise clients" },
-  { year: "2024", event: "Surpassed 500+ successful project deliveries across 50+ industries" },
-];
 
 export default function About() {
   return (
@@ -78,29 +71,6 @@ export default function About() {
                     <span className="text-[13px] text-[#C4A882]/50 font-mono block mb-4">0{i + 1}</span>
                     <h3 className="text-[17px] font-semibold text-white mb-3">{item.title}</h3>
                     <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-4">
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Journey</span>
-              <h2 className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-white leading-[1.08] tracking-tight">
-                Key milestones.
-              </h2>
-            </div>
-            <div className="lg:col-span-8">
-              <div className="space-y-0">
-                {milestones.map((m, idx) => (
-                  <div key={m.year} className={`flex gap-8 py-8 ${idx > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`milestone-${idx + 1}`}>
-                    <span className="font-heading text-2xl font-bold text-white/25 shrink-0 w-20">{m.year}</span>
-                    <p className="text-[14px] text-white/50 leading-relaxed pt-2">{m.event}</p>
                   </div>
                 ))}
               </div>
