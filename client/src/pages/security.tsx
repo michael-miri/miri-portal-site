@@ -131,7 +131,7 @@ export default function Security() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
               {certifications.map((cert) => (
-                <div key={cert.name} className="bg-[#0A0E1A] p-6 hover:bg-[#0e0e12] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div key={cert.name} className="bg-[#0A0E1A] p-6 hover:bg-[#141B2E] transition-colors" data-testid={`card-cert-${cert.name.toLowerCase().replace(/\s/g, '-')}`}>
                   <h4 className="text-[15px] font-semibold text-white mb-1">{cert.name}</h4>
                   <p className="text-[12px] text-white/40 leading-relaxed">{cert.desc}</p>
                 </div>

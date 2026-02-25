@@ -319,7 +319,7 @@ export default function IndustryDetail() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industry.solutions.map((solution, i) => (
-              <div key={i} className="bg-[#0A0E1A] p-8 hover:bg-[#0e0e12] transition-colors group" data-testid={`solution-${i}`}>
+              <div key={i} className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors group" data-testid={`solution-${i}`}>
                 <CheckCircle2 className="w-5 h-5 text-[#C4A882]/40 mb-4 group-hover:text-[#C4A882]/70 transition-colors" />
                 <p className="text-[14px] text-white/60 leading-relaxed">{solution}</p>
               </div>
@@ -372,7 +372,7 @@ export default function IndustryDetail() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {otherIndustries.map(([key, data]) => (
               <Link key={key} href={`/industries/${key}`}>
-                <div className="bg-[#0A0E1A] p-8 hover:bg-[#0e0e12] transition-colors flex flex-col items-center gap-4 cursor-pointer group" data-testid={`link-other-industry-${key}`}>
+                <div className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors flex flex-col items-center gap-4 cursor-pointer group" data-testid={`link-other-industry-${key}`}>
                   <div className="w-12 h-12 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A] transition-transform group-hover:scale-110">
                     {iconMap[key]}
                   </div>

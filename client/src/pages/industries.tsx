@@ -62,7 +62,7 @@ export default function Industries() {
               <div className="lg:col-span-7">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-xl overflow-hidden">
                   {sector.items.map((item) => (
-                    <div key={item} className="bg-[#0A0E1A] p-6 hover:bg-[#0e0e12] transition-colors">
+                    <div key={item} className="bg-[#0A0E1A] p-6 hover:bg-[#141B2E] transition-colors">
                       <span className="text-[14px] text-white/50">{item}</span>
                     </div>
                   ))}
