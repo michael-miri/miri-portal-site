@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import logoImage from "@assets/IMG_6345_1772019800583.png";
+import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo_-8_1772042362314.png";
 
 const navLinks = [
   { label: "About", href: "/about" },
