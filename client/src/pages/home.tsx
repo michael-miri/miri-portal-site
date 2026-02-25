@@ -123,7 +123,7 @@ export default function Home() {
             <div className="lg:flex lg:flex-col lg:justify-center">
               <div className="space-y-6 lg:mt-0">
                 {[
-                  { title: "Practitioners, not theorists", desc: "Our team builds and ships production systems instead of just strategy decks." },
+                  { title: "Practitioners, not theorists", desc: "We build and ship — not just advise." },
                   { title: "ROI in months, not years", desc: "We prioritize high-impact work first." },
                   { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services, and more." },
                 ].map((item, i) => (
