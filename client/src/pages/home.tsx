@@ -230,14 +230,12 @@ export default function Home() {
           </div>
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industries.map((item) => (
-              <Link key={item.name} href={`/industries/${item.slug}`} className="block h-full">
-                <div className="bg-[#0A0E1A] p-8 h-full hover:bg-[#141B2E] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
-                  <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0 transition-transform group-hover:scale-110">
-                    {item.icon}
-                  </div>
-                  <span className="text-[14px] text-white/50 font-medium group-hover:text-white/80 transition-colors">{item.name}</span>
+              <div key={item.name} className="bg-[#0A0E1A] p-8 h-full flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
+                <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0">
+                  {item.icon}
                 </div>
-              </Link>
+                <span className="text-[14px] text-white/50 font-medium">{item.name}</span>
+              </div>
             ))}
           </div>
         </div>
