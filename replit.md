@@ -66,7 +66,6 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 
 ## Contact Info
 - Email: richard@miritechnology.com
-- Location: Lexington, Kentucky
 
 ## User Preferences
 - Primary color: #0645FF

@@ -38,7 +38,7 @@ const industries = [
 export default function Home() {
   useSEO({
     title: "Miri Technology - AI-Driven Tech Consulting | App Development, Automation & Digital Transformation",
-    description: "Miri Technology builds custom software, AI-powered apps, and cloud infrastructure for government, enterprise, and startups. Faster, better, cheaper — guaranteed. Based in Lexington, KY.",
+    description: "Miri Technology builds custom software, AI-powered apps, and cloud infrastructure for government, enterprise, and startups. Faster, better, cheaper — guaranteed.",
   });
   return (
     <Layout>
