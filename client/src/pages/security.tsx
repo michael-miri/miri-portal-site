@@ -12,7 +12,7 @@ const securityPillars = [
   {
     title: "Compliance & Standards",
     desc: "Our practices align with the most rigorous industry standards and regulatory frameworks.",
-    items: ["NIST 800-53 compliant", "ISO 27001 aligned", "FedRAMP High authorization experience"],
+    items: ["Alignment with leading security frameworks", "Regular policy reviews and updates", "Audit-ready documentation and controls"],
   },
   {
     title: "Data Encryption",
