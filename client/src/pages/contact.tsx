@@ -102,7 +102,7 @@ export default function Contact() {
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Contact Info</span>
                 <div className="space-y-6">
                   {[
-                    { label: "Email", value: "hello@aviontech.com" },
+                    { label: "Email", value: "hello@miri.com" },
                     { label: "Phone", value: "(859) 555-0142" },
                     { label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (

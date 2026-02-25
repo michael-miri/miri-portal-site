@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo_-6_1771955481773.png";
+import logoImage from "@assets/IMG_6343_1772019708166.png";
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="shrink-0" data-testid="link-logo">
-            <img src={logoImage} alt="Avion Tech" className="h-12 w-auto" />
+            <img src={logoImage} alt="Miri" className="h-12 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -109,7 +109,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
             <Link href="/" className="inline-block mb-6" data-testid="link-footer-logo">
-              <img src={logoImage} alt="Avion Tech" className="h-12 w-auto" />
+              <img src={logoImage} alt="Miri" className="h-12 w-auto" />
             </Link>
             <p className="text-[15px] text-white/50 leading-relaxed max-w-sm">
               AI-driven technology consulting for organizations ready to move faster, think bigger, and build smarter.
@@ -144,7 +144,7 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
             <ul className="space-y-3 text-[14px] text-white/40">
-              <li data-testid="contact-email">hello@aviontech.com</li>
+              <li data-testid="contact-email">hello@miri.com</li>
               <li data-testid="contact-phone">(859) 555-0142</li>
               <li data-testid="contact-location">Lexington, Kentucky</li>
             </ul>
@@ -158,7 +158,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-white/25" data-testid="text-copyright">&copy; {new Date().getFullYear()} Avion Tech. All rights reserved.</p>
+          <p className="text-[12px] text-white/25" data-testid="text-copyright">&copy; {new Date().getFullYear()} Miri. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
             <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
