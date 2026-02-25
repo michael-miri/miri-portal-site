@@ -186,25 +186,23 @@ export function CTABanner() {
     <section className="py-32 bg-[#09090b]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="border-t border-white/[0.06] pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            <div className="lg:col-span-8">
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Next Step</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
                 Ready to move<br />forward?
               </h2>
-            </div>
-            <div className="lg:flex lg:flex-col lg:items-end lg:justify-end">
-              <p className="text-[15px] text-white/50 leading-relaxed mb-8 max-w-sm">
+              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-md">
                 Book a free consultation. No obligations — just an honest conversation about where technology can take your organization.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
-                  <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-cta-bottom">
-                    Get in Touch
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                  </Button>
-                </Link>
-              </div>
+            </div>
+            <div className="lg:col-span-4 lg:flex lg:justify-end lg:items-end">
+              <Link href="/contact">
+                <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-cta-bottom">
+                  Get in Touch
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
