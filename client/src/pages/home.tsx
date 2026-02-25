@@ -166,7 +166,7 @@ export default function Home() {
                   { num: "04", title: "Scale", desc: "Post-launch support, training, and optimization ensure your solutions grow as your organization grows." },
                 ].map((step, i) => (
                   <div key={step.num} className={`flex gap-8 py-10 ${i > 0 ? "border-t border-white/[0.06]" : ""}`} data-testid={`step-${step.num}`}>
-                    <span className="text-[13px] text-[#C4A882]/50 font-mono shrink-0 pt-1">{step.num}</span>
+                    <span className="text-[32px] leading-none font-bold text-[#C4A882]/30 font-mono shrink-0">{step.num}</span>
                     <div>
                       <h3 className="font-heading text-xl font-semibold text-white mb-2">{step.title}</h3>
                       <p className="text-[16px] text-white/50 leading-relaxed max-w-lg">{step.desc}</p>
