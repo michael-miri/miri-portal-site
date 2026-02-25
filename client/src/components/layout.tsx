@@ -204,11 +204,6 @@ export function CTABanner() {
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>
-                <Link href="/portfolio">
-                  <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-cta-portfolio">
-                    View Our Work
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
