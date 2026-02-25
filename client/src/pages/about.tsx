@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
-import missionImage from "@assets/AdobeStock_328164255_1772042316119.jpeg";
+import missionBg from "@assets/AdobeStock_206661841_1772042502289.jpeg";
 
 const values = [
   {
@@ -33,24 +33,23 @@ export default function About() {
         description="Over 30 years of combined expertise in technology consulting, digital transformation, and enterprise architecture."
       />
 
-      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 py-32">
-            <div>
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Mission</span>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
-                Delivering the<br />future today.
-              </h2>
-              <p className="mt-8 text-[15px] text-white/50 leading-[1.8] max-w-md">
-                Our consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
-              </p>
-              <p className="mt-4 text-[15px] text-white/50 leading-[1.8] max-w-md">
-                We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.
-              </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-white/[0.06]">
-              <img src={missionImage} alt="Modern architecture" className="w-full h-full object-cover" data-testid="img-mission" />
-            </div>
+      <section className="relative border-t border-white/[0.06] overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={missionBg} alt="" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-[#0A0E1A]/70" />
+        </div>
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
+          <div className="py-32 max-w-2xl">
+            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Mission</span>
+            <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
+              Delivering the<br />future today.
+            </h2>
+            <p className="mt-8 text-[15px] text-white/50 leading-[1.8]">
+              Our consultants combine deep expertise in data analytics, enterprise architecture, and digital strategy to help organizations optimize performance and adapt to evolving technology landscapes.
+            </p>
+            <p className="mt-4 text-[15px] text-white/50 leading-[1.8]">
+              We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.
+            </p>
           </div>
         </div>
       </section>
