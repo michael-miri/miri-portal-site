@@ -71,13 +71,13 @@ export default function Portfolio() {
                   <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
                     <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
                     <div className="flex items-center gap-3 mt-3">
-                      {project.client && <span className="text-[13px] text-white/45">{project.client}</span>}
+                      {project.client && <span className="text-[13px] text-white/50">{project.client}</span>}
                       <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#C4A882]/[0.1] border border-[#C4A882]/20 text-[#C4A882]">{project.sector}</span>
                     </div>
                     <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
                     <div className="flex flex-wrap gap-2 mt-6">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{tag}</span>
+                        <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
                       ))}
                     </div>
                     <div className="mt-8">

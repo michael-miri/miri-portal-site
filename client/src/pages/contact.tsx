@@ -111,7 +111,7 @@ export default function Contact() {
 
                   ].map((item) => (
                     <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>
-                      <div className="text-[11px] text-white/35 uppercase tracking-wider">{item.label}</div>
+                      <div className="text-[11px] text-white/50 uppercase tracking-wider">{item.label}</div>
                       <div className="text-[15px] text-white/60 mt-1"><a href={`mailto:${item.value}`} className="hover:text-white transition-colors">{item.value}</a></div>
                     </div>
                   ))}

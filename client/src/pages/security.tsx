@@ -69,7 +69,7 @@ export default function Security() {
                   {pillar.items.map((item) => (
                     <div key={item} className="flex items-start gap-2">
                       <span className="text-[#C4A882]/50 mt-1.5 text-[8px]">●</span>
-                      <span className="text-[13px] text-white/40 leading-relaxed">{item}</span>
+                      <span className="text-[13px] text-white/50 leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>

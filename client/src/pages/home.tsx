@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Our Promise</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-selfware-section">
                 Vendor software<br />is dead.<br />
-                <span className="text-white/25">Welcome to selfware.</span>
+                <span className="text-white/40">Welcome to selfware.</span>
               </h2>
               <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
                 We guarantee to be faster, better, and cheaper. We've built a proven AI methodology that delivers tangible outcomes — leveraging the power of tomorrow, today. Software shouldn't be one-size-fits-all. Selfware is software built for you.
@@ -112,7 +112,7 @@ export default function Home() {
               <div>
                 <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-capabilities-section">
                   Unlimited capabilities.<br />
-                  <span className="text-white/25">One partner.</span>
+                  <span className="text-white/40">One partner.</span>
                 </h2>
                 <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
                   From strategy through implementation — we cover the full technology spectrum so you don't have to manage multiple vendors.
@@ -182,7 +182,7 @@ export default function Home() {
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">How We Work</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-howwework-section">
                 Four phases.<br />
-                <span className="text-white/25">Zero surprises.</span>
+                <span className="text-white/40">Zero surprises.</span>
               </h2>
               <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
                 Every engagement follows a proven methodology designed for clarity, speed, and measurable outcomes.
@@ -248,7 +248,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
               <div>
                 <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-security-section">
-                  Security isn't a feature. It's the <span className="text-white/25">foundation.</span>
+                  Security isn't a feature. It's the <span className="text-white/40">foundation.</span>
                 </h2>
                 <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-lg">
                   Every system we build starts with security. Zero-trust architectures, AES-256 encryption, and 24/7 monitoring — embedded from day one.

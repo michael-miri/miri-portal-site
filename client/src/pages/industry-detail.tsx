@@ -264,7 +264,7 @@ export default function IndustryDetail() {
             <div className="lg:col-span-7">
               <div className="flex items-baseline gap-3 mb-8">
                 <Link href="/industries" className="leading-none" data-testid="link-back-industries">
-                  <span className="text-[13px] text-white/40 hover:text-white/60 transition-colors">Industries</span>
+                  <span className="text-[13px] text-white/50 hover:text-white/70 transition-colors">Industries</span>
                 </Link>
                 <span className="text-[13px] text-white/20 leading-none">/</span>
                 <span className="text-[13px] text-white/60 leading-none">{industry.name}</span>
@@ -375,7 +375,7 @@ export default function IndustryDetail() {
                   <div className="w-12 h-12 rounded-full bg-[#C4A882] flex items-center justify-center text-[#0A0E1A] transition-transform group-hover:scale-110">
                     {iconMap[key]}
                   </div>
-                  <span className="text-[14px] text-white/40 font-medium group-hover:text-white/80 transition-colors">{data.name}</span>
+                  <span className="text-[14px] text-white/50 font-medium group-hover:text-white/80 transition-colors">{data.name}</span>
                 </div>
               </Link>
             ))}

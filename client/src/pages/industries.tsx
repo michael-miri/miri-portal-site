@@ -55,7 +55,7 @@ export default function Industries() {
                 <p className="mt-4 text-[14px] text-white/50 leading-relaxed max-w-sm">{sector.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-6">
                   {sector.tags.map((tag) => (
-                    <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{tag}</span>
+                    <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Industries() {
             </div>
             <div className="flex flex-wrap gap-2">
               {industryTags.map((tag) => (
-                <span key={tag} className="text-[13px] px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/45">{tag}</span>
+                <span key={tag} className="text-[13px] px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
               ))}
             </div>
           </div>

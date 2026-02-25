@@ -119,7 +119,7 @@ export function Footer() {
             <ul className="space-y-3">
               {["Strategy", "AI & Analytics", "Cybersecurity", "Cloud", "Custom Apps"].map((item) => (
                 <li key={item}>
-                  <Link href="/services" className="text-[14px] text-white/40 hover:text-white/60 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</Link>
+                  <Link href="/services" className="text-[14px] text-white/50 hover:text-white/70 transition-colors" data-testid={`link-footer-${item.toLowerCase().replace(/\s/g, '-')}`}>{item}</Link>
                 </li>
               ))}
             </ul>
@@ -135,14 +135,14 @@ export function Footer() {
                 { label: "FAQ", href: "/faq" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-[14px] text-white/40 hover:text-white/60 transition-colors" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</Link>
+                  <Link href={item.href} className="text-[14px] text-white/50 hover:text-white/70 transition-colors" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="md:col-span-3">
             <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
-            <ul className="space-y-3 text-[14px] text-white/40">
+            <ul className="space-y-3 text-[14px] text-white/50">
               <li data-testid="contact-email"><a href="mailto:richard@miritechnology.com" className="hover:text-white transition-colors">richard@miritechnology.com</a></li>
             </ul>
             <div className="mt-8">
@@ -155,13 +155,13 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[14px] text-white/40" data-testid="text-copyright">&copy; {new Date().getFullYear()} Miri. All rights reserved.</p>
+          <p className="text-[14px] text-white/50" data-testid="text-copyright">&copy; {new Date().getFullYear()} Miri. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal#privacy">
-              <span className="text-[14px] text-white/40 hover:text-white/60 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
+              <span className="text-[14px] text-white/50 hover:text-white/70 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
             </Link>
             <Link href="/legal#terms">
-              <span className="text-[14px] text-white/40 hover:text-white/60 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
+              <span className="text-[14px] text-white/50 hover:text-white/70 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
             </Link>
           </div>
         </div>
