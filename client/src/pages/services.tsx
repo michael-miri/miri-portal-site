@@ -111,7 +111,7 @@ export default function Services() {
       <PageHeader
         label="Our Capabilities"
         title="Full-spectrum technology consulting."
-        description="Nine practice areas. One trusted partner. We cover the complete technology lifecycle from strategy through implementation and beyond."
+        description="We cover the complete technology lifecycle from strategy through implementation and beyond."
       />
 
       <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
