@@ -109,7 +109,7 @@ export default function Home() {
               </p>
               <div className="mt-10">
                 <Link href="/services" data-testid="link-capabilities-more">
-                  <span className="text-[13px] text-[#0645FF] hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
+                  <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
                     View all 9 services <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -222,7 +222,7 @@ export default function Home() {
             </div>
             <div className="lg:text-right">
               <Link href="/industries" data-testid="link-industries-more">
-                <span className="text-[13px] text-[#0645FF] hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
+                <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
                   Explore all industries <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
@@ -252,7 +252,7 @@ export default function Home() {
               </p>
               <div className="mt-8">
                 <Link href="/security" data-testid="link-security-more">
-                  <span className="text-[13px] text-[#0645FF] hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group">
+                  <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
                     Our security approach <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>

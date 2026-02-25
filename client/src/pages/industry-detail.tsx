@@ -269,7 +269,7 @@ export default function IndustryDetail() {
                 {industry.relatedServices.map((service, i) => (
                   <div key={i} className={`py-6 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}>
                     <Link href="/services">
-                      <span className="text-[15px] text-white/60 hover:text-[#0645FF] transition-colors inline-flex items-center gap-2 group" data-testid={`link-related-service-${i}`}>
+                      <span className="text-[15px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group" data-testid={`link-related-service-${i}`}>
                         {service}
                         <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </span>
