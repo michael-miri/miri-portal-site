@@ -29,12 +29,12 @@ const services = [
   {
     num: "03",
     title: "Cybersecurity & Resilience",
-    desc: "Secure-by-design architectures with continuous monitoring and compliance frameworks.",
+    desc: "Secure-by-design architectures with continuous monitoring and threat prevention.",
     details: [
       "Zero-trust architecture implementation",
       "Vulnerability assessments and penetration testing",
       "Incident response planning and execution",
-      "Compliance frameworks (SOC 2, NIST, ISO 27001)",
+      "Security awareness training and best practices",
     ],
   },
   {
