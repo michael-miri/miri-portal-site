@@ -39,8 +39,8 @@ export default function Home() {
     <Layout>
       <section className="pt-[160px] pb-32 bg-[#0A0E1A] relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A]/60 via-[#0A0E1A]/40 to-[#0A0E1A]" />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A]/30 via-[#0A0E1A]/30 to-[#0A0E1A]" />
         </div>
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
