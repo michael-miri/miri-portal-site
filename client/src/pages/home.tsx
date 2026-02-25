@@ -60,11 +60,6 @@ export default function Home() {
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 </Link>
-                <Link href="/services">
-                  <Button variant="outline" className="border-[#0645FF]/30 text-[#0645FF] font-medium rounded-full px-7 h-11 bg-transparent hover:bg-[#0645FF]/[0.06] hover:border-[#0645FF]/50" data-testid="button-hero-services">
-                    Our Services
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
