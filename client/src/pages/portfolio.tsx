@@ -31,7 +31,7 @@ const projects = [
   {
     num: "04",
     title: "Housing Management App",
-    client: "Property Management Firm",
+    client: "",
     sector: "Real Estate",
     desc: "Created a housing management application that simplifies tenant communication, maintenance requests, lease tracking, and rent collection into one streamlined platform for property managers and residents.",
     results: ["Centralized tenant and lease management", "Digital maintenance request workflow", "Automated rent reminders and payment tracking", "Tenant self-service portal with 24/7 access"],
@@ -40,7 +40,7 @@ const projects = [
   {
     num: "05",
     title: "Accessible Tour System App",
-    client: "Cultural Heritage Organization",
+    client: "",
     sector: "Government & Culture",
     desc: "Developed an accessible digital tour application that brings historic sites to life through interactive content, audio guides, and real-time navigation — designed from the ground up for ADA compliance and inclusivity.",
     results: ["ADA-compliant accessible design throughout", "Audio-guided tours with multilingual support", "Interactive maps with real-time wayfinding", "Mobile-first progressive web app"],
@@ -71,7 +71,7 @@ export default function Portfolio() {
                   <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
                     <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
                     <div className="flex items-center gap-3 mt-3">
-                      <span className="text-[13px] text-white/45">{project.client}</span>
+                      {project.client && <span className="text-[13px] text-white/45">{project.client}</span>}
                       <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#C4A882]/[0.1] border border-[#C4A882]/20 text-[#C4A882]">{project.sector}</span>
                     </div>
                     <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
