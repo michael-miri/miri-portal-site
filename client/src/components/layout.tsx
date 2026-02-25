@@ -193,11 +193,11 @@ export function CTABanner() {
                 Ready to move<br />forward?
               </h2>
             </div>
-            <div className="lg:text-right">
-              <p className="text-[15px] text-white/50 leading-relaxed mb-8 max-w-md lg:ml-auto">
+            <div className="lg:flex lg:flex-col lg:items-end lg:justify-end">
+              <p className="text-[15px] text-white/50 leading-relaxed mb-8 max-w-sm">
                 Book a free consultation. No obligations — just an honest conversation about where technology can take your organization.
               </p>
-              <div className="flex flex-wrap gap-3 lg:justify-end">
+              <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
                   <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-cta-bottom">
                     Get in Touch
