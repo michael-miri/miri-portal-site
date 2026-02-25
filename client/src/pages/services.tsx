@@ -20,7 +20,7 @@ const services = [
     title: "AI & Advanced Analytics",
     desc: "Embed intelligent tools and automation to optimize performance and extend asset life.",
     details: [
-      "Machine learning model development and deployment",
+      "AI-powered workflow automation and optimization",
       "Predictive analytics and forecasting",
       "Natural language processing and computer vision",
       "Automated decision support systems",
