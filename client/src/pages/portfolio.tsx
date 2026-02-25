@@ -81,7 +81,7 @@ export default function Portfolio() {
                     <h3 className="font-heading text-2xl font-bold text-white leading-tight">{project.title}</h3>
                     <div className="flex items-center gap-3 mt-3">
                       <span className="text-[13px] text-white/45">{project.client}</span>
-                      <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 text-[#0645FF]">{project.sector}</span>
+                      <span className="text-[11px] px-2.5 py-1 rounded-full bg-[#C4A882]/[0.1] border border-[#C4A882]/20 text-[#C4A882]">{project.sector}</span>
                     </div>
                     <p className="mt-6 text-[14px] text-white/50 leading-relaxed">{project.desc}</p>
                     <div className="flex flex-wrap gap-2 mt-6">
