@@ -11,9 +11,9 @@ const capabilities = [
   { num: "04", title: "Cloud & Hybrid\nInfrastructure", desc: "Scalable, resilient platforms with DevOps methods that accelerate deployment." },
   { num: "05", title: "Custom Apps\n& Automation", desc: "Streamlined workflows through agile development and user-centered design." },
   { num: "06", title: "Data Governance\n& Management", desc: "Structured data assets that build trust, improve accessibility, and enable integration." },
-  { num: "07", title: "IoT, Edge &\nReal-Time Systems", desc: "Connected infrastructure that drives operational intelligence and proactive decisions." },
-  { num: "08", title: "Digital Twin &\nVisualization", desc: "Immersive models and simulations that reveal system behavior and support planning." },
-  { num: "09", title: "OT/IT\nIntegration", desc: "Unified, data-rich environments that enhance control and situational awareness." },
+  { num: "07", title: "UX Design\n& Research", desc: "Human-centered design, usability testing, and design systems that make complex technology intuitive." },
+  { num: "08", title: "Managed Services\n& Support", desc: "24/7 monitoring, SLA-backed operations, and ongoing optimization so your systems never skip a beat." },
+  { num: "09", title: "Training & Change\nManagement", desc: "Adoption programs, technical training, and organizational change support that ensure your investment delivers." },
 ];
 
 const stats = [
