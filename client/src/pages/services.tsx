@@ -119,7 +119,8 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={service.num}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
+              id={`service-${service.num}`}
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 scroll-mt-32 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="lg:col-span-1">
