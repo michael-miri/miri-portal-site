@@ -276,7 +276,7 @@ export default function Home() {
               ].map((item) => (
                 <div key={item.title} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
                   <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-[12px] text-white/40 leading-relaxed">{item.desc}</p>
+                  <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
