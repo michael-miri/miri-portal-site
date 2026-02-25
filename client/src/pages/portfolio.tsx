@@ -7,7 +7,7 @@ const projects = [
     client: "Wellness Creative",
     sector: "Health & Wellness",
     desc: "Built a comprehensive company portal for a wellness brand, centralizing employee resources, scheduling, client management, and internal communications into a single intuitive platform.",
-    results: ["Unified portal replacing 4 separate tools", "Streamlined employee onboarding process", "Integrated scheduling and client management", "Mobile-responsive design for on-the-go access"],
+    results: ["Unified portal replacing multiple separate tools", "Streamlined employee onboarding process", "Integrated scheduling and client management", "Mobile-responsive design for on-the-go access"],
     tags: ["Portal", "UX Design", "Custom App", "Wellness"],
   },
   {
