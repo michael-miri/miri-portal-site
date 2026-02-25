@@ -47,7 +47,7 @@ Multi-page marketing website for Avion Tech, an AI-driven tech consulting compan
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/index.css` - Theme variables
 - `tailwind.config.ts` - Design tokens
-- `attached_assets/IMG_6343_1772019708166.png` - Miri logo (current)
+- `attached_assets/IMG_6345_1772019800583.png` - Miri logo (current)
 - `attached_assets/Stantec_Proposal_for_MDAH_Tour_System_1_1771948064569.pdf` - Source content
 
 ## User Preferences
