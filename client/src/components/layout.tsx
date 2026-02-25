@@ -158,13 +158,13 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-white/25" data-testid="text-copyright">&copy; {new Date().getFullYear()} Miri. All rights reserved.</p>
+          <p className="text-[14px] text-white/40" data-testid="text-copyright">&copy; {new Date().getFullYear()} Miri. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal#privacy">
-              <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
+              <span className="text-[14px] text-white/40 hover:text-white/60 transition-colors cursor-pointer" data-testid="link-footer-privacy">Privacy</span>
             </Link>
             <Link href="/legal#terms">
-              <span className="text-[12px] text-white/25 hover:text-white/40 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
+              <span className="text-[14px] text-white/40 hover:text-white/60 transition-colors cursor-pointer" data-testid="link-footer-terms">Terms</span>
             </Link>
           </div>
         </div>
