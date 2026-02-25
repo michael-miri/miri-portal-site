@@ -106,38 +106,35 @@ export default function Home() {
 
       <section className="py-32 bg-[#0A0E1A]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            <div className="lg:col-span-5 lg:sticky lg:top-32">
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What We Do</span>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-capabilities-section">
-                Unlimited capabilities.<br />
-                <span className="text-white/25">One partner.</span>
-              </h2>
-              <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
-                From strategy through implementation — we cover the full technology spectrum so you don't have to manage multiple vendors.
-              </p>
-              <div className="mt-10">
-                <Link href="/services" data-testid="link-capabilities-more">
-                  <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
-                    View all services <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
+          <div className="mb-16">
+            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What We Do</span>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+              <div>
+                <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-capabilities-section">
+                  Unlimited capabilities.<br />
+                  <span className="text-white/25">One partner.</span>
+                </h2>
+                <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-sm">
+                  From strategy through implementation — we cover the full technology spectrum so you don't have to manage multiple vendors.
+                </p>
               </div>
+              <Link href="/services" data-testid="link-capabilities-more">
+                <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
+                  View all services <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             </div>
-
-            <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-                {capabilities.map((cap) => (
-                  <Link key={cap.num} href={`/services#service-${cap.num}`} className="block h-full">
-                    <div className="bg-[#0A0E1A] p-8 h-full group hover:bg-[#141B2E] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
-                      <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
-                      <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
-                      <p className="text-[15px] text-white/50 leading-relaxed">{cap.desc}</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+            {capabilities.map((cap) => (
+              <Link key={cap.num} href={`/services#service-${cap.num}`} className="block h-full">
+                <div className="bg-[#0A0E1A] p-8 h-full group hover:bg-[#141B2E] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
+                  <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
+                  <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
+                  <p className="text-[15px] text-white/50 leading-relaxed">{cap.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -248,39 +245,35 @@ export default function Home() {
 
       <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Security</span>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-security-section">
-                Security isn't a<br />feature. It's the<br />
-                <span className="text-white/25">foundation.</span>
-              </h2>
-              <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
-                Every system we build starts with security. Zero-trust architectures, AES-256 encryption, and 24/7 monitoring — embedded from day one.
-              </p>
-              <div className="mt-8">
-                <Link href="/security" data-testid="link-security-more">
-                  <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
-                    Our security approach <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
+          <div className="mb-16">
+            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Security</span>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+              <div>
+                <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-security-section">
+                  Security isn't a feature. It's the <span className="text-white/25">foundation.</span>
+                </h2>
+                <p className="mt-6 text-[18px] text-white/50 leading-relaxed max-w-lg">
+                  Every system we build starts with security. Zero-trust architectures, AES-256 encryption, and 24/7 monitoring — embedded from day one.
+                </p>
               </div>
+              <Link href="/security" data-testid="link-security-more">
+                <span className="text-[13px] text-white/60 hover:text-white transition-colors inline-flex items-center gap-2 group">
+                  Our security approach <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             </div>
-
-            <div className="lg:flex lg:items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
-              {[
-                { title: "Zero-Trust", desc: "Every access request verified regardless of source" },
-                { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
-                { title: "24/7 Monitoring", desc: "Continuous threat detection and rapid response" },
-              ].map((item) => (
-                <div key={item.title} className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
-                  <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+            {[
+              { title: "Zero-Trust", desc: "Every access request verified regardless of source" },
+              { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
+              { title: "24/7 Monitoring", desc: "Continuous threat detection and rapid response" },
+            ].map((item) => (
+              <div key={item.title} className="bg-[#0A0E1A] p-8 hover:bg-[#141B2E] transition-colors" data-testid={`card-security-${item.title.toLowerCase().replace(/\s/g, '-')}`}>
+                <h3 className="text-[15px] font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
