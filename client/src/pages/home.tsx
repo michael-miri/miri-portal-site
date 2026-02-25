@@ -88,7 +88,7 @@ export default function Home() {
                 {[
                   { title: "Faster", desc: "AI-accelerated delivery that cuts timelines in half." },
                   { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages." },
-                  { title: "Cheaper", desc: "No licensing fees, no per-seat costs, no vendor lock-in." },
+                  { title: "Cheaper", desc: "AI-driven efficiency means lower costs without cutting corners." },
                 ].map((item) => (
                   <div key={item.title} className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
                     <h3 className="font-heading text-xl font-semibold text-white mb-3">{item.title}</h3>
