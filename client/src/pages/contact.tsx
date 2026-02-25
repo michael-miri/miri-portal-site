@@ -108,7 +108,7 @@ export default function Contact() {
                 <div className="space-y-6">
                   {[
                     { label: "Email", value: "richard@miritechnology.com" },
-                    { label: "Phone", value: "(859) 229-9831" },
+
                     { label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (
                     <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>
