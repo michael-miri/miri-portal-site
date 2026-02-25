@@ -47,7 +47,7 @@ export default function Contact() {
         description="Book a free consultation. No obligations — just an honest conversation about your technology needs."
       />
 
-      <section className="bg-[#09090b] border-t border-white/[0.06]">
+      <section className="bg-[#050A30] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-7">

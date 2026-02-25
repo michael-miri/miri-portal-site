@@ -69,7 +69,7 @@ export default function Portfolio() {
         description="A selection of projects that demonstrate how we help organizations transform through practical, impactful technology solutions."
       />
 
-      <section className="bg-[#09090b] border-t border-white/[0.06]">
+      <section className="bg-[#050A30] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           {projects.map((project, i) => (
             <div
@@ -110,7 +110,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
           <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
             Have a similar challenge?

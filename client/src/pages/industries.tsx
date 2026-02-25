@@ -41,7 +41,7 @@ export default function Industries() {
         description="Tailored technology solutions for every industry, from private enterprise to public service. We adapt to your sector's unique challenges."
       />
 
-      <section className="bg-[#09090b] border-t border-white/[0.06]">
+      <section className="bg-[#050A30] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           {sectors.map((sector, i) => (
             <div
@@ -62,7 +62,7 @@ export default function Industries() {
               <div className="lg:col-span-7">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-xl overflow-hidden">
                   {sector.items.map((item) => (
-                    <div key={item} className="bg-[#09090b] p-6 hover:bg-[#0e0e12] transition-colors">
+                    <div key={item} className="bg-[#050A30] p-6 hover:bg-[#0e0e12] transition-colors">
                       <span className="text-[14px] text-white/50">{item}</span>
                     </div>
                   ))}
@@ -73,7 +73,7 @@ export default function Industries() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#09090b] border-t border-white/[0.06]">
+      <section className="py-32 bg-[#050A30] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>

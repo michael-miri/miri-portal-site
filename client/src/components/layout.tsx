@@ -19,7 +19,7 @@ export function Navbar() {
   const [location] = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/90 backdrop-blur-xl border-b border-white/[0.06]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050A30]/90 backdrop-blur-xl border-b border-white/[0.06]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="shrink-0" data-testid="link-logo">
@@ -73,7 +73,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-white/[0.06] bg-[#09090b]/95 backdrop-blur-xl"
+            className="lg:hidden border-t border-white/[0.06] bg-[#050A30]/95 backdrop-blur-xl"
           >
             <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-6 space-y-1">
               {navLinks.map((link) => (
@@ -104,7 +104,7 @@ export function Navbar() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-[#09090b] pt-20 pb-10">
+    <footer className="border-t border-white/[0.06] bg-[#050A30] pt-20 pb-10">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-5">
@@ -175,7 +175,7 @@ export function Footer() {
 
 export function PageHeader({ label, title, description }: { label: string; title: string; description: string }) {
   return (
-    <section className="pt-[140px] pb-20 bg-[#09090b]">
+    <section className="pt-[140px] pb-20 bg-[#050A30]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">{label}</span>
         <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl">{title}</h1>
@@ -187,7 +187,7 @@ export function PageHeader({ label, title, description }: { label: string; title
 
 export function CTABanner() {
   return (
-    <section className="py-32 bg-[#09090b]">
+    <section className="py-32 bg-[#050A30]">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <div className="border-t border-white/[0.06] pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -217,7 +217,7 @@ export function CTABanner() {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#09090b] text-white">
+    <div className="min-h-screen bg-[#050A30] text-white">
       <Navbar />
       {children}
       <Footer />
