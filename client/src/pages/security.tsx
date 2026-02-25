@@ -64,7 +64,15 @@ export default function Security() {
                 data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
               >
                 <h3 className="font-heading text-[17px] font-semibold text-white leading-snug mb-3">{pillar.title}</h3>
-                <p className="text-[15px] text-white/50 leading-relaxed">{pillar.desc}</p>
+                <p className="text-[15px] text-white/50 leading-relaxed mb-4">{pillar.desc}</p>
+                <div className="space-y-2">
+                  {pillar.items.map((item) => (
+                    <div key={item} className="flex items-start gap-2">
+                      <span className="text-[#C4A882]/50 mt-1.5 text-[8px]">●</span>
+                      <span className="text-[13px] text-white/40 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
