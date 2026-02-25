@@ -118,34 +118,19 @@ export default function Home() {
               <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
                 Most consultants hand you a strategy deck and walk away. We roll up our sleeves and implement alongside your team — from architecture to deployment to ongoing support.
               </p>
-              <div className="mt-10 space-y-6">
-                {[
-                  { title: "Practitioners, not theorists", desc: "Our team writes code, configures infrastructure, and ships production systems — not just PowerPoints." },
-                  { title: "ROI in months, not years", desc: "We prioritize high-impact work first. Most clients see measurable results within the first quarter." },
-                  { title: "One partner, full spectrum", desc: "AI, cloud, security, data, IoT, custom apps — you get one trusted team instead of juggling five vendors." },
-                ].map((item, i) => (
-                  <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
-                    <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
-                    <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div>
-              <div className="rounded-2xl border border-white/[0.06] bg-[#0e0e12] overflow-hidden">
-                <div className="p-10 border-b border-white/[0.06]">
-                  <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-8">By the Numbers</span>
-                  <div className="space-y-0">
-                    {stats.map((stat, i) => (
-                      <div key={i} className={`py-6 ${i > 0 ? "border-t border-white/[0.04]" : ""}`} data-testid={`stat-${i}`}>
-                        <div className="font-heading text-[2.5rem] font-bold text-white leading-none mb-2">{stat.value}</div>
-                        <p className="text-[15px] text-white/40 leading-relaxed">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
+            <div className="space-y-6 lg:mt-24">
+              {[
+                { title: "Practitioners, not theorists", desc: "Our team writes code, configures infrastructure, and ships production systems — not just PowerPoints." },
+                { title: "ROI in months, not years", desc: "We prioritize high-impact work first. Most clients see measurable results within the first quarter." },
+                { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services — you get one trusted team instead of juggling five vendors." },
+              ].map((item, i) => (
+                <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
+                  <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
+                  <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
