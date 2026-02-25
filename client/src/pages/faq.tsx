@@ -22,7 +22,7 @@ const generalFAQs = [
   },
   {
     q: "Where are you located?",
-    a: "We serve clients nationally across the United States, working with organizations of all sizes — from startups to enterprise and government agencies.",
+    a: "We're based in Kentucky and serve clients nationally across the United States, working with organizations of all sizes — from startups to enterprise and government agencies.",
   },
   {
     q: "What is selfware?",
