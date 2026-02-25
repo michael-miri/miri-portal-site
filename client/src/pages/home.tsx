@@ -43,21 +43,23 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0E1A]/30 via-[#0A0E1A]/30 to-[#0A0E1A]" />
         </div>
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
-            <div className="lg:col-span-7">
+          <div>
+            <div className="lg:max-w-[58%]">
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] inline-flex items-center gap-2 mb-8"><Sparkles className="w-4 h-4" /> AI-Driven Technology Consulting</span>
               <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-white leading-[1.02] tracking-[-0.02em]">
                 Build<br />
-                smarter.<br />
-                <span className="text-[#0645FF]">Move faster.</span>
+                smarter.
               </h1>
             </div>
-            <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
-              <p className="text-[24px] text-white/50 leading-relaxed max-w-md mb-6">
-                We help organizations modernize operations, harness AI, and scale infrastructure.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link href="/contact">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-0">
+              <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-[#0645FF] leading-[1.02] tracking-[-0.02em]">
+                Move faster.
+              </h1>
+              <div className="flex items-center gap-8">
+                <p className="text-[18px] text-white/50 leading-relaxed max-w-xs hidden lg:block">
+                  We help organizations modernize operations, harness AI, and scale infrastructure.
+                </p>
+                <Link href="/contact" className="shrink-0">
                   <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 group" data-testid="button-hero-cta">
                     Get in Touch
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
@@ -65,6 +67,9 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            <p className="text-[18px] text-white/50 leading-relaxed max-w-sm mt-6 lg:hidden">
+              We help organizations modernize operations, harness AI, and scale infrastructure.
+            </p>
           </div>
         </div>
       </section>
