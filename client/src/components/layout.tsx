@@ -144,8 +144,8 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
             <ul className="space-y-3 text-[14px] text-white/40">
-              <li data-testid="contact-email">hello@miri.com</li>
-              <li data-testid="contact-phone">(859) 555-0142</li>
+              <li data-testid="contact-email">richard@miritechnology.com</li>
+              <li data-testid="contact-phone">(859) 229-9831</li>
               <li data-testid="contact-location">Lexington, Kentucky</li>
             </ul>
             <div className="mt-8">
