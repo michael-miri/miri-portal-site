@@ -4,25 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
 import missionImage from "@assets/AdobeStock_194728217_1772041997096.jpeg";
 
-const team = [
-  {
-    name: "Richard Hake",
-    initials: "RH",
-    role: "Project Manager",
-    location: "Lexington, Kentucky",
-    bio: "Richard brings over 15 years of experience in management consulting, business transformation, and program leadership. He specializes in guiding digital modernization initiatives, integrating technology solutions, and aligning project delivery with organizational goals.",
-    skills: ["Stakeholder Engagement", "Strategic Planning", "Cross-Functional Leadership", "Digital Modernization", "Program Management", "Risk Mitigation"],
-  },
-  {
-    name: "Michael Colliver",
-    initials: "MC",
-    role: "Technology Solution Architect",
-    location: "Lexington, Kentucky",
-    bio: "Michael is a senior technology consultant with 14 years of experience in software development, digital transformation, and user experience. He has led cross-functional teams through complex lifecycles, integrating business strategy with technical execution.",
-    skills: ["Solution Architecture", "Software Development", "UI/UX Design", "Business Analysis", "Agile Leadership", "Technical Strategy"],
-  },
-];
-
 const values = [
   {
     title: "Scalable & Secure",
@@ -101,37 +82,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-32">
-          <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Leadership</span>
-          <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-20">
-            Meet the team.
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden max-w-4xl">
-            {team.map((member) => (
-              <div key={member.name} className="bg-[#0A0E1A] p-10" data-testid={`card-team-${member.name.toLowerCase().replace(/\s/g, '-')}`}>
-                <div className="w-16 h-16 rounded-full bg-[#0645FF]/[0.08] border border-[#0645FF]/20 flex items-center justify-center mb-8">
-                  <span className="font-heading text-[15px] font-bold text-[#0645FF]">{member.initials}</span>
-                </div>
-
-                <h3 className="font-heading text-xl font-bold text-white">{member.name}</h3>
-                <p className="text-[13px] text-[#0645FF]/80 mt-1">{member.role}</p>
-                <p className="text-[12px] text-white/35 mt-1">{member.location}</p>
-
-                <p className="text-[13px] text-white/50 leading-relaxed mt-6">{member.bio}</p>
-
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {member.skills.map((skill) => (
-                    <span key={skill} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/40">{skill}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
