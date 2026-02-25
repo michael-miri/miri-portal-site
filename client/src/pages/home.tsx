@@ -74,19 +74,19 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/60">Trusted across industries</span>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {[
-              { name: "Government", icon: <Shield className="w-6 h-6 text-[#09090b]" /> },
-              { name: "Healthcare", icon: <HeartPulse className="w-6 h-6 text-[#09090b]" /> },
-              { name: "Finance", icon: <Landmark className="w-6 h-6 text-[#09090b]" /> },
-              { name: "Manufacturing", icon: <Factory className="w-6 h-6 text-[#09090b]" /> },
-              { name: "Energy", icon: <Zap className="w-6 h-6 text-[#09090b]" /> },
+              { name: "Government", icon: <Shield className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Healthcare", icon: <HeartPulse className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Finance", icon: <Landmark className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Manufacturing", icon: <Factory className="w-5 h-5 text-[#09090b]" /> },
+              { name: "Energy", icon: <Zap className="w-5 h-5 text-[#09090b]" /> },
             ].map((item) => (
-              <div key={item.name} className="flex flex-col items-center gap-5 group" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
-                <div className="w-20 h-20 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(196,168,130,0.2)]">
+              <div key={item.name} className="flex flex-col items-center justify-center gap-5 bg-[#09090b] py-12 group hover:bg-[#0e0e12] transition-colors" data-testid={`tag-industry-${item.name.toLowerCase()}`}>
+                <div className="w-14 h-14 rounded-full bg-[#C4A882] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                   {item.icon}
                 </div>
-                <span className="text-[15px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
+                <span className="text-[14px] text-white/40 font-medium tracking-wide transition-colors group-hover:text-white/80">{item.name}</span>
               </div>
             ))}
           </div>
