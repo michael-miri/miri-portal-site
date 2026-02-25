@@ -109,7 +109,6 @@ export default function Contact() {
                   {[
                     { label: "Email", value: "richard@miritechnology.com" },
 
-                    { label: "Location", value: "Lexington, Kentucky" },
                   ].map((item) => (
                     <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>
                       <div className="text-[11px] text-white/35 uppercase tracking-wider">{item.label}</div>
