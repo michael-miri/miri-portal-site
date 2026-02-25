@@ -75,7 +75,7 @@ export default function Home() {
             <div className="lg:col-span-5 lg:sticky lg:top-32">
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What We Do</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="heading-capabilities-section">
-                Nine capabilities.<br />
+                Unlimited capabilities.<br />
                 <span className="text-white/25">One partner.</span>
               </h2>
               <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-sm">
