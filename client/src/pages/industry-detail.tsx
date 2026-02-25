@@ -18,12 +18,12 @@ const industryData: Record<string, {
     description: "We build mission-critical platforms for federal, state, and local government agencies. From citizen-facing portals to classified data systems, our solutions meet the strictest compliance and security requirements while modernizing legacy infrastructure.",
     challenges: [
       "Aging legacy systems that slow down operations and increase costs",
-      "Strict compliance requirements (FedRAMP, FISMA, NIST 800-53)",
+      "Strict compliance and regulatory requirements",
       "Data silos across departments preventing unified decision-making",
       "Cybersecurity threats targeting government infrastructure",
     ],
     solutions: [
-      "FedRAMP-compliant cloud migration and modernization",
+      "Compliant cloud migration and modernization",
       "Zero-trust security architecture implementation",
       "Interoperable data platforms for cross-agency collaboration",
       "Citizen service portals with accessibility compliance",
@@ -31,7 +31,7 @@ const industryData: Record<string, {
       "Automated compliance monitoring and reporting",
     ],
     outcomes: [
-      "40% reduction in legacy system maintenance costs",
+      "Significant reduction in legacy system maintenance costs",
       "Full compliance with federal security frameworks",
       "Real-time data sharing across agencies",
       "Improved citizen satisfaction scores",
