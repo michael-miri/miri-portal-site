@@ -14,19 +14,19 @@ import { useSEO } from "@/hooks/use-seo";
 const generalFAQs = [
   {
     q: "What do you do?",
-    a: "We're an AI-driven technology consulting firm that helps organizations modernize, optimize, and transform their operations. We offer full-spectrum technology consulting including strategy, AI & analytics, cybersecurity, cloud infrastructure, custom application development, data governance, IoT solutions, digital twin modeling, and OT/IT integration.",
+    a: "We're an AI-driven technology consulting firm that helps organizations modernize, optimize, and transform their operations. We build what we call selfware — software built specifically for you, not bloated vendor packages. Our services span strategy, AI & analytics, cybersecurity, cloud infrastructure, custom app development, data governance, UX design, managed services, and training.",
   },
   {
     q: "What industries do you serve?",
-    a: "We serve organizations across all sectors including private enterprise, government & federal agencies, municipal governments, and customer-facing businesses. Our experience spans healthcare, finance, education, retail, manufacturing, logistics, energy, real estate, and more — over 50 industries in total.",
+    a: "We serve organizations across all sectors including private enterprise, government & federal agencies, municipal governments, and customer-facing businesses. Our experience spans healthcare, finance, education, retail, manufacturing, logistics, energy, real estate, defense, and more.",
   },
   {
     q: "Where are you located?",
-    a: "We're headquartered in Lexington, Kentucky. We serve clients nationally and have experience working with organizations across the United States, including federal agencies and Fortune 500 companies.",
+    a: "We're based in Lexington, Kentucky and serve clients nationally. We work with organizations across the United States, from startups to enterprise and government agencies.",
   },
   {
-    q: "How long have you been in business?",
-    a: "Our team brings over 20 years of combined experience in technology consulting, digital transformation, and enterprise architecture. Our consultants have led hundreds of successful projects across diverse industries.",
+    q: "What is selfware?",
+    a: "Selfware is our approach to building software that's purpose-built for your organization — not one-size-fits-all vendor solutions. We leverage AI-driven methodologies to deliver solutions that are faster, better, and cheaper than traditional consulting. Software shouldn't be generic. Selfware is software built for you.",
   },
 ];
 
@@ -52,11 +52,11 @@ const serviceFAQs = [
 const securityFAQs = [
   {
     q: "How do you handle data security?",
-    a: "Security is embedded in everything we do. We follow secure-by-design principles, implement zero-trust architectures, and adhere to industry frameworks including SOC 2, NIST, and ISO 27001. All data is encrypted at rest and in transit using AES-256 encryption.",
+    a: "Security is embedded in everything we do. We follow secure-by-design principles and implement zero-trust architectures where every access request is verified regardless of source. All data is encrypted at rest and in transit using AES-256 encryption, and we maintain 24/7 threat monitoring across all systems.",
   },
   {
-    q: "Are you compliant with federal security standards?",
-    a: "Yes. We have experience achieving FedRAMP High authorization and full NIST 800-53 compliance for federal clients. Our cybersecurity practice is specifically designed to meet the stringent requirements of government and defense organizations.",
+    q: "What security measures do you implement?",
+    a: "Our security approach includes zero-trust architecture, AES-256 encryption, 24/7 threat monitoring, identity & access management with multi-factor authentication, network security with intrusion detection, and a structured five-phase security lifecycle from assessment through continuous improvement.",
   },
   {
     q: "Do you sign NDAs and data processing agreements?",
@@ -79,7 +79,7 @@ const processFAQs = [
   },
   {
     q: "What makes you different from other consultants?",
-    a: "Three things set us apart: First, we're practitioners, not just advisors — our team builds and implements solutions alongside your staff. Second, we prioritize practical, ROI-driven outcomes over theoretical frameworks. Third, our deep expertise across the full technology spectrum means you get one trusted partner instead of managing multiple vendors.",
+    a: "We guarantee to be faster, better, and cheaper. We're practitioners, not just advisors — we build and implement solutions alongside your team. We leverage a proven AI methodology that delivers tangible outcomes, and our full-spectrum expertise means you get one trusted partner instead of managing multiple vendors.",
   },
 ];
 
