@@ -122,18 +122,18 @@ export default function Home() {
 
             <div className="lg:flex lg:flex-col lg:justify-center">
               <div className="space-y-6 lg:mt-0">
-              {[
-                { title: "Practitioners, not theorists", desc: "Our team builds and ships production systems instead of just strategy decks." },
-                { title: "ROI in months, not years", desc: "We prioritize high-impact work first." },
-                { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services, and more." },
-              ].map((item, i) => (
-                <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
-                  <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
-                  <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+                {[
+                  { title: "Practitioners, not theorists", desc: "Our team builds and ships production systems instead of just strategy decks." },
+                  { title: "ROI in months, not years", desc: "We prioritize high-impact work first." },
+                  { title: "One partner, full spectrum", desc: "AI, cloud, security, data, UX, managed services, and more." },
+                ].map((item, i) => (
+                  <div key={i} className="border-t border-white/[0.06] pt-6" data-testid={`why-item-${i}`}>
+                    <h3 className="text-[15px] font-semibold text-white mb-1.5">{item.title}</h3>
+                    <p className="text-[15px] text-white/50 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
         </div>
       </section>
 
