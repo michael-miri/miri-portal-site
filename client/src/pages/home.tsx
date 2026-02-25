@@ -267,7 +267,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+            <div className="lg:flex lg:items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
               {[
                 { title: "Zero-Trust", desc: "Every access request verified regardless of source" },
                 { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
@@ -278,6 +279,7 @@ export default function Home() {
                   <p className="text-[12px] text-white/40 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
