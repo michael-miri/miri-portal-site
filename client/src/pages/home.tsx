@@ -233,7 +233,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industries.map((item) => (
               <div key={item.name} className="bg-[#0A0E1A] p-8 h-full flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
                 <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0">
