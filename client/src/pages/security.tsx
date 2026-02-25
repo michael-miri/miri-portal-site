@@ -54,33 +54,25 @@ export default function Security() {
         description="Security isn't an afterthought — it's embedded in everything we build. From zero-trust to continuous monitoring, we protect what matters most."
       />
 
-      <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
+      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          {securityPillars.map((pillar, i) => (
-            <div
-              key={pillar.title}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 ${i > 0 ? "border-t border-white/[0.06]" : ""}`}
-              data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
-            >
-              <div className="lg:col-span-1">
-
-              </div>
-              <div className="lg:col-span-4">
-                <h3 className="font-heading text-xl font-bold text-white leading-tight">{pillar.title}</h3>
-                <p className="mt-3 text-[14px] text-white/50 leading-relaxed">{pillar.desc}</p>
-              </div>
-              <div className="lg:col-span-7">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+            {securityPillars.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="bg-[#0A0E1A] p-8 text-center"
+                data-testid={`card-security-pillar-${pillar.title.toLowerCase().replace(/\s/g, '-')}`}
+              >
+                <h3 className="font-heading text-xl font-bold text-white mb-3">{pillar.title}</h3>
+                <p className="text-[13px] text-white/50 leading-relaxed mb-5">{pillar.desc}</p>
+                <div className="space-y-2">
                   {pillar.items.map((item) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <span className="text-[#C4A882]/50 mt-1.5 text-[8px]">●</span>
-                      <span className="text-[14px] text-white/50 leading-relaxed">{item}</span>
-                    </div>
+                    <div key={item} className="text-[13px] text-white/40 leading-relaxed">{item}</div>
                   ))}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
