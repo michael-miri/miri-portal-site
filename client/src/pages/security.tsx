@@ -12,7 +12,7 @@ const securityPillars = [
   {
     title: "Compliance & Standards",
     desc: "Our practices align with the most rigorous industry standards and regulatory frameworks.",
-    items: ["SOC 2 Type II certified", "NIST 800-53 compliant", "ISO 27001 aligned", "FedRAMP High authorization experience"],
+    items: ["NIST 800-53 compliant", "ISO 27001 aligned", "FedRAMP High authorization experience"],
   },
   {
     title: "Data Encryption",
@@ -37,7 +37,6 @@ const securityPillars = [
 ];
 
 const certifications = [
-  { name: "SOC 2 Type II", desc: "Audited security controls for service organizations" },
   { name: "NIST 800-53", desc: "Federal information security standards" },
   { name: "ISO 27001", desc: "International information security management" },
   { name: "FedRAMP", desc: "Federal cloud security authorization" },

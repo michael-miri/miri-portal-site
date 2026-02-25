@@ -256,7 +256,7 @@ export default function Home() {
                 <span className="text-white/25">foundation.</span>
               </h2>
               <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
-                Every system we build starts with security. Zero-trust architectures, SOC 2 compliance, AES-256 encryption, and 24/7 monitoring — embedded from day one.
+                Every system we build starts with security. Zero-trust architectures, AES-256 encryption, and 24/7 monitoring — embedded from day one.
               </p>
               <div className="mt-8">
                 <Link href="/security" data-testid="link-security-more">
@@ -267,10 +267,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden sm:grid-cols-3">
               {[
                 { title: "Zero-Trust", desc: "Every access request verified regardless of source" },
-                { title: "SOC 2 Type II", desc: "Audited security controls for service organizations" },
                 { title: "AES-256", desc: "Enterprise-grade encryption at rest and in transit" },
                 { title: "24/7 Monitoring", desc: "Continuous threat detection and rapid response" },
               ].map((item) => (
