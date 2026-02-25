@@ -362,7 +362,7 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
+      <section className="pt-24 pb-12 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Explore More</span>
           <h2 className="font-heading text-[clamp(2rem,3.5vw,2.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-12">
