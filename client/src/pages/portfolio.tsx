@@ -3,7 +3,7 @@ import { Layout, PageHeader, CTABanner } from "@/components/layout";
 const projects = [
   {
     num: "01",
-    title: "Company Wellness Portal",
+    title: "Company Operations Portal",
     client: "Wellness Creative",
     sector: "Health & Wellness",
     desc: "Built a comprehensive company portal for a wellness brand, centralizing employee resources, scheduling, client management, and internal communications into a single intuitive platform.",
