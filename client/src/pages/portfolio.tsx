@@ -25,7 +25,7 @@ const projects = [
     client: "Neat Enterprise",
     sector: "Service Industry",
     desc: "Designed and built a booking platform for a cleaning services company, enabling customers to schedule, manage, and pay for services with a seamless self-service experience.",
-    results: ["Online booking replacing manual phone scheduling", "Automated reminders reducing no-shows by 40%", "Integrated payment processing", "Real-time availability and instant confirmation"],
+    results: ["Online booking replacing manual phone scheduling", "Automated reminders reducing no-shows", "Integrated payment processing", "Real-time availability and instant confirmation"],
     tags: ["Booking", "Payments", "Mobile App", "Automation"],
   },
   {
