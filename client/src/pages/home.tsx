@@ -94,7 +94,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {capabilities.map((cap) => (
                   <div key={cap.num} className="bg-[#09090b] p-8 group hover:bg-[#0e0e12] transition-colors" data-testid={`card-capability-${cap.num}`}>
-                    <span className="text-[48px] leading-none font-bold text-[#C4A882]/10 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/20">{cap.num}</span>
+                    <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
                     <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
                     <p className="text-[13px] text-white/50 leading-relaxed">{cap.desc}</p>
                   </div>
