@@ -1,4 +1,5 @@
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const projects = [
   {
@@ -49,6 +50,10 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  useSEO({
+    title: "Portfolio - Custom App Development & AI Project Examples",
+    description: "See real projects from Miri Technology: company portals, AI-powered property reviews, booking platforms, housing management apps, and accessible tour systems.",
+  });
   return (
     <Layout>
       <PageHeader

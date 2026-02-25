@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 import missionBg from "@assets/AdobeStock_206661841_1772042502289.jpeg";
 
 const values = [
@@ -25,6 +26,10 @@ const values = [
 
 
 export default function About() {
+  useSEO({
+    title: "About Us - AI-Powered Technology Consulting Firm",
+    description: "Learn about Miri Technology — an AI-driven consulting firm delivering custom software, automation, and digital transformation. We guarantee to be faster, better, and cheaper.",
+  });
   return (
     <Layout>
       <PageHeader

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const generalFAQs = [
   {
@@ -89,6 +91,32 @@ const faqSections = [
 ];
 
 export default function FAQ() {
+  useSEO({
+    title: "FAQ - Common Questions About Our Tech Consulting Services",
+    description: "Answers to frequently asked questions about Miri Technology's consulting services, engagement process, security practices, pricing, and how to get started.",
+  });
+
+  useEffect(() => {
+    const allFAQs = [...generalFAQs, ...serviceFAQs, ...securityFAQs, ...processFAQs];
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": allFAQs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
+        },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, []);
+
   return (
     <Layout>
       <PageHeader

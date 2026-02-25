@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const sectors = [
   {
@@ -33,6 +34,10 @@ const sectors = [
 const industryTags = ["Healthcare", "Finance", "Education", "Retail", "Manufacturing", "Logistics", "Energy", "Real Estate", "Telecommunications", "Agriculture", "Tourism", "Non-Profit"];
 
 export default function Industries() {
+  useSEO({
+    title: "Industries We Serve - Government, Enterprise, Healthcare & More",
+    description: "Miri Technology provides tailored technology solutions for government, healthcare, finance, manufacturing, defense, education, retail, and energy sectors.",
+  });
   return (
     <Layout>
       <PageHeader

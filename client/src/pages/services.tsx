@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const services = [
   {
@@ -106,6 +107,10 @@ const services = [
 ];
 
 export default function Services() {
+  useSEO({
+    title: "Services - Custom Software, AI, Cloud & Cybersecurity Consulting",
+    description: "Explore Miri Technology's full-spectrum consulting services: strategy, AI & analytics, cybersecurity, cloud infrastructure, custom app development, data governance, UX design, managed services, and training.",
+  });
   return (
     <Layout>
       <PageHeader

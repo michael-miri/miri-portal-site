@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const securityPillars = [
   {
@@ -46,6 +47,10 @@ const securityProcess = [
 ];
 
 export default function Security() {
+  useSEO({
+    title: "Security - Enterprise-Grade Cybersecurity & Zero-Trust Architecture",
+    description: "Miri Technology's security approach: zero-trust architecture, AES-256 encryption, 24/7 threat monitoring, identity & access management, and network security for enterprise and government.",
+  });
   return (
     <Layout>
       <PageHeader

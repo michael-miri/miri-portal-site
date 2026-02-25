@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -19,6 +20,10 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
+  useSEO({
+    title: "Contact Us - Free Tech Consulting Consultation",
+    description: "Get in touch with Miri Technology for a free consultation. Custom software development, AI solutions, cloud infrastructure, and cybersecurity consulting. No obligation.",
+  });
   const { toast } = useToast();
 
   const form = useForm<ContactFormValues>({

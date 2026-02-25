@@ -1,6 +1,11 @@
 import { Layout, PageHeader } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Legal() {
+  useSEO({
+    title: "Privacy Policy & Terms of Service",
+    description: "Miri Technology's privacy policy and terms of service. Learn how we protect your data and the terms governing our consulting services.",
+  });
   return (
     <Layout>
       <PageHeader

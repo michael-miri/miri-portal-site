@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, ShoppingCart, Sword, Check, Rocket, CircleCheckBig, DollarSign } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
+import { useSEO } from "@/hooks/use-seo";
 import heroBg from "@assets/AdobeStock_206661841_1772042502289.jpeg";
 
 const capabilities = [
@@ -35,6 +36,10 @@ const industries = [
 ];
 
 export default function Home() {
+  useSEO({
+    title: "Miri Technology - AI-Driven Tech Consulting | App Development, Automation & Digital Transformation",
+    description: "Miri Technology builds custom software, AI-powered apps, and cloud infrastructure for government, enterprise, and startups. Faster, better, cheaper — guaranteed. Based in Lexington, KY.",
+  });
   return (
     <Layout>
       <section className="pt-[160px] pb-32 bg-[#0A0E1A] relative overflow-hidden">
