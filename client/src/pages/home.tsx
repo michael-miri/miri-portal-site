@@ -54,7 +54,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-5 lg:flex lg:flex-col lg:justify-center">
               <p className="text-[28px] text-white/50 leading-relaxed max-w-md mb-10 [text-wrap:balance]">
-                We help organizations modernize operations, harness AI, and scale technology.
+                We help organizations modernize operations, harness&nbsp;AI, and scale technology.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
