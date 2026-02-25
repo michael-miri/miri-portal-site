@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, ShoppingCart, Sword, Check, Rocket, Gem, DollarSign } from "lucide-react";
+import { ArrowRight, Sparkles, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, ShoppingCart, Sword, Check, Rocket, CircleCheckBig, DollarSign } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
 import heroBg from "@assets/AdobeStock_321324090_1771955338444.jpeg";
 
@@ -87,7 +87,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
                 {[
                   { title: "Faster", desc: "AI-accelerated delivery that cuts timelines in half.", icon: <Rocket className="w-5 h-5" /> },
-                  { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages.", icon: <Gem className="w-5 h-5" /> },
+                  { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages.", icon: <CircleCheckBig className="w-5 h-5" /> },
                   { title: "Cheaper", desc: "AI-driven efficiency means lower costs without cutting corners.", icon: <DollarSign className="w-5 h-5" /> },
                 ].map((item) => (
                   <div key={item.title} className="bg-[#09090b] p-8" data-testid={`card-selfware-${item.title.toLowerCase()}`}>
