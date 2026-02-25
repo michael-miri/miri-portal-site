@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
+import missionImage from "@assets/AdobeStock_194728217_1772041997096.jpeg";
 
 const team = [
   {
@@ -73,18 +74,8 @@ export default function About() {
                 We believe technology should serve people, not the other way around. Every solution we design starts with understanding your unique challenges and ends with measurable outcomes.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
-              {[
-                { val: "20+", label: "Years\nExperience" },
-                { val: "500+", label: "Projects\nDelivered" },
-                { val: "99%", label: "Client\nSatisfaction" },
-                { val: "50+", label: "Industries\nServed" },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-[#0A0E1A] p-8 flex flex-col justify-center" data-testid={`card-stat-${stat.label.split('\n')[0].toLowerCase()}`}>
-                  <div className="font-heading text-[2.5rem] font-bold text-white leading-none">{stat.val}</div>
-                  <div className="text-[12px] text-white/40 mt-3 whitespace-pre-line leading-relaxed">{stat.label}</div>
-                </div>
-              ))}
+            <div className="rounded-2xl overflow-hidden border border-white/[0.06]">
+              <img src={missionImage} alt="Modern architecture" className="w-full h-full object-cover" data-testid="img-mission" />
             </div>
           </div>
         </div>
