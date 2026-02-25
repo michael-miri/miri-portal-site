@@ -18,7 +18,7 @@ const capabilities = [
 
 const stats = [
   { value: "500+", label: "Projects delivered across government, enterprise, and startups" },
-  { value: "20+", label: "Years of combined expertise in technology consulting" },
+  { value: "30+", label: "Years of combined expertise in technology consulting" },
   { value: "99%", label: "Client satisfaction rate across all engagements" },
   { value: "50+", label: "Industries served — from healthcare to defense" },
 ];
