@@ -80,7 +80,9 @@ export default function Portfolio() {
                         <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
                       ))}
                     </div>
-                    <div className="mt-8">
+                  </div>
+                  <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
+                    <div className="rounded-2xl overflow-hidden border border-white/[0.06] bg-[#0A0E1A] p-8 h-full flex flex-col justify-center">
                       <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/80 block mb-4">Key Outcomes</span>
                       <div className="space-y-0">
                         {project.results.map((result, j) => (
@@ -88,16 +90,6 @@ export default function Portfolio() {
                             <span className="text-[14px] text-white/50 leading-relaxed">{result}</span>
                           </div>
                         ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className={`${!imageRight ? "lg:[direction:ltr]" : ""}`}>
-                    <div className="rounded-2xl overflow-hidden border border-white/[0.06] bg-[#141B2E] aspect-[4/3] flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 rounded-full bg-white/[0.05] flex items-center justify-center mx-auto mb-4">
-                          <span className="text-[24px] font-bold text-white/20 font-mono">{project.num}</span>
-                        </div>
-                        <span className="text-[13px] text-white/20">Project Image</span>
                       </div>
                     </div>
                   </div>
