@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, HeartPulse, Landmark, Factory, Zap, Shield, GraduationCap, ShoppingCart, Sword, Check, Rocket, CircleCheckBig, DollarSign } from "lucide-react";
 import { Layout, CTABanner } from "@/components/layout";
-import heroBg from "@assets/AdobeStock_321324090_1771955338444.jpeg";
+import heroBg from "@assets/AdobeStock_206661841_1772042502289.jpeg";
 
 const capabilities = [
   { num: "01", title: "Strategy &\nTransformation", desc: "Align business goals with technology through agile delivery and high-value outcomes." },
