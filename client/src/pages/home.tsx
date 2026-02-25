@@ -55,8 +55,8 @@ export default function Home() {
               <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-[#0645FF] leading-[1.02] tracking-[-0.02em]">
                 Move faster.
               </h1>
-              <div className="flex items-center gap-8">
-                <p className="text-[18px] text-white/50 leading-relaxed max-w-xs hidden lg:block">
+              <div className="flex flex-col items-start gap-4">
+                <p className="text-[18px] text-white/50 leading-relaxed max-w-xs">
                   We help organizations modernize operations, harness AI, and scale infrastructure.
                 </p>
                 <Link href="/contact" className="shrink-0">
@@ -67,9 +67,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <p className="text-[18px] text-white/50 leading-relaxed max-w-sm mt-6 lg:hidden">
-              We help organizations modernize operations, harness AI, and scale infrastructure.
-            </p>
           </div>
         </div>
       </section>
