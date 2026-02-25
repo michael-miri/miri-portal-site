@@ -190,9 +190,9 @@ export function CTABanner() {
             <div className="lg:col-span-9">
               <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Next Step</span>
               <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
-                Ready to move<br />forward?
+                Ready to move forward?
               </h2>
-              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-md">
+              <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-lg">
                 Book a free consultation. No obligations — just an honest conversation about where technology can take your organization.
               </p>
             </div>
