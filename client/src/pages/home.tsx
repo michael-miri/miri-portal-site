@@ -72,7 +72,7 @@ export default function Home() {
       <section className="bg-[#09090b] border-t border-white/[0.06] py-24">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="text-center mb-16">
-            <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882]/60">Trusted across industries</span>
+            <h2 className="font-heading text-[32px] font-bold text-white tracking-tight">Trusted across industries</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {[
