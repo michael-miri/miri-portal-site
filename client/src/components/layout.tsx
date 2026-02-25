@@ -143,7 +143,7 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] mb-5">Get in Touch</h4>
             <ul className="space-y-3 text-[14px] text-white/40">
-              <li data-testid="contact-email">richard@miritechnology.com</li>
+              <li data-testid="contact-email"><a href="mailto:richard@miritechnology.com" className="hover:text-white transition-colors">richard@miritechnology.com</a></li>
             </ul>
             <div className="mt-8">
               <Link href="/contact">
