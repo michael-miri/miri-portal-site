@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
-import missionImage from "@assets/AdobeStock_194728217_1772042214459.jpeg";
+import missionImage from "@assets/AdobeStock_328164255_1772042316119.jpeg";
 
 const values = [
   {
