@@ -93,8 +93,8 @@ export default function Home() {
             <div className="lg:col-span-7">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
                 {capabilities.map((cap) => (
-                  <Link key={cap.num} href={`/services#service-${cap.num}`}>
-                    <div className="bg-[#09090b] p-8 group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
+                  <Link key={cap.num} href={`/services#service-${cap.num}`} className="block h-full">
+                    <div className="bg-[#09090b] p-8 h-full group hover:bg-[#0e0e12] transition-colors cursor-pointer" data-testid={`card-capability-${cap.num}`}>
                       <span className="text-[48px] leading-none font-bold text-[#C4A882]/30 font-mono block mb-2 transition-colors group-hover:text-[#C4A882]/50">{cap.num}</span>
                       <h3 className="font-heading text-[17px] font-semibold text-white leading-snug whitespace-pre-line mb-3">{cap.title}</h3>
                       <p className="text-[13px] text-white/50 leading-relaxed">{cap.desc}</p>
@@ -206,8 +206,8 @@ export default function Home() {
           </div>
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
             {industries.map((item) => (
-              <Link key={item.name} href={`/industries/${item.slug}`}>
-                <div className="bg-[#09090b] p-8 hover:bg-[#0e0e12] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
+              <Link key={item.name} href={`/industries/${item.slug}`} className="block h-full">
+                <div className="bg-[#09090b] p-8 h-full hover:bg-[#0e0e12] transition-colors cursor-pointer group flex items-center gap-4" data-testid={`industry-tag-${item.name.toLowerCase().replace(/\s/g, '-')}`}>
                   <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center shrink-0 transition-transform group-hover:scale-110">
                     {item.icon}
                   </div>
