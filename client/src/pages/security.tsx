@@ -113,30 +113,6 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="py-32 bg-[#0A0E1A] border-t border-white/[0.06]">
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 text-center">
-          <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-white leading-tight">
-            Need a security assessment?
-          </h2>
-          <p className="mt-4 text-[15px] text-white/50 leading-relaxed max-w-lg mx-auto">
-            Our cybersecurity experts can evaluate your current posture and recommend improvements.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link href="/contact">
-              <Button className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90" data-testid="button-security-contact">
-                Request an Assessment
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-            <Link href="/faq">
-              <Button variant="outline" className="border-white/[0.1] text-white/60 font-medium rounded-full px-7 h-11 bg-transparent hover:bg-white/[0.03] hover:text-white/80" data-testid="button-security-faq">
-                Security FAQ
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CTABanner />
     </Layout>
   );
