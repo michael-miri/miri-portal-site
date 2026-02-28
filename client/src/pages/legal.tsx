@@ -57,7 +57,7 @@ export default function Legal() {
               <div>
                 <h3 className="text-[15px] font-semibold text-white mb-3">Your Rights</h3>
                 <p className="text-[15px] text-white/50 leading-relaxed">
-                  You have the right to access, correct, or delete your personal information at any time. To exercise these rights, contact us at richard@miritechnology.com. We will respond to all requests within 30 business days.
+                  You have the right to access, correct, or delete your personal information at any time. To exercise these rights, contact us at contact@miritechnology.com. We will respond to all requests within 30 business days.
                 </p>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Legal() {
               <div>
                 <h3 className="text-[15px] font-semibold text-white mb-3">Contact</h3>
                 <p className="text-[15px] text-white/50 leading-relaxed">
-                  For questions about these terms or our privacy practices, contact us at richard@miritechnology.com.
+                  For questions about these terms or our privacy practices, contact us at contact@miritechnology.com.
                 </p>
               </div>
             </div>

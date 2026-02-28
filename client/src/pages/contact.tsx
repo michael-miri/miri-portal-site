@@ -36,7 +36,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\n\nMessage:\n${data.message}`
     );
-    window.location.href = `mailto:richard@miritechnology.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contact@miritechnology.com?subject=${subject}&body=${body}`;
     toast({
       title: "Opening Email Client",
       description: "Your email app should open with the message ready to send.",
@@ -112,7 +112,7 @@ export default function Contact() {
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Contact Info</span>
                 <div className="space-y-6">
                   {[
-                    { label: "Email", value: "richard@miritechnology.com" },
+                    { label: "Email", value: "contact@miritechnology.com" },
 
                   ].map((item) => (
                     <div key={item.label} data-testid={`text-contact-${item.label.toLowerCase()}`}>

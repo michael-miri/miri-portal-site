@@ -65,7 +65,7 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 - `client/public/favicon.png` - Blue chevron favicon
 
 ## Contact Info
-- Email: richard@miritechnology.com
+- Email: contact@miritechnology.com
 
 ## User Preferences
 - Primary color: #0645FF
