@@ -31,15 +31,6 @@ const projects = [
   },
   {
     num: "04",
-    title: "Housing Management App",
-    client: "",
-    sector: "Real Estate",
-    desc: "Created a housing management application that simplifies tenant communication, maintenance requests, lease tracking, and rent collection into one streamlined platform for property managers and residents.",
-    results: ["Centralized tenant and lease management", "Digital maintenance request workflow", "Automated rent reminders and payment tracking", "Tenant self-service portal with 24/7 access"],
-    tags: ["Property Management", "Custom App", "UX Design", "Automation"],
-  },
-  {
-    num: "05",
     title: "Accessible Tour System App",
     client: "",
     sector: "Government & Culture",
@@ -52,7 +43,7 @@ const projects = [
 export default function Portfolio() {
   useSEO({
     title: "Portfolio - Custom App Development & AI Project Examples",
-    description: "See real projects from Miri Technology: company portals, AI-powered property reviews, booking platforms, housing management apps, and accessible tour systems.",
+    description: "See real projects from Miri Technology: company portals, AI-powered property reviews, booking platforms, and accessible tour systems.",
   });
   return (
     <Layout>

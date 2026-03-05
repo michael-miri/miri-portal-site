@@ -1,9 +1,15 @@
 # Miri Technology Website
 
 ## Overview
-Multi-page marketing website for Miri Technology, an AI-driven tech consulting company. Conversion-optimized site with separate pages for Services, About, Industries, Portfolio, FAQ, Security, Contact, and Legal. Brand: "Miri" — slogan: "Delivering the Future Today".
+Multi-page marketing website for Miri Technology, an AI-driven tech consulting company. Conversion-optimized site with separate pages for Services, About, Industries, Products, Portfolio, FAQ, Security, Contact, and Legal. Brand: "Miri" — slogan: "Delivering the Future Today".
 
 ## Recent Changes
+- 2026-03-05: Added Products landing page (/products) with 3 product cards
+- 2026-03-05: Added miri|housing product page (/miri-housing) — PHA management platform
+- 2026-03-05: Added miri|portal product page (/miri-portal) — Company operations portal
+- 2026-03-05: Added miri|ehr product page (/miri-ehr) — Electronic health records system
+- 2026-03-05: Added "Products" to navbar navigation
+- 2026-03-05: Removed housing management app from portfolio (now a product)
 - 2026-02-25: Added per-page SEO with useSEO hook (dynamic titles, descriptions, OG/Twitter tags)
 - 2026-02-25: Added JSON-LD structured data (ProfessionalService on index.html, FAQPage on FAQ)
 - 2026-02-25: Enhanced meta tags: keywords, robots, twitter cards, og:site_name, og:locale
@@ -36,12 +42,16 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 2. **Services** (`/services`) - Full 9 capabilities with detailed bullet points per service
 3. **About** (`/about`) - Mission, values, Our Story selfware manifesto
 4. **Industries** (`/industries`) - 4 sectors with full details + additional industry tags
-5. **Portfolio** (`/portfolio`) - 5 project examples with key outcomes
-6. **FAQ** (`/faq`) - 4 accordion sections with FAQ structured data (JSON-LD)
-7. **Security** (`/security`) - 6 security pillars, lifecycle process
-8. **Contact** (`/contact`) - Form (mailto) + contact info sidebar + expectations
-9. **Legal** (`/legal`) - Combined Privacy Policy and Terms of Service
-10. **Industry Detail** (`/industries/:slug`) - Hidden from nav, components retained
+5. **Products** (`/products`) - Landing page with 3 product cards (miri|housing, miri|portal, miri|ehr)
+6. **miri|housing** (`/miri-housing`) - Enterprise Housing Management Platform for PHAs
+7. **miri|portal** (`/miri-portal`) - Company Operations Portal
+8. **miri|ehr** (`/miri-ehr`) - Electronic Health Records System
+9. **Portfolio** (`/portfolio`) - 4 project examples with key outcomes
+10. **FAQ** (`/faq`) - 4 accordion sections with FAQ structured data (JSON-LD)
+11. **Security** (`/security`) - 6 security pillars, lifecycle process
+12. **Contact** (`/contact`) - Form (mailto) + contact info sidebar + expectations
+13. **Legal** (`/legal`) - Combined Privacy Policy and Terms of Service
+14. **Industry Detail** (`/industries/:slug`) - Hidden from nav, components retained
 
 ## Shared Components
 - `client/src/components/layout.tsx` - Navbar, Footer, PageHeader, CTABanner, Layout wrapper
@@ -58,6 +68,10 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 - `client/src/pages/security.tsx` - Security page
 - `client/src/pages/contact.tsx` - Contact form page (mailto)
 - `client/src/pages/legal.tsx` - Privacy & Terms page
+- `client/src/pages/products.tsx` - Products landing page with product cards
+- `client/src/pages/miri-housing.tsx` - miri|housing product page
+- `client/src/pages/miri-portal.tsx` - miri|portal product page
+- `client/src/pages/miri-ehr.tsx` - miri|ehr product page
 - `client/src/pages/industry-detail.tsx` - Individual industry detail pages (hidden from nav)
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/hooks/use-seo.ts` - SEO hook for per-page meta management

@@ -14,6 +14,10 @@ import Security from "@/pages/security";
 import Contact from "@/pages/contact";
 import Legal from "@/pages/legal";
 import IndustryDetail from "@/pages/industry-detail";
+import Products from "@/pages/products";
+import MiriHousing from "@/pages/miri-housing";
+import MiriPortal from "@/pages/miri-portal";
+import MiriEhr from "@/pages/miri-ehr";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -44,6 +48,10 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/industries" component={Industries} />
         <Route path="/industries/:slug" component={IndustryDetail} />
+        <Route path="/products" component={Products} />
+        <Route path="/miri-housing" component={MiriHousing} />
+        <Route path="/miri-portal" component={MiriPortal} />
+        <Route path="/miri-ehr" component={MiriEhr} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/faq" component={FAQ} />
         <Route path="/security" component={Security} />

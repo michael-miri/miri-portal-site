@@ -8,6 +8,7 @@ import logoImage from "@assets/Black_and_White_Initial_A_Tech_Business_Logo_-8_1
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Products", href: "/products" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Industries", href: "/industries" },
   { label: "Security", href: "/security" },
