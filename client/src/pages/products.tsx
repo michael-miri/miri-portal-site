@@ -70,7 +70,7 @@ export default function Products() {
                     </span>
                   ))}
                 </div>
-                <span className="text-[13px] text-[#0645FF] font-medium inline-flex items-center gap-1.5 mt-2" data-testid={`link-product-learn-more-${product.name.replace(/[|™]/g, '').trim().toLowerCase().replace(/\s/g, '-')}`}>
+                <span className="text-[13px] text-white/60 font-medium inline-flex items-center gap-1.5 mt-2" data-testid={`link-product-learn-more-${product.name.replace(/[|™]/g, '').trim().toLowerCase().replace(/\s/g, '-')}`}>
                   Learn More
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
