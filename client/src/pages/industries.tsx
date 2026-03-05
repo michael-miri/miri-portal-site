@@ -27,7 +27,7 @@ const sectors = [
       { name: "Housing & Human Services" },
       { name: "Citizen Service Portals" },
     ],
-    tags: ["Federal Agencies", "State Government", "Public Sector", "Defense"],
+    tags: ["Federal Agencies", "State Government", "Public Sector", "Municipal"],
   },
   {
     title: "Municipal",
