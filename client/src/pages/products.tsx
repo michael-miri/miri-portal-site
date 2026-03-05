@@ -5,19 +5,19 @@ import { useSEO } from "@/hooks/use-seo";
 
 const products = [
   {
-    name: "miri|housing™",
+    name: "miri | housing™",
     description: "Enterprise Housing Management Platform — production-grade software for Public Housing Authorities managing HCV vouchers, inspections, certifications, and financial operations.",
     tags: ["PHA", "HUD", "HCV"],
     href: "/miri-housing",
   },
   {
-    name: "miri|portal™",
+    name: "miri | portal™",
     description: "Company Operations Portal — centralize employee resources, scheduling, client management, and internal communications in a single unified platform.",
     tags: ["Enterprise", "SaaS", "Collaboration"],
     href: "/miri-portal",
   },
   {
-    name: "miri|ehr™",
+    name: "miri | ehr™",
     description: "Electronic Health Records System — secure, compliant health record management with clinical documentation, scheduling, billing, and lab integration.",
     tags: ["Healthcare", "HIPAA", "Clinical"],
     href: "/miri-ehr",

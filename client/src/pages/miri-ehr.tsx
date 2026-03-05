@@ -72,7 +72,7 @@ export default function MiriEHR() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6" data-testid="label-product">Product</span>
           <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl" data-testid="heading-product-name">
-            miri|ehr<span className="text-[#C4A882]">&trade;</span>
+            miri | ehr<span className="text-[#C4A882]">&trade;</span>
           </h1>
           <p className="mt-4 text-[clamp(1.25rem,2.5vw,1.75rem)] text-white/70 font-heading font-semibold max-w-2xl" data-testid="text-product-tagline">
             Electronic Health Records System
@@ -120,7 +120,7 @@ export default function MiriEHR() {
             Built for compliance from day one.
           </h2>
           <p className="text-[17px] text-white/50 max-w-xl leading-relaxed mb-16" data-testid="text-compliance-desc">
-            Patient data security is non-negotiable. miri|ehr is designed with enterprise-grade security controls and full regulatory compliance at every layer.
+            Patient data security is non-negotiable. miri | ehr is designed with enterprise-grade security controls and full regulatory compliance at every layer.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {complianceItems.map((item) => (

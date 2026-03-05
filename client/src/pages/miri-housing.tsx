@@ -92,7 +92,7 @@ export default function MiriHousing() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6" data-testid="label-product">Product</span>
           <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl" data-testid="text-hero-title">
-            miri|housing<span className="text-[#C4A882]">&trade;</span>
+            miri | housing<span className="text-[#C4A882]">&trade;</span>
           </h1>
           <p className="mt-4 text-[clamp(1.25rem,2.5vw,1.75rem)] text-white/70 font-heading font-medium max-w-2xl" data-testid="text-hero-tagline">
             Enterprise Housing Management Platform
@@ -187,10 +187,10 @@ export default function MiriHousing() {
               <div className="lg:col-span-9">
                 <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">Get Started</span>
                 <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-white leading-[1.08] tracking-tight">
-                  See miri|housing in action.
+                  See miri | housing in action.
                 </h2>
                 <p className="mt-6 text-[15px] text-white/50 leading-relaxed max-w-lg">
-                  Schedule a personalized demo and discover how miri|housing can streamline your PHA operations and improve HUD compliance.
+                  Schedule a personalized demo and discover how miri | housing can streamline your PHA operations and improve HUD compliance.
                 </p>
               </div>
               <div className="lg:col-span-3 lg:flex lg:justify-end">

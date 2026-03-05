@@ -68,7 +68,7 @@ export default function MiriPortal() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6" data-testid="label-product">Product</span>
           <h1 className="font-heading text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.05] tracking-tight max-w-3xl" data-testid="heading-product-name">
-            miri|portal<span className="text-[#C4A882]">&trade;</span>
+            miri | portal<span className="text-[#C4A882]">&trade;</span>
           </h1>
           <p className="mt-4 text-[22px] text-white/70 font-heading max-w-2xl" data-testid="text-product-tagline">
             Company Operations Portal
@@ -111,7 +111,7 @@ export default function MiriPortal() {
 
       <section className="py-24 bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
-          <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-4">Why miri|portal</span>
+          <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-4">Why miri | portal</span>
           <h2 className="font-heading text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-white leading-[1.1] tracking-tight mb-16" data-testid="heading-key-benefits">
             Key Benefits
           </h2>
