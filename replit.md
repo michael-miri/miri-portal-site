@@ -42,11 +42,12 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 2. **Services** (`/services`) - Full 9 capabilities with detailed bullet points per service
 3. **About** (`/about`) - Mission, values, Our Story selfware manifesto
 4. **Industries** (`/industries`) - 4 sectors with full details + additional industry tags
-5. **Products** (`/products`) - Landing page with 3 product cards (miri|housing, miri|portal, miri|ehr)
+5. **Products** (`/products`) - Landing page with 4 product cards (miri|housing, miri|portal, miri|ehr, miri|grants)
 6. **miri|housing** (`/miri-housing`) - Enterprise Housing Management Platform for PHAs
 7. **miri|portal** (`/miri-portal`) - Company Operations Portal
 8. **miri|ehr** (`/miri-ehr`) - Electronic Health Records System
-9. **Portfolio** (`/portfolio`) - 4 project examples with key outcomes
+9. **miri|grants** (`/miri-grants`) - Integrated Grants Management for Public Agencies
+10. **Portfolio** (`/portfolio`) - 4 project examples with key outcomes
 10. **FAQ** (`/faq`) - 4 accordion sections with FAQ structured data (JSON-LD)
 11. **Security** (`/security`) - 6 security pillars, lifecycle process
 12. **Contact** (`/contact`) - Form (mailto) + contact info sidebar + expectations
@@ -72,6 +73,7 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 - `client/src/pages/miri-housing.tsx` - miri|housing product page
 - `client/src/pages/miri-portal.tsx` - miri|portal product page
 - `client/src/pages/miri-ehr.tsx` - miri|ehr product page
+- `client/src/pages/miri-grants.tsx` - miri|grants product page
 - `client/src/pages/industry-detail.tsx` - Individual industry detail pages (hidden from nav)
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/hooks/use-seo.ts` - SEO hook for per-page meta management

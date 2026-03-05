@@ -22,6 +22,12 @@ const products = [
     tags: ["Healthcare", "HIPAA", "Clinical"],
     href: "/miri-ehr",
   },
+  {
+    name: "miri | grants™",
+    description: "Integrated Grants Management for Public Agencies — end-to-end lifecycle management from application through closeout for port authorities and public-sector organizations.",
+    tags: ["Government", "Grants", "Compliance"],
+    href: "/miri-grants",
+  },
 ];
 
 export default function Products() {
