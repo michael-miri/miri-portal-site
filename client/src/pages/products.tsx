@@ -46,7 +46,7 @@ export default function Products() {
 
       <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-xl overflow-hidden">
             {products.map((product) => (
               <Link
                 key={product.name}
