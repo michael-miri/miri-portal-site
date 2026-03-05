@@ -27,7 +27,7 @@ const sectors = [
       { name: "Housing & Human Services" },
       { name: "Citizen Service Portals" },
     ],
-    tags: ["Regulatory Systems", "Environmental Oversight", "Construction & Utilities", "Enforcement Workflows", "Property Registries", "Transparency Systems"],
+    tags: ["Federal Agencies", "State Government", "Public Sector", "Defense"],
   },
   {
     title: "Municipal",
