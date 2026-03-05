@@ -214,11 +214,5 @@ export function CTABanner() {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="min-h-screen bg-[#0A0E1A] text-white">
-      <Navbar />
-      {children}
-      <Footer />
-    </div>
-  );
+  return <>{children}</>;
 }
