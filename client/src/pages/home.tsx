@@ -38,7 +38,7 @@ const industries = [
 export default function Home() {
   useSEO({
     title: "Miri Technology - AI-Driven Tech Consulting | App Development, Automation & Digital Transformation",
-    description: "Miri Technology builds custom software, AI-powered apps, and cloud infrastructure for government, enterprise, and startups. Faster, better, cheaper — guaranteed.",
+    description: "Miri Technology builds custom software, AI-powered apps, and cloud infrastructure for government, enterprise, and startups. Better, faster, cheaper — guaranteed.",
   });
   return (
     <Layout>
@@ -84,15 +84,15 @@ export default function Home() {
                 <span className="text-white/40">Welcome to selfware.</span>
               </h2>
               <p className="mt-8 text-[18px] text-white/50 leading-relaxed max-w-md">
-                We guarantee to be faster, better, and cheaper. We've built a proven AI methodology that delivers tangible outcomes — leveraging the power of tomorrow, today. Software shouldn't be one-size-fits-all. Selfware is software built for you.
+                We guarantee to be better, faster, and cheaper. We've built a proven AI methodology that delivers tangible outcomes — leveraging the power of tomorrow, today. Software shouldn't be one-size-fits-all. Selfware is software built for you.
               </p>
             </div>
 
             <div className="lg:col-span-7 lg:flex lg:items-center">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
                 {[
-                  { title: "Faster", desc: "AI-accelerated delivery that cuts timelines in half.", icon: <Rocket className="w-5 h-5" /> },
                   { title: "Better", desc: "Purpose-built solutions, not bloated vendor packages.", icon: <CircleCheckBig className="w-5 h-5" /> },
+                  { title: "Faster", desc: "AI-accelerated delivery that cuts timelines in half.", icon: <Rocket className="w-5 h-5" /> },
                   { title: "Cheaper", desc: "AI-driven efficiency means lower costs without cutting corners.", icon: <DollarSign className="w-5 h-5" /> },
                 ].map((item) => (
                   <div key={item.title} className="bg-[#0A0E1A] p-8" data-testid={`card-selfware-${item.title.toLowerCase()}`}>

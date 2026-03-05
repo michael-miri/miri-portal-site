@@ -28,7 +28,7 @@ const values = [
 export default function About() {
   useSEO({
     title: "About Us - AI-Powered Technology Consulting Firm",
-    description: "Learn about Miri Technology — an AI-driven consulting firm delivering custom software, automation, and digital transformation. We guarantee to be faster, better, and cheaper.",
+    description: "Learn about Miri Technology — an AI-driven consulting firm delivering custom software, automation, and digital transformation. We guarantee to be better, faster, and cheaper.",
   });
   return (
     <Layout>
@@ -77,7 +77,7 @@ export default function About() {
                   That frustration became a conviction: there has to be a better way. Not another off-the-shelf product with a fresh coat of paint, but something fundamentally different — software that is built around you, your team, and the way you actually work. We call it selfware.
                 </p>
                 <p className="text-[15px] text-white/50 leading-[1.8]">
-                  Selfware is our answer to vendor lock-in, ballooning costs, and technology that creates more problems than it solves. By harnessing AI-driven development, we build purpose-fit solutions faster, better, and cheaper than traditional approaches. No wasted features. No six-figure licensing fees. No twelve-month implementation timelines. Just clean, intuitive tools that do exactly what you need — and nothing you don't.
+                  Selfware is our answer to vendor lock-in, ballooning costs, and technology that creates more problems than it solves. By harnessing AI-driven development, we build purpose-fit solutions better, faster, and cheaper than traditional approaches. No wasted features. No six-figure licensing fees. No twelve-month implementation timelines. Just clean, intuitive tools that do exactly what you need — and nothing you don't.
                 </p>
                 <p className="text-[15px] text-white/50 leading-[1.8]">
                   Our north star is seamlessness. Technology should feel invisible — it should remove friction, not add it. When a system works the way your mind already thinks, you stop noticing the software and start focusing on the work that matters. That's the experience we obsess over in every project we take on.

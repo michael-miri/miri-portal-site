@@ -26,7 +26,7 @@ const generalFAQs = [
   },
   {
     q: "What is selfware?",
-    a: "Selfware is our approach to building software that's purpose-built for your organization — not one-size-fits-all vendor solutions. We leverage AI-driven methodologies to deliver solutions that are faster, better, and cheaper than traditional consulting. Software shouldn't be generic. Selfware is software built for you.",
+    a: "Selfware is our approach to building software that's purpose-built for your organization — not one-size-fits-all vendor solutions. We leverage AI-driven methodologies to deliver solutions that are better, faster, and cheaper than traditional consulting. Software shouldn't be generic. Selfware is software built for you.",
   },
 ];
 
@@ -79,7 +79,7 @@ const processFAQs = [
   },
   {
     q: "What makes you different from other consultants?",
-    a: "We guarantee to be faster, better, and cheaper. We're practitioners, not just advisors — we build and implement solutions alongside your team. We leverage a proven AI methodology that delivers tangible outcomes, and our full-spectrum expertise means you get one trusted partner instead of managing multiple vendors.",
+    a: "We guarantee to be better, faster, and cheaper. We're practitioners, not just advisors — we build and implement solutions alongside your team. We leverage a proven AI methodology that delivers tangible outcomes, and our full-spectrum expertise means you get one trusted partner instead of managing multiple vendors.",
   },
 ];
 
