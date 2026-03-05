@@ -50,7 +50,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
             <div className="lg:col-span-7">
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] inline-flex items-center gap-2 mb-8"><Sparkles className="w-4 h-4" /> AI-Driven Technology Consulting</span>
+              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] inline-flex items-center gap-2 mb-8"><Sparkles className="w-4 h-4" /> AI-Driven Products and Consulting</span>
               <h1 className="font-heading text-[clamp(3rem,6.5vw,5.5rem)] font-bold text-white leading-[1.02] tracking-[-0.02em]">
                 Build<br />
                 smarter.<br />
