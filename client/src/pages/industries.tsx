@@ -8,25 +8,47 @@ const sectors = [
   {
     title: "Private Sector",
     desc: "Enterprise-grade solutions for organizations ranging from startups to Fortune 500 companies.",
-    items: ["Enterprise Resource Planning", "Digital Transformation", "Process Automation", "Data-Driven Decision Making"],
+    items: [
+      { name: "Enterprise Resource Planning" },
+      { name: "Digital Transformation" },
+      { name: "Process Automation" },
+      { name: "Data-Driven Decision Making" },
+    ],
     tags: ["Enterprise", "Startups", "SMBs", "Manufacturing", "Logistics"],
   },
   {
     title: "Government & Federal",
     desc: "Secure, compliant technology platforms built for federal agencies and defense organizations.",
-    items: ["FedRAMP Compliant Solutions", "Secure Communication Platforms", "Compliance Automation", "Citizen Service Portals"],
-    tags: ["Defense", "Compliance", "Secure Systems", "Federal IT"],
+    items: [
+      { name: "Compliance", detail: "Regulatory systems, environmental oversight, federal rules, program monitoring." },
+      { name: "Permitting", detail: "Environmental agencies, construction, utilities, planning departments." },
+      { name: "Inspections", detail: "Field inspections, compliance checks, enforcement workflows." },
+      { name: "Asset & Facility Management", detail: "Environmental facilities, infrastructure assets, property registries." },
+      { name: "Housing & Human Services", detail: "Rental assistance, housing grants, homelessness programs." },
+      { name: "Citizen Service Portals", detail: "Public-facing applications, application portals, transparency systems." },
+    ],
+    tags: [],
   },
   {
     title: "Municipal",
     desc: "Smart city solutions and public service platforms that improve community engagement and operational efficiency.",
-    items: ["Smart City Infrastructure", "Public Service Dashboards", "Community Engagement Apps", "Asset Management Systems"],
+    items: [
+      { name: "Smart City Infrastructure" },
+      { name: "Public Service Dashboards" },
+      { name: "Community Engagement Apps" },
+      { name: "Asset Management Systems" },
+    ],
     tags: ["Smart Cities", "Public Services", "Community Apps", "Transportation"],
   },
   {
     title: "Customer-Facing",
     desc: "Consumer-ready digital products with exceptional user experience and scalable architectures.",
-    items: ["E-Commerce Platforms", "SaaS Product Development", "Mobile Applications", "Customer Analytics"],
+    items: [
+      { name: "E-Commerce Platforms" },
+      { name: "SaaS Product Development" },
+      { name: "Mobile Applications" },
+      { name: "Customer Analytics" },
+    ],
     tags: ["E-Commerce", "SaaS", "Consumer Apps", "FinTech"],
   },
 ];
@@ -58,17 +80,22 @@ export default function Industries() {
 
                 <h3 className="font-heading text-3xl font-bold text-white leading-tight">{sector.title}</h3>
                 <p className="mt-4 text-[14px] text-white/50 leading-relaxed max-w-sm">{sector.desc}</p>
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {sector.tags.map((tag) => (
-                    <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
-                  ))}
-                </div>
+                {sector.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {sector.tags.map((tag) => (
+                      <span key={tag} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-white/50">{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="lg:col-span-7">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.06] border border-white/[0.06] rounded-xl overflow-hidden">
                   {sector.items.map((item) => (
-                    <div key={item} className="bg-[#0A0E1A] p-6 ">
-                      <span className="text-[14px] text-white/50">{item}</span>
+                    <div key={item.name} className="bg-[#0A0E1A] p-6">
+                      <span className="text-[14px] font-medium text-white">{item.name}</span>
+                      {item.detail && (
+                        <p className="text-[13px] text-white/50 leading-relaxed mt-2">{item.detail}</p>
+                      )}
                     </div>
                   ))}
                 </div>
