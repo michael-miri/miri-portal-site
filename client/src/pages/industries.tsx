@@ -18,7 +18,7 @@ const sectors = [
   },
   {
     title: "Government & Federal",
-    desc: "Secure, compliant technology platforms built for federal agencies and defense organizations.",
+    desc: "Purpose-built platforms for federal agencies, state governments, and public-sector organizations — from compliance and permitting to citizen services.",
     items: [
       { name: "Compliance", detail: "Regulatory systems, environmental oversight, federal rules, program monitoring." },
       { name: "Permitting", detail: "Environmental agencies, construction, utilities, planning departments." },
