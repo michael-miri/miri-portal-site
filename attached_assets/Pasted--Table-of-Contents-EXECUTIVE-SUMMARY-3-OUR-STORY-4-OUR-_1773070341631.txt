@@ -1,0 +1,397 @@
+
+Table of Contents
+EXECUTIVE SUMMARY	3
+OUR STORY	4
+OUR EXPERTISE	5
+OUR TEAM	6
+TECHNICAL VOLUME	7
+OUR APPROACH	8
+TIMELINE	9
+SECURITY & COMPLIANCE	10
+SUPPORT & MAINTENANCE	12
+COST VOLUME	14
+PROJECT EXAMPLES	15
+RESUMES	17
+
+ 
+Executive Summary
+The Office of the State Auditor (OSA) requires a secure, reliable, and flexible Time and Attendance System capable of supporting a distributed workforce operating across multiple locations. Miri is pleased to offer a modern, cloud-based time and attendance platform designed to accurately track employee attendance and location while supporting operational planning, reporting, and workforce visibility across the organization.
+The Miri platform is a fully developed product with advanced configurability, allowing OSA administrators to tailor workflows, reporting structures, location verification rules, and user permissions to meet evolving operational requirements. Employees can securely clock in and out through any device due to our desktop and mobile-friendly design, enabling accurate attendance tracking whether working from OSA offices, remote locations, or in the field.
+Miri’s solution is designed to provide OSA with a secure, modern, and adaptable platform while maintaining affordability and transparency. The following differentiators highlight the value Miri brings to this implementation.
+
+Advanced Configurability
+The Miri platform is built with advanced configurability that allows administrators to tailor workflows, reporting, and operational rules without requiring redevelopment or system changes. This flexibility enables OSA to configure location rules, reporting structures, and approval workflows that align with the agency’s operational practices.
+
+Intuitive User Experience
+Miri is designed with a modern, intuitive user experience that simplifies daily use for both employees and administrators. The platform’s streamlined mobile and browser interfaces reduce training requirements and support rapid adoption, ensuring staff can easily record attendance whether working in the office or in the field.
+
+Rapid Implementation and Deployment
+Because Miri is delivered as a fully developed cloud platform, implementation focuses primarily on system configuration rather than custom development. This streamlined deployment approach allows OSA to implement the system efficiently while minimizing project risk and ensuring the agency can meet the desired implementation timeline.
+
+Built for Distributed and Mobile Workforces
+OSA staff frequently work across multiple locations as part of their audit and investigative responsibilities. Miri is designed to support distributed workforces by providing reliable mobile and browser-based time tracking with GPS and IP location verification, allowing employees to accurately record attendance whether working in the office, remotely, or in the field.
+
+Low Administrative Overhead
+Miri’s platform is designed to minimize administrative complexity through configurable workflows, automated reporting, and centralized management tools. These features allow administrators to efficiently manage users, reporting, and operational rules without requiring extensive technical support.
+
+Responsive Vendor Partnership
+Miri provides direct access to its product team for implementation support, system questions, and enhancement requests. This approach allows issues to be addressed quickly and ensures that the system can continue to evolve in alignment with OSA’s operational needs.
+
+Enhancement Credits for Continuous Improvement
+Miri provides enhancement credits that allow OSA to request minor system enhancements or workflow customizations during the contract term at no additional cost. This ensures the platform can evolve alongside the agency’s operational needs while maintaining predictable project costs.
+
+System Overview and Architecture
+
+Platform Overview
+Miri | Time and Attendance is a platform designed to support distributed workforces and modern workforce management requirements. The system enables employees to record attendance through a responsive browser-based interface accessible from desktop and mobile devices. Because the platform is fully browser-based and responsive, staff can securely access the system from any modern web browser without requiring specialized software installation.
+The platform supports configurable workflows, reporting, and operational rules, allowing administrators to tailor the system to the Office of the State Auditor’s operational requirements. This configurability enables OSA administrators to manage work locations, approval processes, and reporting structures through system configuration rather than software customization.
+
+System Architecture
+The Miri platform is built using a modern cloud-based full-stack architecture designed to provide reliability, scalability, and secure system operation. The application is delivered through a responsive web interface built using React, allowing users to access the system through any modern web browser on desktop or mobile devices.
+The application logic is supported by a Node.js-based API layer, which manages system workflows, user authentication, data processing, and communication between application components. This API architecture allows the platform to support secure integrations with external systems while maintaining consistent system performance.
+Application data is stored within a PostgreSQL relational database hosted through Amazon Relational Database Service (Amazon RDS). This managed database service provides automated backups, system monitoring, and reliable data storage capabilities while reducing administrative overhead.
+
+Cloud Infrastructure
+The Miri platform is hosted in the AWS US East (Ohio) region, ensuring that all application infrastructure and data storage remain within the United States. Hosting the platform in AWS provides a highly available and scalable infrastructure capable of supporting OSA’s workforce management needs.
+AWS provides enterprise-grade infrastructure services including automated system monitoring, infrastructure redundancy, and secure data storage. These capabilities allow Miri to deliver a reliable cloud-based platform while minimizing operational complexity for OSA.
+
+Security Architecture
+Security is a core design component of the Miri platform. The system leverages AWS security services and industry-standard security practices to protect sensitive data and ensure system integrity.
+Data transmitted between users and the platform is encrypted using Transport Layer Security (TLS). Data stored within the system is encrypted at rest using AES-256 encryption through AWS Key Management Service (KMS).
+Application infrastructure is deployed within an AWS Virtual Private Cloud (VPC) environment that restricts network access and isolates system components. Database services hosted through Amazon RDS provide automated backups and recovery capabilities to ensure data durability and resilience.
+
+Authentication and Identity Management
+The Miri platform supports Enterprise Single Sign-On (SSO) authentication, allowing the Office of the State Auditor to integrate the system with its existing identity management environment. Through SSO integration, staff can securely access the platform using their existing organizational credentials.
+This approach simplifies user access management while maintaining centralized control over authentication policies and account management.
+
+Performance and Scalability
+The Miri platform is designed to support the operational needs of the Office of the State Auditor and can scale to support the required number of system users. The cloud-based architecture allows the system to accommodate expected usage levels, including concurrent access during peak clock-in and clock-out periods.
+Because the platform is hosted in AWS, system resources can be scaled as needed to support future growth while maintaining consistent application performance.
+ 
+Functional Requirements Response
+Core System Capabilities
+The Miri platform provides all core functionality required by the Office of the State Auditor for a modern Time and Attendance System. The platform enables employees to securely record attendance, verify work locations, and provide administrators with the reporting and oversight tools necessary to manage workforce attendance across multiple locations.
+Miri supports browser-based and mobile-responsive access, allowing staff to clock in and out whether working from OSA offices, remote locations, or field assignments. The system provides real-time attendance tracking with configurable workflows that allow administrators to manage approvals, location verification, and reporting.
+The platform includes the following capabilities required by the RFP:
+•	Real-time clock-in and clock-out functionality
+•	Browser-based and mobile-responsive user access
+•	GPS-based location verification
+•	IP-based location verification when accessed via browser
+•	Manual worksite selection from approved location lists
+•	Configurable approval workflows for location or attendance exceptions
+•	Administrative configuration of approved work locations
+•	Real-time staff attendance monitoring
+•	Configurable reporting and administrative dashboards
+
+Administrative Functions
+The Miri platform provides administrative capabilities that allow OSA administrators and managers to efficiently manage users, reporting, and system configuration.
+Administrative functions include:
+•	Bulk creation, modification, and deactivation of user accounts
+•	Historical data preservation for employee attendance records
+•	Configurable system hierarchy and user roles
+•	Administrative dashboards for monitoring attendance activity
+•	Reporting tools for analyzing workforce attendance and system usage
+•	Administrative configuration of work locations and attendance rules
+These capabilities allow administrators to configure the system to match operational workflows without requiring software modification.
+
+User Roles and Access Levels
+The Miri platform supports role-based access control to ensure appropriate permissions are applied across different user groups within the organization.
+User roles may include:
+HR Administrators
+•	Full administrative system access
+•	Ability to manage users and correct attendance records
+•	Access to system reporting and administrative configuration tools
+IT Administrators
+•	System configuration management
+•	Integration configuration
+•	oversight of system operation and maintenance
+Managers
+•	Access to team attendance records
+•	Ability to review and approve attendance entries
+•	Access to reporting tools for assigned staff
+Staff Users
+•	Browser-based and mobile-responsive system access
+•	Ability to clock in and out
+•	Ability to select approved work locations
+•	Ability to submit notes or attendance updates for managerial review
+
+Reporting and Data Management
+The Miri platform includes configurable reporting capabilities that allow administrators and managers to analyze attendance data and system usage.
+The system supports:
+•	Administrative dashboards for monitoring workforce attendance
+•	Configurable reporting tools
+•	Historical data archival and retrieval
+•	Export of system data in standard formats including CSV, Excel, and PDF
+These reporting capabilities allow OSA administrators to analyze attendance trends, support operational planning, and maintain historical records.
+ 
+Security and Compliance
+
+Our solution is architected to meet and exceed the security and compliance requirements for your project. The following measures support confidentiality, integrity, and availability of all data and services:
+
+Data Residency
+•	All data is hosted exclusively in U.S. Data Centers within a trusted partners’ cloud environment and meets any federal or state mandates for data residency.
+•	No data—at rest or in transit—is stored or processed outside the United States. All backups, disaster recovery replicas, and media files remain within U.S. borders.
+Written Information Security Program (WISP)
+•	A comprehensive Written Information Security Program (WISP) governs all aspects of data protection, including:
+o	Encryption: All data in transit is encrypted using industry-standard protocols (AES-256, TLS 1.2+).
+o	Backups: Automated backups are performed on customizable schedules (weekly, monthly, yearly), stored securely, and regularly tested for integrity and restoration.
+o	Vulnerability Management: Regular vulnerability scans and patch management help the environment remain secure against emerging threats.
+Incident Response & Breach Notification
+•	Service Level Agreement: In the event of a confirmed data breach or security incident, you will be immediately notified upon discovery.
+•	Post-Incident Reporting: A full incident report—including root cause analysis, containment actions, and remediation steps—will be provided promptly after containment.
+ 
+Authentication & Access Controls
+•	Access: Role-based access controls (RBAC) and Multi-Factor Authentication (MFA) are enforced for all users. Single Sign-On (SSO) can be enabled where required based on organizational needs. Both internal and external users are governed by the same identity verification standards and access security policies.
+•	Least Privilege Principle: Access to sensitive data and administrative functions is restricted to authorized personnel only, with regular reviews of access rights.
+Data Privacy & Confidentiality
+•	Confidentiality Agreements: All personnel and subcontractors are bound by confidentiality agreements and undergo background checks as required by state policy.
+Audit & Monitoring 
+•	Continuous Monitoring: Security events are monitored in real-time, with automated alerts for suspicious activity. 
+Ongoing Compliance & Review 
+•	Annual Policy Review: Security policies and procedures are reviewed and updated annually, or as required by changes in law or regulation.
+
+Compliance with Commonwealth Security Standards
+The Miri platform is designed to align with the Commonwealth of Massachusetts information security requirements referenced in the RFP, including:
+•	201 CMR 17.00 – Standards for the Protection of Personal Information of Residents of the Commonwealth
+•	IS.001 – Commonwealth Information Security Risk Management Standard
+The platform incorporates security practices that support these requirements, including encryption of sensitive data, role-based access controls, secure authentication, and system monitoring.
+
+Data Encryption
+The Miri platform protects sensitive information through encryption of data both in transit and at rest.
+All data transmitted between users and the platform is encrypted using Transport Layer Security (TLS). This protects user sessions and data exchanged between client devices and the application.
+Data stored within the system is encrypted at rest using AES-256 encryption through AWS Key Management Service (KMS). This encryption protects database storage, backups, and related data services.
+
+Infrastructure Security
+The platform is hosted within Amazon Web Services (AWS) cloud infrastructure located in the United States. Application services are deployed within a secure AWS Virtual Private Cloud (VPC) environment that restricts network access and isolates system components.
+Database services are hosted through Amazon Relational Database Service (Amazon RDS) using PostgreSQL. This managed database service provides automated security updates, database monitoring, and automated backup capabilities.
+AWS infrastructure provides additional security capabilities including network-level access controls, infrastructure monitoring, and managed system maintenance.
+
+Authentication and Access Control
+The Miri platform supports Enterprise Single Sign-On (SSO) authentication, allowing the Office of the State Auditor to integrate the platform with its existing identity management system. Through SSO integration, users can securely access the platform using their existing organizational credentials.
+The system also supports role-based access control, allowing administrators to assign permissions based on user roles. This ensures that users have access only to the information and functionality required for their responsibilities.
+
+Audit Logging and Monitoring
+The platform maintains system audit logs that record user activity and system events. These logs allow administrators to monitor system usage, review operational activity, and support compliance with audit or legal requirements.
+Audit logging capabilities provide traceability for system actions, including user access and administrative changes within the system.
+
+Backup and Data Protection
+Database services hosted through Amazon RDS include automated backup capabilities and recovery mechanisms that support data durability and operational resilience. These features allow the system to maintain reliable data protection and support recovery in the event of system interruption.
+
+Secure System Operations
+The Miri platform is designed to maintain secure system operation through the use of managed cloud infrastructure, encryption, identity controls, and system monitoring. These practices support the protection of employee attendance data and ensure reliable system operation for the Office of the State Auditor.
+ 
+Implementation Plan and Timeline
+Implementation Approach
+The Miri platform is delivered as a fully developed cloud-based solution, allowing implementation to focus primarily on system configuration, integration, and user onboarding rather than custom software development. This approach reduces project risk and allows the Office of the State Auditor (OSA) to deploy the system efficiently.
+Miri will work closely with OSA staff to configure system workflows, approved work locations, user roles, and reporting capabilities to align with the agency’s operational requirements. The implementation process includes system configuration, integration setup, administrative training, and go-live support.
+Because the platform is already operational and hosted in secure cloud infrastructure, the implementation process can be completed within a short timeframe.
+Implementation Phases
+Phase 1 – Project Initiation
+During the project initiation phase, Miri will work with OSA stakeholders to confirm system requirements, project timelines, and implementation responsibilities. This phase includes initial system configuration planning and identification of key administrative users.
+Key activities include:
+•	Project kickoff meeting
+•	Review of system requirements and operational workflows
+•	Identification of implementation stakeholders
+•	Initial configuration planning
+Phase 2 – System Configuration
+During the configuration phase, the Miri platform will be configured to support OSA’s operational requirements. This includes configuring approved work locations, system roles, reporting capabilities, and attendance workflows.
+Key activities include:
+•	Configuration of approved worksite locations
+•	Setup of administrative and manager roles
+•	Configuration of attendance workflows
+•	Setup of reporting dashboards
+Phase 3 – Integration Setup
+During this phase, the platform will be integrated with the systems identified in the RFP. Integration work will focus on establishing secure data exchange with the Commonwealth HRCMS and Wolters Kluwer TeamMate+ systems.
+Key activities include:
+•	Configuration of integration endpoints
+•	Testing of integration functionality
+•	Validation of data exchange processes
+Phase 4 – Training and System Validation
+Once configuration and integration work are completed, Miri will conduct administrator training sessions and system validation activities. This phase ensures that OSA administrators are prepared to manage the system and that all system functionality operates as expected.
+Key activities include:
+•	Administrator training sessions
+•	System testing and validation
+•	User acceptance review
+Phase 5 – Go-Live and Support
+After successful system validation, the platform will be deployed for operational use. Miri will provide go-live support to ensure a smooth transition for administrators and staff.
+Key activities include:
+•	System launch
+•	Go-live support
+•	Post-launch monitoring
+Implementation Timeline
+Because the Miri platform is a fully developed product delivered through secure cloud infrastructure, implementation can be completed within a short timeframe. Miri is prepared to meet or exceed the RFP’s preferred implementation timeline.
+Miri commits to supporting a system go-live on or before July 1, 2026, placing the implementation within the RFP’s Highly Advantageous timeline category.
+Implementation Staffing
+Miri will assign a dedicated implementation team to support the project. The implementation team will work with OSA stakeholders throughout the project lifecycle to ensure a smooth deployment and successful system adoption.
+Implementation staffing may include:
+•	Implementation project lead
+•	Technical configuration specialist
+•	Integration support specialist
+•	Training and onboarding support
+This team will coordinate closely with OSA staff to ensure all system configuration, integration, and training activities are completed within the agreed implementation timeline.
+ 
+Integration Approach
+Integration Overview
+The Miri platform provides a secure and flexible integration framework designed to support data exchange with existing enterprise systems used by the Office of the State Auditor. The platform supports modern API-based integration as well as secure file-based data exchange where direct API connectivity is not available.
+This approach ensures reliable communication between systems while allowing integration methods to adapt to the technical capabilities of external systems.
+API-Based Integrations
+Miri supports integration with external systems using REST-based APIs over secure HTTPS connections. API integrations allow systems to exchange data in a structured and efficient manner while maintaining strong security controls.
+API authentication is supported through OAuth 2.0 or secure token-based authentication mechanisms, ensuring that system-to-system communication occurs through authenticated and encrypted channels.
+This architecture allows Miri to integrate with enterprise systems in a secure and scalable manner.
+File-Based Integration
+In situations where API connectivity is not available or supported, the Miri platform can support secure file-based data exchange as an alternative integration method.
+File-based integrations may utilize structured data formats and secure transfer methods to exchange system data. This approach ensures that integration can still be achieved even when external systems do not support direct API connectivity.
+HRCMS Integration
+The Miri platform supports integration with the Commonwealth Human Resources/Compensation Management System (HRCMS) through secure API-based communication where available.
+This integration allows relevant workforce data to be exchanged between systems to support workforce management processes and maintain alignment with the Commonwealth’s HR systems.
+Where API connectivity is not available, secure file-based data exchange methods can be used to support data synchronization.
+Wolters Kluwer TeamMate+ Integration
+The platform also supports integration with Wolters Kluwer TeamMate+, enabling data exchange between the time and attendance system and the audit management platform.
+This integration allows operational data to be shared between systems in order to support the agency’s audit and investigative workflows.
+Integration may be implemented using REST-based APIs or secure file-based exchange depending on the capabilities of the external system.
+Data Export Capabilities
+The Miri platform supports export of system data in common formats to support reporting and external system integration. Supported export formats include:
+•	CSV
+•	Microsoft Excel
+•	PDF
+These export capabilities allow administrators to generate reports or transfer data to other systems when necessary.
+ 
+Vendor Qualifications and Experience
+
+Company Overview
+Miri is a technology firm specializing in software development, cloud infrastructure, automation, cybersecurity, and digital transformation solutions for government, enterprise, and other organizations. Miri’s mission is to develop configurable software platforms and technology solutions designed to help organizations modernize operations, improve efficiency, and securely manage critical data and workflows.  
+Miri’s development approach focuses on building modern cloud-based systems that combine strong security practices, flexible configuration capabilities, and intuitive user experiences. These platforms are designed to support organizations with distributed teams and complex operational requirements while maintaining reliability and cost efficiency.
+Through its experience delivering configurable software solutions and cloud-based platforms, Miri provides the technical expertise required to successfully deploy and support modern workforce management systems such as the Time and Attendance System requested by the Office of the State Auditor.
+Capabilities
+
+
+
+
+
+ 
+Partners & Platforms
+
+
+
+
+
+
+Commitment to Client Success
+Miri works closely with clients throughout the project lifecycle, from system design and implementation through deployment and ongoing improvement. The company emphasizes collaboration, transparency, and continuous improvement to ensure that implemented systems remain aligned with operational needs.
+Through its combination of technical expertise, modern platform architecture, and client-focused development approach, Miri is well positioned to deliver a secure and configurable Time and Attendance System for the Office of the State Auditor.
+
+ 
+Relevant Project Experience
+Miri has experience designing and implementing configurable software platforms that support operational management, data tracking, and workflow automation for organizations with specialized operational requirements. The following projects demonstrate relevant experience in developing secure, cloud-based systems with configurable workflows, reporting capabilities, and data management tools.
+
+ 
+Miri | EHR - Electronic Health Record System
+Recent client implementation: Wellness Creative
+Miri | EHR is a configurable electronic health record platform designed to support therapy practices and healthcare organizations that require secure client management, scheduling, documentation, billing, and operational reporting. The platform combines modern cloud architecture with flexible workflow configuration, allowing organizations to manage client interactions, operational workflows, and financial processes within a single integrated system.
+ 
+
+
+Company Portal and Time Tracking System
+Client: Wellness Creative
+Miri developed a web-based company portal that includes integrated time tracking functionality and workforce management tools. The platform allows employees to record work activity, track time, and access organizational resources through a secure web interface. The system includes administrative dashboards and configurable reporting tools that allow administrators to monitor workforce activity and operational performance.
+ 
+Support & Maintenance
+
+Tiered Support Model
+Our support services are structured in a three-tier model to promote rapid, expert assistance for all user types and issue severities:
+•	Tier 1: Help Desk
+o	Provides first-line support for general inquiries, user access issues, navigation help, and basic troubleshooting.
+o	Available to all users via phone, email, and a centralized support portal.
+•	Tier 2: Application Support
+o	Handles escalated issues related to application functionality, configuration, data integrity, and user workflows.
+o	Staffed by analysts and technical specialists with deep knowledge of the platform and business processes.
+•	Tier 3: Development & Integration Support
+o	Engages software engineers and integration experts for complex incidents, bug fixes, system integrations, and root cause analysis.
+o	Responsible for code-level troubleshooting, hotfixes, and coordination of system upgrades.
+Service Level Agreements (SLAs)
+•	Priority 1 (Critical): Complete loss of service, security breach, or data integrity issue affecting all users.
+•	Priority 2 (High): Major functionality impaired, significant impact to business operations, but system remains operational.
+•	Priority 3 (Standard): Routine support, minor bugs, usability questions, or enhancement requests.
+All incidents are tracked in a centralized ticketing system with real-time status updates and escalation protocols.
+ 
+User Training and Knowledge Resources
+•	Comprehensive Training
+o	All training will be provided directly by Stantec personnel, who are authorized to deliver instruction on the proposed solution. Training is designed to equip your staff with the knowledge and confidence needed to operate, manage, and support the system effectively.
+o	Training can be conducted on-site and/or remotely, based on your preferences and scheduling needs. The initial training sessions will typically last two (2) to four (4) hours, depending on audience roles and scope, with additional follow-up sessions provided as needed after go-live or major updates.
+o	Training can be tailored by staff roles as needed.
+•	User Guides and Self-Service Support
+o	All users have access to up-to-date user guides, FAQs, and other support documentation via a centralized support portal. The portal also provides access to the ticketing system for submitting and tracking support requests.
+Support Portal and Communication
+•	Centralized Support Portal:
+o	Users can submit tickets, access knowledge resources, and track the status of their requests in a single, user-friendly portal.
+•	Proactive Communication:
+o	We provide advance notice of scheduled maintenance, upgrades, and new feature releases. Critical incidents are communicated immediately to designated contacts.
+Performance Monitoring and Reporting
+•	System Health Monitoring:
+o	Automated monitoring tools track system uptime, performance, and security events 24x7. Alerts are routed to support staff for immediate action.
+•	Regular Reporting:
+o	You will receives periodic reports as needed on support activity, SLA compliance, system performance, and user feedback to support transparency and drive continuous improvement.
+ 
+Requirements Compliance Matrix
+Core System Capabilities
+Requirement	Compliance	Miri Response
+Browser and mobile-based platform accessible via web and mobile browsers	Fully Compliant	Miri provides a responsive browser-based platform accessible from any modern web browser on desktop and mobile devices.
+Real-time clock-in / clock-out functionality from multiple locations	Fully Compliant	The platform supports real-time clock-in and clock-out functionality for staff working in office, remote, or field environments.
+Geo-fencing for approved work locations	Fully Compliant	Miri supports configurable location rules that allow administrators to manage approved work locations and attendance validation.
+Staff tracking capability with real-time GPS reporting	Fully Compliant	GPS-based location verification can be used when staff access the system from mobile devices.
+Identity verification and location tracking when not attached to the internet	Fully Compliant	The system supports configurable attendance workflows including manual location entry when automated location verification is unavailable.
+Pull-down menus of approved work sites	Fully Compliant	Administrators configure approved worksite locations which are presented to staff through selectable location lists.
+Staff can flag locations for manager review	Fully Compliant	Configurable workflows allow attendance entries to be reviewed and approved by managers when exceptions occur.
+Manager addition of new locations and times	Fully Compliant	Authorized administrators and managers can update and manage worksite configurations through administrative tools.
+Manager approval for non-GPS verified locations	Fully Compliant	The platform supports configurable approval workflows for attendance exceptions.
+Smartphone and browser access	Fully Compliant	Miri is accessible through responsive browser interfaces on mobile and desktop devices.
+IP location service when using browser access	Fully Compliant	The system records session information including IP-based access data for browser sessions.
+
+Administrative Functions
+Requirement	Compliance	Miri Response
+Staff bulk account creation, modification, and deletion	Fully Compliant	Administrative tools support user account management including creation, modification, and deactivation of users.
+Working group alignment and management	Fully Compliant	Miri supports configurable user roles and organizational groupings.
+Comprehensive reporting capabilities	Fully Compliant	The platform provides configurable reporting dashboards and administrative reports.
+Data archival and retrieval functionality	Fully Compliant	Historical attendance data is securely stored and accessible for reporting and retrieval.
+System hierarchy configuration	Fully Compliant	Administrators can configure system roles and reporting hierarchies.
+
+Platform and Technical Requirements
+Requirement	Compliance	Miri Response
+Cloud-based mobile access	Fully Compliant	Miri is delivered as a cloud-based platform accessible via browser from mobile and desktop devices.
+Cross-platform compatibility (iOS, Android, Windows, macOS)	Fully Compliant	Because the system is browser-based, it supports all major operating systems.
+U.S.-based cloud infrastructure	Fully Compliant	Miri is hosted within Amazon Web Services (AWS) infrastructure located in the US East (Ohio) region.
+System data access during and after contract	Fully Compliant	Administrators retain access to system data during the contract period and may export data when required.
+
+Security Requirements
+Requirement	Compliance	Miri Response
+Compliance with Massachusetts security standards (201 CMR 17.00 and IS.001)	Fully Compliant	The Miri platform incorporates encryption, access control, logging, and secure infrastructure practices aligned with Commonwealth security requirements.
+Data encryption in transit and at rest	Fully Compliant	Data in transit is encrypted using TLS and data at rest is encrypted using AES-256 through AWS KMS.
+Multi-factor authentication capability	Fully Compliant	The system supports secure authentication and integration with enterprise identity systems that support MFA.
+Audit trail functionality	Fully Compliant	The platform maintains system logs and audit trails for user and administrative activity.
+Enterprise Single Sign-On support	Fully Compliant	Miri supports Enterprise SSO integration using secure authentication protocols.
+
+Integration Requirements
+Requirement	Compliance	Miri Response
+Integration with Commonwealth HRCMS	Fully Compliant	Miri supports secure REST API integration with HRCMS with file-based exchange available if required.
+Integration with Wolters Kluwer TeamMate+	Fully Compliant	The platform supports API-based or secure file-based integration with TeamMate+.
+Standard API availability for future integrations	Fully Compliant	Miri provides REST API endpoints that allow secure system-to-system data exchange.
+Data export formats (CSV, Excel, PDF)	Fully Compliant	The platform supports exporting data in CSV, Microsoft Excel, and PDF formats.
+
+ 
+Performance Requirements
+Requirement	Compliance	Miri Response
+99.5% uptime during business hours	Fully Compliant	AWS-hosted infrastructure supports reliable system availability and operational monitoring.
+Response time under 3 seconds	Fully Compliant	The system architecture is designed to provide responsive performance during normal operations.
+Support for 250+ users and 100 concurrent logins	Fully Compliant	Cloud infrastructure allows the platform to scale to support required user capacity.
+
+Implementation and Support
+Requirement	Compliance	Miri Response
+System configuration and setup	Fully Compliant	Miri provides full implementation support including system configuration and deployment.
+Data migration assistance	Fully Compliant	Implementation services include support for data configuration and system onboarding.
+User training	Fully Compliant	Training services are provided as part of implementation.
+Technical support during business hours	Fully Compliant	Miri provides technical support during standard business hours.
+System maintenance and updates	Fully Compliant	The platform includes ongoing system updates and maintenance.
+Backup and disaster recovery services	Fully Compliant	Automated backups and recovery are supported through AWS infrastructure.
+Data export after contract expiration	Fully Compliant	Data export capabilities ensure administrators can retrieve system data when required.
+
+

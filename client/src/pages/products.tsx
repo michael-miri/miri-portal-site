@@ -28,12 +28,18 @@ const products = [
     tags: ["Government", "Grants", "Compliance"],
     href: "/miri-grants",
   },
+  {
+    name: "miri | time & attendance™",
+    description: "Cloud-Based Workforce Time Tracking — modern time and attendance platform for distributed workforces with real-time clock-in/out, GPS and IP location verification, and configurable workflows.",
+    tags: ["Workforce", "Cloud", "Government"],
+    href: "/miri-time-attendance",
+  },
 ];
 
 export default function Products() {
   useSEO({
     title: "Products - Enterprise Software Platforms",
-    description: "Explore Miri Technology's product suite: miri|housing for public housing authorities, miri|portal for company operations, and miri|ehr for electronic health records.",
+    description: "Explore Miri Technology's enterprise product suite: miri|housing, miri|portal, miri|ehr, miri|grants, and miri|time & attendance — purpose-built platforms for government, healthcare, and enterprise organizations.",
   });
 
   return (
@@ -52,7 +58,7 @@ export default function Products() {
                 key={product.name}
                 href={product.href}
                 className="bg-[#0A0E1A] p-8 flex flex-col gap-5"
-                data-testid={`card-product-${product.name.replace(/[|™]/g, '').trim().toLowerCase().replace(/\s/g, '-')}`}
+                data-testid={`card-product-${product.name.replace(/[|™&]/g, '').trim().toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <h3 className="font-heading text-2xl font-bold text-white tracking-tight">
                   {product.name}
@@ -70,7 +76,7 @@ export default function Products() {
                     </span>
                   ))}
                 </div>
-                <span className="text-[13px] text-white/60 font-medium inline-flex items-center gap-1.5 mt-2" data-testid={`link-product-learn-more-${product.name.replace(/[|™]/g, '').trim().toLowerCase().replace(/\s/g, '-')}`}>
+                <span className="text-[13px] text-white/60 font-medium inline-flex items-center gap-1.5 mt-2" data-testid={`link-product-learn-more-${product.name.replace(/[|™&]/g, '').trim().toLowerCase().replace(/\s+/g, '-')}`}>
                   Learn More
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
