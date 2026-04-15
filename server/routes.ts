@@ -42,7 +42,7 @@ export async function registerRoutes(
       `;
 
       const result = await resend.emails.send({
-        from: "Miri Website <noreply@miritechnology.com>",
+        from: "Miri Website <noreply@mail.miritechnology.com>",
         to: RECIPIENTS,
         replyTo: email,
         subject,
