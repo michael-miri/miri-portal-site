@@ -60,17 +60,26 @@ export default function Demo() {
     defaultValues: { name: "", email: "", company: "", phone: "", message: "" },
   });
 
-  const onSubmit = (data: DemoFormValues) => {
-    const subject = encodeURIComponent(`Free Demo Request from ${data.name} — ${data.company}`);
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nPhone: ${data.phone || "N/A"}\n\nAdditional Info:\n${data.message || "N/A"}`
-    );
-    window.location.href = `mailto:contact@miritechnology.com?subject=${subject}&body=${body}`;
-    toast({
-      title: "Opening Email Client",
-      description: "Your email app should open with the message ready to send.",
-    });
-    form.reset();
+  const onSubmit = async (data: DemoFormValues) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, source: "demo" }),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      toast({
+        title: "Request Received!",
+        description: "We'll reach out within 24 hours to schedule your consultation.",
+      });
+      form.reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly at contact@miritechnology.com",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

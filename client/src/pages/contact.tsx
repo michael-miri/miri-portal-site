@@ -31,17 +31,26 @@ export default function Contact() {
     defaultValues: { name: "", email: "", company: "", message: "" },
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    const subject = encodeURIComponent(`Contact from ${data.name}${data.company ? ` — ${data.company}` : ""}`);
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "N/A"}\n\nMessage:\n${data.message}`
-    );
-    window.location.href = `mailto:contact@miritechnology.com?subject=${subject}&body=${body}`;
-    toast({
-      title: "Opening Email Client",
-      description: "Your email app should open with the message ready to send.",
-    });
-    form.reset();
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, source: "contact" }),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      form.reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly at contact@miritechnology.com",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
