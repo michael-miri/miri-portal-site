@@ -28,6 +28,7 @@ export default function Contact() {
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
+    mode: "onChange",
     defaultValues: { name: "", email: "", company: "", message: "" },
   });
 
@@ -107,7 +108,7 @@ export default function Contact() {
                         <FormMessage />
                       </FormItem>
                     )} />
-                    <Button type="submit" className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 w-full sm:w-auto" data-testid="button-submit-contact">
+                    <Button type="submit" disabled={!form.formState.isValid} className="bg-[#0645FF] text-white font-medium rounded-full px-7 h-11 hover:bg-[#0645FF]/90 w-full sm:w-auto disabled:opacity-40 disabled:cursor-not-allowed" data-testid="button-submit-contact">
                       Send Message
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
