@@ -97,7 +97,7 @@ export default function Demo() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/50 text-[13px]">Full Name *</FormLabel>
+                          <FormLabel className="text-white/50 text-[13px]">Name *</FormLabel>
                           <FormControl>
                             <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-name" />
                           </FormControl>
