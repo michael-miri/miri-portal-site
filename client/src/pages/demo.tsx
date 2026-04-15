@@ -125,7 +125,7 @@ export default function Demo() {
                         <FormItem>
                           <FormLabel className="text-white/50 text-[13px]">Full Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-name" />
+                            <Input {...field} placeholder="John Doe" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -134,7 +134,7 @@ export default function Demo() {
                         <FormItem>
                           <FormLabel className="text-white/50 text-[13px]">Work Email *</FormLabel>
                           <FormControl>
-                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-email" />
+                            <Input {...field} type="email" placeholder="john@company.com" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -145,7 +145,7 @@ export default function Demo() {
                         <FormItem>
                           <FormLabel className="text-white/50 text-[13px]">Company *</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="Company name" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-company" />
+                            <Input {...field} placeholder="Company name" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-company" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -154,7 +154,7 @@ export default function Demo() {
                         <FormItem>
                           <FormLabel className="text-white/50 text-[13px]">Phone</FormLabel>
                           <FormControl>
-                            <Input {...field} type="tel" placeholder="(555) 123-4567" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-phone" />
+                            <Input {...field} type="tel" placeholder="(555) 123-4567" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-demo-phone" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -164,7 +164,7 @@ export default function Demo() {
                       <FormItem>
                         <FormLabel className="text-white/50 text-[13px]">Tell us about your business</FormLabel>
                         <FormControl>
-                          <Textarea {...field} rows={4} placeholder="What tools are you currently using? What processes would you like to automate?" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg focus:border-[#0645FF]/50 resize-none" data-testid="input-demo-message" />
+                          <Textarea {...field} rows={4} placeholder="What tools are you currently using? What processes would you like to automate?" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/40 rounded-lg focus:border-[#0645FF]/50 resize-none" data-testid="input-demo-message" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
