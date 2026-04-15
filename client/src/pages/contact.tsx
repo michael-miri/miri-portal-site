@@ -13,7 +13,7 @@ import { useSEO } from "@/hooks/use-seo";
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Please enter a valid email"),
-  company: z.string().optional(),
+  company: z.string().min(1, "Company is required"),
   message: z.string().min(1, "Please tell us how we can help"),
 });
 
@@ -92,9 +92,9 @@ export default function Contact() {
                     </div>
                     <FormField control={form.control} name="company" render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/50 text-[13px]">Company</FormLabel>
+                        <FormLabel className="text-white/50 text-[13px]">Company *</FormLabel>
                         <FormControl>
-                          <Input {...field} placeholder="Company name (optional)" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-company" />
+                          <Input {...field} placeholder="Company name" className="bg-white/[0.03] border-white/[0.08] text-white placeholder:text-white/20 rounded-lg h-11 focus:border-[#0645FF]/50" data-testid="input-company" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
