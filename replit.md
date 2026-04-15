@@ -53,7 +53,8 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 11. **Security** (`/security`) - 6 security pillars, lifecycle process
 12. **Contact** (`/contact`) - Form (mailto) + contact info sidebar + expectations
 13. **Legal** (`/legal`) - Combined Privacy Policy and Terms of Service
-14. **Industry Detail** (`/industries/:slug`) - Hidden from nav, components retained
+14. **Demo** (`/demo`) - QR code landing page for postcard campaign — consultation sign-up and free demo buildout
+15. **Industry Detail** (`/industries/:slug`) - Hidden from nav, components retained
 
 ## Shared Components
 - `client/src/components/layout.tsx` - Navbar, Footer, PageHeader, CTABanner, Layout wrapper
@@ -76,6 +77,7 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 - `client/src/pages/miri-ehr.tsx` - miri|ehr product page
 - `client/src/pages/miri-grants.tsx` - miri|grants product page
 - `client/src/pages/miri-time-attendance.tsx` - miri|time & attendance product page
+- `client/src/pages/demo.tsx` - QR code landing page for postcard campaign
 - `client/src/pages/industry-detail.tsx` - Individual industry detail pages (hidden from nav)
 - `client/src/components/layout.tsx` - Shared layout components
 - `client/src/hooks/use-seo.ts` - SEO hook for per-page meta management
