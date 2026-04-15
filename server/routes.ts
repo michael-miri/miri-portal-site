@@ -41,13 +41,20 @@ export async function registerRoutes(
         </div>
       `;
 
-      await resend.emails.send({
-        from: "Miri Website <onboarding@resend.dev>",
+      const result = await resend.emails.send({
+        from: "Miri Website <noreply@miritechnology.com>",
         to: RECIPIENTS,
         replyTo: email,
         subject,
         html: htmlContent,
       });
+
+      console.log("Resend response:", JSON.stringify(result));
+
+      if (result.error) {
+        console.error("Resend error:", JSON.stringify(result.error));
+        return res.status(500).json({ error: result.error.message || "Failed to send email" });
+      }
 
       return res.json({ success: true });
     } catch (error) {
