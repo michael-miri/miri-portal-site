@@ -89,42 +89,6 @@ export default function Demo() {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-6">
-              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6" data-testid="label-demo">Free Consultation & Demo</span>
-              <h1 className="font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="text-hero-title">
-                Still running your business on spreadsheets?
-              </h1>
-              <p className="mt-6 text-[17px] text-white/50 leading-relaxed max-w-lg" data-testid="text-hero-subtitle">
-                We build custom software and AI integrations that automate your operations, cut costs, and help you scale — fast. Sign up for a free consultation and we'll build you a custom demo tailored to your workflows.
-              </p>
-
-              <div className="mt-12 space-y-8">
-                {valueProps.map((prop) => (
-                  <div key={prop.title} className="flex gap-5" data-testid={`card-value-${prop.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-                    <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 border border-[#0645FF]/20 flex items-center justify-center shrink-0">
-                      <prop.icon className="w-5 h-5 text-[#0645FF]" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading text-lg font-semibold text-white">{prop.title}</h3>
-                      <p className="text-[14px] text-white/50 leading-relaxed mt-1">{prop.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-12 pt-10 border-t border-white/[0.06]">
-                <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What You Get</span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {checklist.map((item) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <CheckCircle className="w-4 h-4 text-[#0645FF] mt-0.5 shrink-0" />
-                      <span className="text-[14px] text-white/60">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-10 lg:sticky lg:top-32">
                 <h2 className="font-heading text-2xl font-bold text-white mb-2" data-testid="text-form-title">Get Your Free Demo</h2>
                 <p className="text-[14px] text-white/50 mb-8">Fill out the form below and we'll reach out within 24 hours to schedule your consultation.</p>
@@ -186,6 +150,42 @@ export default function Demo() {
                     <p className="text-[12px] text-white/30 text-center">No spam. No obligation. We'll reach out within 24 hours.</p>
                   </form>
                 </Form>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6" data-testid="label-demo">Free Consultation & Demo</span>
+              <h1 className="font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] font-bold text-white leading-[1.08] tracking-tight" data-testid="text-hero-title">
+                Still running your business on spreadsheets?
+              </h1>
+              <p className="mt-6 text-[17px] text-white/50 leading-relaxed max-w-lg" data-testid="text-hero-subtitle">
+                We build custom software and AI integrations that automate your operations, cut costs, and help you scale — fast. Sign up for a free consultation and we'll build you a custom demo tailored to your workflows.
+              </p>
+
+              <div className="mt-12 space-y-8">
+                {valueProps.map((prop) => (
+                  <div key={prop.title} className="flex gap-5" data-testid={`card-value-${prop.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+                    <div className="w-10 h-10 rounded-lg bg-[#0645FF]/10 border border-[#0645FF]/20 flex items-center justify-center shrink-0">
+                      <prop.icon className="w-5 h-5 text-[#0645FF]" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-lg font-semibold text-white">{prop.title}</h3>
+                      <p className="text-[14px] text-white/50 leading-relaxed mt-1">{prop.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-12 pt-10 border-t border-white/[0.06]">
+                <span className="text-[14px] font-medium tracking-[0.2em] uppercase text-[#C4A882] block mb-6">What You Get</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {checklist.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle className="w-4 h-4 text-[#0645FF] mt-0.5 shrink-0" />
+                      <span className="text-[14px] text-white/60">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
