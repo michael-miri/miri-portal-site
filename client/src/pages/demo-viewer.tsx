@@ -21,7 +21,8 @@ export default function DemoViewer() {
     <iframe
       src={demo.url}
       title={demo.name}
-      className="fixed inset-0 w-screen h-screen border-0 bg-white"
+      className="fixed inset-0 w-full border-0 bg-white"
+      style={{ height: "100dvh" }}
       data-testid={`iframe-demo-${demo.slug}`}
       allow="clipboard-read; clipboard-write; fullscreen"
     />
