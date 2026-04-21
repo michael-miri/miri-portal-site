@@ -1,27 +1,8 @@
+import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
 import { Layout, PageHeader, CTABanner } from "@/components/layout";
 import { useSEO } from "@/hooks/use-seo";
-
-type Demo = {
-  slug: string;
-  name: string;
-  company: string;
-  description: string;
-  url: string;
-  tags?: string[];
-};
-
-const demos: Demo[] = [
-  {
-    slug: "accuromm-usa",
-    name: "Accuromm USA Production Optimizer",
-    company: "Accuromm USA",
-    description:
-      "Manufacturing production optimizer demo with dashboard, orders, plant floor, analytics, ERP, and operations views.",
-    url: "https://accuromm-usa.replit.app/",
-    tags: ["Manufacturing", "Analytics", "ERP"],
-  },
-];
+import { demos } from "@/lib/demos";
 
 export default function Demos() {
   useSEO({
@@ -35,7 +16,7 @@ export default function Demos() {
       <PageHeader
         label="Demos"
         title="Demo Applications"
-        description="Interactive previews of platforms we've built. Each demo links to a live, deployed application."
+        description="Interactive previews of platforms we've built. Each demo opens a live, deployed application."
       />
 
       <section className="bg-[#0A0E1A] border-t border-white/[0.06]">
@@ -76,16 +57,14 @@ export default function Demos() {
                     ))}
                   </div>
                 )}
-                <a
-                  href={demo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={`/demos/${demo.slug}`}
                   className="inline-flex items-center justify-center gap-2 mt-2 px-5 py-3 bg-[#0645FF] text-white text-[13px] font-medium rounded-md self-start"
                   data-testid={`link-open-demo-${demo.slug}`}
                 >
                   Open Demo
                   <ArrowUpRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             ))}
             {demos.length % 2 !== 0 && (
