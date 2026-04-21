@@ -45,6 +45,20 @@ function ScrollToTop() {
 }
 
 function Router() {
+  const [location] = useLocation();
+  const isFullscreen = /^\/demos\/[^/]+$/.test(location);
+
+  if (isFullscreen) {
+    return (
+      <div className="min-h-screen bg-[#0A0E1A] text-white">
+        <ScrollToTop />
+        <Switch>
+          <Route path="/demos/:slug" component={DemoViewer} />
+        </Switch>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#0A0E1A] text-white">
       <Navbar />
