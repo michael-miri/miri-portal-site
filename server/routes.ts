@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const RECIPIENTS = ["michael@miritechnology.com", "richard@miritechnology.com"];
 
 const DEMO_REDIRECTS: Record<string, string> = {
-  "accuromm-usa": "https://example.replit.app",
+  "accuromm-usa": "https://accuromm-usa.replit.app/",
 };
 
 export async function registerRoutes(

@@ -18,7 +18,7 @@ const demos: Demo[] = [
     company: "Accuromm USA",
     description:
       "Manufacturing production optimizer demo with dashboard, orders, plant floor, analytics, ERP, and operations views.",
-    url: "https://example.replit.app",
+    url: "https://accuromm-usa.replit.app/",
     tags: ["Manufacturing", "Analytics", "ERP"],
   },
 ];
