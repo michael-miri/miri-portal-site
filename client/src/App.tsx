@@ -22,6 +22,7 @@ import MiriEhr from "@/pages/miri-ehr";
 import MiriGrants from "@/pages/miri-grants";
 import MiriTimeAttendance from "@/pages/miri-time-attendance";
 import Demo from "@/pages/demo";
+import Demos from "@/pages/demos";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -65,6 +66,7 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route path="/legal" component={Legal} />
         <Route path="/demo" component={Demo} />
+        <Route path="/demos" component={Demos} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

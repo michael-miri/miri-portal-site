@@ -7,10 +7,22 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const RECIPIENTS = ["michael@miritechnology.com", "richard@miritechnology.com"];
 
+const DEMO_REDIRECTS: Record<string, string> = {
+  "accuromm-usa": "https://example.replit.app",
+};
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  app.get("/demos/:slug", (req, res, next) => {
+    const target = DEMO_REDIRECTS[req.params.slug];
+    if (target) {
+      return res.redirect(302, target);
+    }
+    return next();
+  });
+
   app.post("/api/contact", async (req, res) => {
     try {
       const { name, email, company, message, source } = req.body;

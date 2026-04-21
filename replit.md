@@ -55,6 +55,7 @@ Multi-page marketing website for Miri Technology, an AI-driven tech consulting c
 13. **Legal** (`/legal`) - Combined Privacy Policy and Terms of Service
 14. **Demo** (`/demo`) - QR code landing page for postcard campaign — consultation sign-up and free demo buildout
 15. **Industry Detail** (`/industries/:slug`) - Hidden from nav, components retained
+16. **Demos** (`/demos`) - Index of live demo applications (links to separately deployed Replit apps); server-side redirects at `/demos/:slug` (e.g. `/demos/accuromm-usa`)
 
 ## Shared Components
 - `client/src/components/layout.tsx` - Navbar, Footer, PageHeader, CTABanner, Layout wrapper
