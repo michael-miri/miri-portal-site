@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "3-2_mM-6JFuj-57MnvhgB"
+uri = "file://client-portal.zip"
+type = "unspecified"
+title = "Miri Technology Client Portal — index.html"
