@@ -1,6 +1,7 @@
 # Ignore everything
 *
 
-# Except the static site file
+# Except the static site files
 !index.html
 !.gitignore
+!CNAME
