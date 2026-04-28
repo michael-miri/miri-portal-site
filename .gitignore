@@ -1,6 +1,6 @@
-node_modules
-dist
-.DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
+# Ignore everything
+*
+
+# Except the static site file
+!index.html
+!.gitignore
